@@ -6,8 +6,8 @@
 }:
 let
   service = "microbin";
+  cfg = config.homelab.services.${service};
   homelab = config.homelab;
-  cfg = homelab.${service};
 in
 {
   options.homelab.services.${service} = {
@@ -45,7 +45,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    servies = {
+    services = {
       ${service} = {
         enable = true;
         settings = {

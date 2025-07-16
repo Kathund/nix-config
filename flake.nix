@@ -15,6 +15,7 @@
       modules = [
         ./machines/sarah
         ./machines/common
+        ./homelab
       ];
     };
 
