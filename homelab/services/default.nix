@@ -15,5 +15,6 @@
 
   imports = [
     ./microbin
+    ./cloudflared
   ];
 }

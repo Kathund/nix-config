@@ -12,6 +12,14 @@
 
     services = {
       enable = true;
+      microbin = {
+        enable = true;
+        port = 24572;
+      };
+      cloudflared = {
+        enable = true;
+        tunnel-id = "3e5ff925-bd92-4301-b336-3602fd7f0327";
+      };
     };
   };
 }
