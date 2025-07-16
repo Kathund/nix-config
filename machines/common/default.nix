@@ -37,6 +37,7 @@
     vim
     neovim
     git
+    gh
     lazygit
     ncdu
     nmap
