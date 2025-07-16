@@ -10,10 +10,11 @@
   outputs = { nixpkgs , ... } @ inputs:
   {
 
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.sarah = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./configuration.nix
+        ./machines/sarah
+        ./machines/common
       ];
     };
 
