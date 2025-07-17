@@ -8,7 +8,8 @@
   };
 
   imports = [
-    ../../dots/zsh/default.nix
+    ../../dots/zsh
+    ../../dots/hyfetch
     ./gitconfig.nix
   ];
 
