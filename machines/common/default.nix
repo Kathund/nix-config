@@ -7,6 +7,7 @@
 {
   imports = [
     ./nix
+    ./fonts
   ];
 
   time.timeZone = "Australia/Perth";
