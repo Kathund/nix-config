@@ -19,13 +19,6 @@ in
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
-  
-  users.users.kathund = {
-    isNormalUser = true;
-    description = "kathund";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-  };
 
   environment.systemPackages = with pkgs; [
     jellyfin

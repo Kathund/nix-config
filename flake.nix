@@ -16,6 +16,7 @@
         ./machines/sarah
         ./machines/common
         ./homelab
+        ./users/kathund
       ];
     };
 
