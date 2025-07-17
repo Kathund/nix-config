@@ -8,6 +8,7 @@
   };
 
   imports = [
+    ../../dots/zsh/default.nix
     ./gitconfig.nix
   ];
 

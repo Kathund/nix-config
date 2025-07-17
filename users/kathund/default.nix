@@ -7,10 +7,13 @@
         isNormalUser = true;
         description = "kathund";
         extraGroups = [ "networkmanager" "wheel" ];
+	shell = pkgs.zsh;
         packages = with pkgs; [];
       };
     };
   };
+
+  programs.zsh.enable = true;
 
   imports = [ inputs.home-manager.nixosModules.home-manager ];
 
