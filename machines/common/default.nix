@@ -37,9 +37,6 @@
   environment.systemPackages = with pkgs; [
     vim
     neovim
-    git
-    gh
-    lazygit
     ncdu
     nmap
     jq
