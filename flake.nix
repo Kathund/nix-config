@@ -13,9 +13,9 @@
     nixosConfigurations.sarah = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./machines/sarah
-        ./machines/common
         ./homelab
+        ./machines/common
+        ./machines/sarah
         ./users/kathund
       ];
     };
