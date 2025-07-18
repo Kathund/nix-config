@@ -31,7 +31,7 @@
       enable = true;
       settings = {
         add_newline = true;
-        format = "[](#9A348E)$os$username$hostname[](bg:#DA627D fg:#9A348E)$directory[](fg:#DA627D bg:#FCA17D)$git_branch$git_status[](fg:#FCA17D bg:#86BBD8)$nodejs[](fg:#86BBD8 bg:#06969A)\$docker_context[](fg:#06969A bg:#33658A)$time[ ](fg:#33658A)";
+        format = "[](#9A348E)$username$hostname[](bg:#DA627D fg:#9A348E)$directory[](fg:#DA627D bg:#FCA17D)$git_branch$git_status[](fg:#FCA17D bg:#86BBD8)$nodejs[](fg:#86BBD8 bg:#06969A)\$docker_context[](fg:#06969A bg:#33658A)$time$cmd_duration[ ](fg:#33658A)";
         username = {
           show_always = true;
           style_user = "bg:#9A348E";
@@ -43,10 +43,6 @@
           ssh_only = false;
           format = "[$ssh_symbol$hostname ]($style)";
           style = "bg:#9A348E";
-        };
-        os = {
-          style = "bg:#9A348E";
-          disabled = true;
         };
         directory = {
           style = "bg:#DA627D";
@@ -84,6 +80,11 @@
           time_format = "%R";
           style = "bg:#33658A";
           format = "[ ♥ $time ]($style)";
+        };
+        cmd_duration = {
+          disabled = false;
+          style = "bg:#33658A";
+          format = "[taken $duration ]($style)";
         };
       };
     };
