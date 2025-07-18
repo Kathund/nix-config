@@ -20,6 +20,10 @@
         enable = true;
         port = 24572;
       };
+      ntfy-sh = {
+        enable = true;
+        port = 25472;
+      };
       uptime-kuma = {
         enable = true;
         port = 3001;
