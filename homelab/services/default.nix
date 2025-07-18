@@ -14,7 +14,8 @@
   };
 
   imports = [
-    ./microbin
     ./cloudflared
+    ./microbin
+    ./uptime-kuma
   ];
 }
