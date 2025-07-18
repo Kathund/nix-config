@@ -17,7 +17,12 @@ in
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      nodejs_22
+      nodejs_24
+      pnpm_9
+      prettier
+      eslint
+      tsx
+      typescript
     ];
   };
 }
