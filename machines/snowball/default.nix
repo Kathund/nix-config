@@ -11,7 +11,7 @@
   ];
 
   networking = {
-    hostName = "sarah";
+    hostName = "snowball";
   };
 
   boot.loader.grub.device = "/dev/sda";

@@ -19,12 +19,12 @@
     { nixpkgs, ... }@inputs:
     {
 
-      nixosConfigurations.sarah = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.snowball = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
           ./homelab
           ./machines/common
-          ./machines/sarah
+          ./machines/snowball
           ./programs
           ./users/kathund
         ];
