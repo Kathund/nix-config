@@ -1,10 +1,4 @@
 {
-  config,
-  inputs,
-  pkgs,
-  ...
-}:
-{
   config.homelab = {
     enable = true;
     baseDomain = "kath.lol";

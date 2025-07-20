@@ -1,10 +1,4 @@
 {
-  config,
-  inputs,
-  pkgs,
-  ...
-}:
-{
   imports = [
     ./boot
     ./fonts

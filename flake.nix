@@ -18,7 +18,6 @@
   outputs =
     { nixpkgs, ... }@inputs:
     {
-
       nixosConfigurations.snowball = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
@@ -29,6 +28,5 @@
           ./users/kathund
         ];
       };
-
     };
 }

@@ -1,10 +1,4 @@
 {
-  config,
-  inputs,
-  pkgs,
-  ...
-}:
-{
   config.programs = {
     dev = {
       nix = {

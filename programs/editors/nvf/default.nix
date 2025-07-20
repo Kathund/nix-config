@@ -276,6 +276,13 @@ in
                 enable = true;
               };
             };
+            keymaps = [
+              {
+                key = "<leader>pv";
+                mode = "n";
+                action = "<cmd>Ex<CR>";
+              }
+            ];
           };
         };
       };
