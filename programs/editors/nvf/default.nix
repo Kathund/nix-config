@@ -211,19 +211,6 @@ in
                 enable = true;
               };
             };
-            filetree = {
-              nvimTree = {
-                enable = true;
-                setupOpts = {
-                  view = {
-                    float = {
-                      enable = true;
-                      quit_on_focus_loss = true;
-                    };
-                  };
-                };
-              };
-            };
             tabline = {
               nvimBufferline = {
                 enable = true;
