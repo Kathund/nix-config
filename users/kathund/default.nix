@@ -1,4 +1,9 @@
-{ inputs, config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 
 {
   users = {
@@ -6,9 +11,12 @@
       kathund = {
         isNormalUser = true;
         description = "kathund";
-        extraGroups = [ "networkmanager" "wheel" ];
-	shell = pkgs.zsh;
-        packages = with pkgs; [];
+        extraGroups = [
+          "networkmanager"
+          "wheel"
+        ];
+        shell = pkgs.zsh;
+        packages = with pkgs; [ ];
       };
     };
   };
@@ -20,7 +28,15 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      kathund = import ./dots.nix;
+      kathund = {
+        home = {
+          username = "kathund";
+          homeDirectory = "/home/kathund";
+          stateVersion = "25.05";
+        };
+
+        programs.home-manager.enable = true;
+      };
     };
   };
 }

@@ -1,5 +1,7 @@
 {
   imports = [
     ./dev
+    ./editors
+    ./terminal
   ];
 }

@@ -50,7 +50,7 @@ in
         enable = true;
         settings = {
           MICROBIN_WIDE = true;
-	  MICROBIN_PUBLIC_PATH = "https://${cfg.url}/";
+          MICROBIN_PUBLIC_PATH = "https://${cfg.url}/";
           MICROBIN_BIND = "127.0.0.1";
           MICROBIN_PORT = cfg.port;
           MICROBIN_HIDE_LOGO = true;
@@ -63,7 +63,7 @@ in
           MICROBIN_ETERNAL_PASTA = true;
           MICROBIN_DEFAULT_EXPIRY = "1week";
           MICROBIN_PRIVATE = false;
-	  MICROBIN_HIGHLIGHTSYNTAX = true;
+          MICROBIN_HIGHLIGHTSYNTAX = true;
         };
       };
     };

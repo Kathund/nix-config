@@ -3,24 +3,32 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-  };
 
-  outputs = { nixpkgs , ... } @ inputs:
-  {
-
-    nixosConfigurations.sarah = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./homelab
-        ./machines/common
-        ./machines/sarah
-        ./programs
-        ./users/kathund
-      ];
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-}
 
+  outputs =
+    { nixpkgs, ... }@inputs:
+    {
+
+      nixosConfigurations.sarah = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./homelab
+          ./machines/common
+          ./machines/sarah
+          ./programs
+          ./users/kathund
+        ];
+      };
+
+    };
+}

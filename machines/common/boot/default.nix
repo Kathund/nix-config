@@ -1,11 +1,4 @@
 {
-  config,
-  inputs,
-  pkgs,
-  lib,
-  ...
-}:
-{
   boot = {
     loader = {
       timeout = 10;

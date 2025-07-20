@@ -1,11 +1,10 @@
 {
   config,
-  pkgs,
   lib,
   ...
 }:
 let
-  program = "nodejs";
+  program = "python";
   cfg = config.programs.dev.${program};
 in
 {
@@ -21,12 +20,7 @@ in
       {
         home = {
           packages = with pkgs; [
-            nodejs_24
-            pnpm_9
-            prettier
-            eslint
-            tsx
-            typescript
+            python312
           ];
         };
       };

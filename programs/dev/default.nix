@@ -1,5 +1,7 @@
 {
   imports = [
+    ./nix
     ./nodejs
+    ./python
   ];
 }

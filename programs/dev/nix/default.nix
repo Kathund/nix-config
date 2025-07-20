@@ -1,11 +1,11 @@
 {
   config,
-  pkgs,
+  inputs,
   lib,
   ...
 }:
 let
-  program = "nodejs";
+  program = "nix";
   cfg = config.programs.dev.${program};
 in
 {
@@ -19,16 +19,23 @@ in
     home-manager.users.kathund =
       { pkgs, ... }:
       {
+        programs = {
+          nix-your-shell = {
+            enable = true;
+          };
+          nix-index = {
+            enable = true;
+          };
+        };
         home = {
           packages = with pkgs; [
-            nodejs_24
-            pnpm_9
-            prettier
-            eslint
-            tsx
-            typescript
+            nixfmt-rfc-style
+            nixfmt-tree
+            nixd
+            compose2nix
           ];
         };
+        nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
       };
   };
 }

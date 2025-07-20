@@ -28,7 +28,7 @@ in
     services = {
       ${service} = {
         enable = true;
-	tunnels = {
+        tunnels = {
           ${cfg.tunnel-id} = {
             credentialsFile = "/home/kathund/.cloudflared/${cfg.tunnel-id}.json";
             default = "http_status:404";

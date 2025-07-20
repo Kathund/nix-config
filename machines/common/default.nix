@@ -9,6 +9,7 @@
     ./boot
     ./fonts
     ./nix
+    ./programs
   ];
 
   time.timeZone = "Australia/Perth";
@@ -34,15 +35,6 @@
   };
 
   services.openssh.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    vim
-    neovim
-    ncdu
-    nmap
-    jq
-    ripgrep
-  ];
 
   system.stateVersion = "25.11";
 }
