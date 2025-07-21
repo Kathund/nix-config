@@ -9,7 +9,7 @@ let
   cfg = config.programs.terminal.cli.${program};
 in
 {
-  options.programs.terminal.${program} = {
+  options.programs.terminal.cli.${program} = {
     enable = lib.mkEnableOption {
       description = "Enable ${program}";
     };
