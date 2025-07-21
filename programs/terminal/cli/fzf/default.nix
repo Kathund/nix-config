@@ -6,7 +6,7 @@
 }:
 let
   program = "fzf";
-  cfg = config.programs.terminal.${program};
+  cfg = config.programs.terminal.cli.${program};
 in
 {
   options.programs.terminal.${program} = {

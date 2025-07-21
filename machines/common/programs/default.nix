@@ -20,9 +20,11 @@
       };
     };
     terminal = {
-      git = {
-        username = "Jacob";
-        email = "admin@kath.lol";
+      cli = {
+        git = {
+          username = "Jacob";
+          email = "admin@kath.lol";
+        };
       };
     };
   };

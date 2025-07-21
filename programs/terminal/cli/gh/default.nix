@@ -5,8 +5,8 @@
   ...
 }:
 let
-  program = "qwqfetch";
-  cfg = config.programs.terminal.${program};
+  program = "gh";
+  cfg = config.programs.terminal.cli.${program};
 in
 {
   options.programs.terminal.${program} = {
