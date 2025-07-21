@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  username,
   ...
 }:
 let
@@ -15,32 +16,36 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.kathund =
-      { pkgs, ... }:
-      {
-        home.packages = with pkgs; [ grc ];
+    home-manager = {
+      users = {
+        ${username} =
+          { pkgs, ... }:
+          {
+            home.packages = with pkgs; [ grc ];
 
-        programs = {
-          ${program} = {
-            enable = true;
-            enableCompletion = false;
-            zplug = {
-              enable = true;
-              plugins = [
-                { name = "zsh-users/zsh-autosuggestions"; }
-                { name = "zsh-users/zsh-syntax-highlighting"; }
-                { name = "zsh-users/zsh-completions"; }
-                { name = "zsh-users/zsh-history-substring-search"; }
-                { name = "unixorn/warhol.plugin.zsh"; }
-              ];
+            programs = {
+              ${program} = {
+                enable = true;
+                enableCompletion = false;
+                zplug = {
+                  enable = true;
+                  plugins = [
+                    { name = "zsh-users/zsh-autosuggestions"; }
+                    { name = "zsh-users/zsh-syntax-highlighting"; }
+                    { name = "zsh-users/zsh-completions"; }
+                    { name = "zsh-users/zsh-history-substring-search"; }
+                    { name = "unixorn/warhol.plugin.zsh"; }
+                  ];
+                };
+
+                shellAliases = {
+                };
+
+                initContent = '''';
+              };
             };
-
-            shellAliases = {
-            };
-
-            initContent = '''';
           };
-        };
       };
+    };
   };
 }

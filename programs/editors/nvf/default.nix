@@ -3,6 +3,7 @@
   pkgs,
   lib,
   inputs,
+  username,
   ...
 }:
 let
@@ -287,20 +288,24 @@ in
         };
       };
     };
-    home-manager.users.kathund =
-      { pkgs, ... }:
-      {
-        home.file.".editorconfig".source = (pkgs.formats.ini { }).generate ".editorconfig" {
-          "*" = {
-            indent_style = "space";
-            indent_size = 2;
-            end_of_line = "lf";
-            charset = "utf-8";
-            trim_trailing_whitespace = true;
-            insert_final_newline = true;
-            max_line_width = 120;
+    home-manager = {
+      users = {
+        ${username} =
+          { pkgs, ... }:
+          {
+            home.file.".editorconfig".source = (pkgs.formats.ini { }).generate ".editorconfig" {
+              "*" = {
+                indent_style = "space";
+                indent_size = 2;
+                end_of_line = "lf";
+                charset = "utf-8";
+                trim_trailing_whitespace = true;
+                insert_final_newline = true;
+                max_line_width = 120;
+              };
+            };
           };
-        };
       };
+    };
   };
 }

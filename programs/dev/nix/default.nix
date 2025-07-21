@@ -2,6 +2,7 @@
   config,
   inputs,
   lib,
+  username,
   ...
 }:
 let
@@ -16,26 +17,30 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.kathund =
-      { pkgs, ... }:
-      {
-        programs = {
-          nix-your-shell = {
-            enable = true;
+    home-manager = {
+      users = {
+        ${username} =
+          { pkgs, ... }:
+          {
+            programs = {
+              nix-your-shell = {
+                enable = true;
+              };
+              nix-index = {
+                enable = true;
+              };
+            };
+            home = {
+              packages = with pkgs; [
+                nixfmt-rfc-style
+                nixfmt-tree
+                nixd
+                compose2nix
+              ];
+            };
+            nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
           };
-          nix-index = {
-            enable = true;
-          };
-        };
-        home = {
-          packages = with pkgs; [
-            nixfmt-rfc-style
-            nixfmt-tree
-            nixd
-            compose2nix
-          ];
-        };
-        nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
       };
+    };
   };
 }

@@ -17,16 +17,26 @@
 
   outputs =
     { nixpkgs, ... }@inputs:
+    let
+      username = "kathund";
+
+      nixosMachine =
+        { machine }:
+        nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs machine username; };
+          modules = [
+            ./homelab
+            ./machines/common
+            ./machines/${machine}
+            ./programs
+            ./users/${username}
+          ];
+        };
+    in
     {
-      nixosConfigurations.snowball = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./homelab
-          ./machines/common
-          ./machines/snowball
-          ./programs
-          ./users/kathund
-        ];
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+      nixosConfigurations = {
+        snowball = nixosMachine { machine = "snowball"; };
       };
     };
 }

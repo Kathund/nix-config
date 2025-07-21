@@ -24,8 +24,10 @@
   };
 
   services.xserver = {
-    layout = "au";
-    xkbVariant = "";
+    xkb = {
+      layout = "au";
+      variant = "";
+    };
   };
 
   services.openssh.enable = true;

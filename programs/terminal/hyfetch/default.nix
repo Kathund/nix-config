@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  username,
   ...
 }:
 let
@@ -145,19 +146,23 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.kathund = {
-      programs = {
-        ${program} = {
-          enable = true;
-          settings = {
-            mode = cfg.mode;
-            light_dark = cfg.theme;
-            preset = cfg.preset;
-            lightness = cfg.brightness;
-            color_align = {
-              mode = cfg.colorAlign;
+    home-manager = {
+      users = {
+        ${username} = {
+          programs = {
+            ${program} = {
+              enable = true;
+              settings = {
+                mode = cfg.mode;
+                light_dark = cfg.theme;
+                preset = cfg.preset;
+                lightness = cfg.brightness;
+                color_align = {
+                  mode = cfg.colorAlign;
+                };
+                backend = cfg.backend;
+              };
             };
-            backend = cfg.backend;
           };
         };
       };

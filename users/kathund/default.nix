@@ -1,15 +1,16 @@
 {
   inputs,
   pkgs,
+  username,
   ...
 }:
 
 {
   users = {
     users = {
-      kathund = {
+      ${username} = {
         isNormalUser = true;
-        description = "kathund";
+        description = username;
         extraGroups = [
           "networkmanager"
           "wheel"
@@ -20,21 +21,28 @@
     };
   };
 
-  programs.zsh.enable = true;
+  programs = {
+    zsh = {
+      enable = true;
+    };
+  };
 
   imports = [ inputs.home-manager.nixosModules.home-manager ];
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      kathund = {
+      ${username} = {
         home = {
-          username = "kathund";
-          homeDirectory = "/home/kathund";
+          username = username;
+          homeDirectory = "/home/${username}";
           stateVersion = "25.05";
         };
-
-        programs.home-manager.enable = true;
+        programs = {
+          home-manager = {
+            enable = true;
+          };
+        };
       };
     };
   };

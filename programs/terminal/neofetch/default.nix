@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  username,
   ...
 }:
 let
@@ -15,10 +16,14 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.kathund = {
-      programs = {
-        ${program} = {
-          enable = true;
+    home-manager = {
+      users = {
+        ${username} = {
+          programs = {
+            ${program} = {
+              enable = true;
+            };
+          };
         };
       };
     };

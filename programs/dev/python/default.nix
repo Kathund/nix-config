@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  username,
   ...
 }:
 let
@@ -15,14 +16,18 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.kathund =
-      { pkgs, ... }:
-      {
-        home = {
-          packages = with pkgs; [
-            python312
-          ];
-        };
+    home-manager = {
+      users = {
+        ${username} =
+          { pkgs, ... }:
+          {
+            home = {
+              packages = with pkgs; [
+                python312
+              ];
+            };
+          };
       };
+    };
   };
 }

@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  username,
   ...
 }:
 let
@@ -15,19 +16,23 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.kathund =
-      { pkgs, ... }:
-      {
-        home = {
-          packages = with pkgs; [
-            nodejs_24
-            pnpm_9
-            prettier
-            eslint
-            tsx
-            typescript
-          ];
-        };
+    home-manager = {
+      users = {
+        ${username} =
+          { pkgs, ... }:
+          {
+            home = {
+              packages = with pkgs; [
+                nodejs_24
+                pnpm_9
+                prettier
+                eslint
+                tsx
+                typescript
+              ];
+            };
+          };
       };
+    };
   };
 }
