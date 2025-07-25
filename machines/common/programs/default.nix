@@ -1,5 +1,10 @@
 {
   config.programs = {
+    hardware = {
+      grub = {
+        enable = true;
+      };
+    };
     editors = {
       nvf = {
         enable = true;

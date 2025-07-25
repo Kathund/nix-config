@@ -1,0 +1,7 @@
+{
+  imports = [
+    ./grub
+    ./sddm
+    ./sound
+  ];
+}

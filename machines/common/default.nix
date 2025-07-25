@@ -1,13 +1,12 @@
 {
   imports = [
-    ./boot
-    ./fonts
     ./nix
     ./programs
   ];
 
   time.timeZone = "Australia/Perth";
   networking.networkmanager.enable = true;
+  nixpkgs.config.allowUnfree = true;
 
   i18n.defaultLocale = "en_AU.UTF-8";
 
