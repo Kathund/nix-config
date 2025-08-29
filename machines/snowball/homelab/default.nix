@@ -3,27 +3,25 @@
     enable = true;
     baseDomain = "kath.lol";
     services = {
-      arr = {
-        bazarr = {
-          enable = true;
-          port = 24570;
-        };
-        lidarr = {
-          enable = true;
-          port = 24571;
-        };
-        prowlarr = {
-          enable = true;
-          port = 24572;
-        };
-        radarr = {
-          enable = true;
-          port = 24573;
-        };
-        sonarr = {
-          enable = true;
-          port = 24574;
-        };
+      bazarr = {
+        enable = true;
+        port = 24570;
+      };
+      lidarr = {
+        enable = true;
+        port = 24571;
+      };
+      prowlarr = {
+        enable = true;
+        port = 24572;
+      };
+      radarr = {
+        enable = true;
+        port = 24573;
+      };
+      sonarr = {
+        enable = true;
+        port = 24574;
       };
       cloudflared = {
         enable = true;
@@ -33,21 +31,25 @@
         enable = true;
         port = 24575;
       };
-      flaresolverr = {
+      homepage-dashboard = {
         enable = true;
         port = 24576;
+        url = "homepage.kath.lol";
       };
       microbin = {
         enable = true;
         port = 24577;
+        url = "bin.kath.lol";
       };
       ntfy-sh = {
         enable = true;
         port = 24578;
+        url = "ntfy.kath.lol";
       };
       uptime-kuma = {
         enable = true;
         port = 3001;
+        url = "status.kath.lol";
       };
     };
   };

@@ -23,23 +23,21 @@ in
     };
     url = lib.mkOption {
       type = lib.types.str;
-      default = "bin.${homelab.baseDomain}";
+      default = "${service}.${homelab.baseDomain}";
     };
-    homepage.name = lib.mkOption {
-      type = lib.types.str;
-      default = "Deluge";
-    };
-    homepage.description = lib.mkOption {
-      type = lib.types.str;
-      default = "Torrent Client";
-    };
-    homepage.icon = lib.mkOption {
-      type = lib.types.str;
-      default = "${service}.svg";
-    };
-    homepage.category = lib.mkOption {
-      type = lib.types.str;
-      default = "Services";
+    homepage-dashboard = {
+      name = lib.mkOption {
+        type = lib.types.str;
+        default = service;
+      };
+      description = lib.mkOption {
+        type = lib.types.str;
+        default = "Torrent Client";
+      };
+      category = lib.mkOption {
+        type = lib.types.str;
+        default = "Downloads";
+      };
     };
   };
 

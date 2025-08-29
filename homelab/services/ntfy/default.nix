@@ -15,7 +15,7 @@ in
     };
     configDir = lib.mkOption {
       type = lib.types.str;
-      default = "/var/lib/ntfy-sh";
+      default = "/var/lib/${service}";
     };
     port = lib.mkOption {
       type = lib.types.port;
@@ -23,23 +23,21 @@ in
     };
     url = lib.mkOption {
       type = lib.types.str;
-      default = "ntfy.${homelab.baseDomain}";
+      default = "${service}.${homelab.baseDomain}";
     };
-    homepage.name = lib.mkOption {
-      type = lib.types.str;
-      default = "ntfy";
-    };
-    homepage.description = lib.mkOption {
-      type = lib.types.str;
-      default = "Mobile notfication tool";
-    };
-    homepage.icon = lib.mkOption {
-      type = lib.types.str;
-      default = "ntfy.svg";
-    };
-    homepage.category = lib.mkOption {
-      type = lib.types.str;
-      default = "Services";
+    homepage-dashboard = {
+      name = lib.mkOption {
+        type = lib.types.str;
+        default = service;
+      };
+      description = lib.mkOption {
+        type = lib.types.str;
+        default = "Mobile notfication tool";
+      };
+      category = lib.mkOption {
+        type = lib.types.str;
+        default = "Services";
+      };
     };
   };
 

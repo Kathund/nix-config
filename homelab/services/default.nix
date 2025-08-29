@@ -3,7 +3,7 @@
     ./arr
     ./cloudflared
     ./deluge
-    ./flaresolverr
+    ./homepage-dashboard
     ./microbin
     ./ntfy
     ./uptime-kuma

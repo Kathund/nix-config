@@ -15,7 +15,7 @@ in
     };
     configDir = lib.mkOption {
       type = lib.types.str;
-      default = "/var/lib/uptime-kuma";
+      default = "/var/lib/${service}";
     };
     port = lib.mkOption {
       type = lib.types.port;
@@ -23,23 +23,21 @@ in
     };
     url = lib.mkOption {
       type = lib.types.str;
-      default = "status.${homelab.baseDomain}";
+      default = "${service}.${homelab.baseDomain}";
     };
-    homepage.name = lib.mkOption {
-      type = lib.types.str;
-      default = "Uptime Kuma";
-    };
-    homepage.description = lib.mkOption {
-      type = lib.types.str;
-      default = "Service monitoring tool";
-    };
-    homepage.icon = lib.mkOption {
-      type = lib.types.str;
-      default = "uptime-kuma.svg";
-    };
-    homepage.category = lib.mkOption {
-      type = lib.types.str;
-      default = "Services";
+    homepage-dashboard = {
+      name = lib.mkOption {
+        type = lib.types.str;
+        default = service;
+      };
+      description = lib.mkOption {
+        type = lib.types.str;
+        default = "Service monitoring tool";
+      };
+      category = lib.mkOption {
+        type = lib.types.str;
+        default = "Services";
+      };
     };
   };
 

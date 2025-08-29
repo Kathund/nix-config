@@ -7,7 +7,6 @@
 let
   service = "cloudflared";
   cfg = config.homelab.services.${service};
-  homelab = config.homelab;
 in
 {
   options.homelab.services.${service} = {

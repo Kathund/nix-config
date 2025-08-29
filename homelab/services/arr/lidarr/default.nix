@@ -5,11 +5,11 @@
 }:
 let
   service = "lidarr";
-  cfg = config.homelab.services.arr.${service};
+  cfg = config.homelab.services.${service};
   homelab = config.homelab;
 in
 {
-  options.homelab.services.arr.${service} = {
+  options.homelab.services.${service} = {
     enable = lib.mkEnableOption {
       description = "Enable ${service}";
     };
@@ -25,21 +25,19 @@ in
       type = lib.types.str;
       default = "${service}.${homelab.baseDomain}";
     };
-    homepage.name = lib.mkOption {
-      type = lib.types.str;
-      default = "Radarr";
-    };
-    homepage.description = lib.mkOption {
-      type = lib.types.str;
-      default = "Music collection manager";
-    };
-    homepage.icon = lib.mkOption {
-      type = lib.types.str;
-      default = "${service}.svg";
-    };
-    homepage.category = lib.mkOption {
-      type = lib.types.str;
-      default = "Arr";
+    homepage-dashboard = {
+      name = lib.mkOption {
+        type = lib.types.str;
+        default = service;
+      };
+      description = lib.mkOption {
+        type = lib.types.str;
+        default = "Music collection manager";
+      };
+      category = lib.mkOption {
+        type = lib.types.str;
+        default = "Arr";
+      };
     };
   };
 
