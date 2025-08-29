@@ -47,26 +47,7 @@ in
         listenPort = cfg.port;
         allowedHosts = "localhost:${toString cfg.port},127.0.0.1:${toString cfg.port},${cfg.url}";
         settings = {
-          background = {
-            image = "https://i.imgur.com/lMdnZls.jpeg";
-            blur = "sm";
-            brightness = 50;
-            opacity = 50;
-          };
-          statusStyle = "dot";
-          hideVersion = "true";
-          cardBlur = "md";
-          headerStyle = "clean";
-          theme = "dark";
-          color = "slate";
           layout = [
-            {
-              Glances = {
-                header = false;
-                style = "row";
-                columns = 4;
-              };
-            }
             {
               Arr = {
                 header = true;
