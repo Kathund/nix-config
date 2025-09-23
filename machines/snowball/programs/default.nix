@@ -26,6 +26,7 @@
           enable = true;
           brightness = 0.82;
           backend = "fastfetch";
+          preset = "bisexual";
         };
         lazygit = {
           enable = true;

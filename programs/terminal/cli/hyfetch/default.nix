@@ -161,6 +161,7 @@ in
                   mode = cfg.colorAlign;
                 };
                 backend = cfg.backend;
+                pride_month_disable = false;
               };
             };
           };
