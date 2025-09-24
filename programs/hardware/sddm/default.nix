@@ -13,20 +13,15 @@ in
     enable = lib.mkEnableOption {
       description = "Enable ${program}";
     };
-    wallpaper = lib.mkOption {
-      type = lib.types.path;
-      default = ../../../assets/sddm-wall.png;
-      description = "Wallpaper to use for the SDDM Astronaut theme";
-    };
   };
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = [
       (pkgs.catppuccin-sddm.override {
         flavor = "mocha";
+        accent = "sapphire";
         font = "JetBrainsMono Nerd Font";
         fontSize = "24";
-        background = cfg.wallpaper;
         loginBackground = false;
       })
     ];
@@ -34,7 +29,7 @@ in
       displayManager = {
         sddm = {
           enable = true;
-          theme = "catppuccin-mocha";
+          theme = "catppuccin-mocha-sapphire";
           package = pkgs.kdePackages.sddm;
           wayland = {
             enable = true;

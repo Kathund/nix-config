@@ -23,7 +23,7 @@ in
           programs = {
             ${program} = {
               enable = true;
-              package = pkgs.rofi-wayland;
+              package = pkgs.rofi;
               theme = "/home/${username}/nix-config/programs/misc/rofi/themes/rounded-nord-dark.rasi";
             };
           };
