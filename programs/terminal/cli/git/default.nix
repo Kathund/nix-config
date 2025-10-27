@@ -28,8 +28,12 @@ in
           programs = {
             ${program} = {
               enable = true;
-              userName = cfg.username;
-              userEmail = cfg.email;
+              settings = {
+                user = {
+                  name = cfg.username;
+                  email = cfg.email;
+                };
+              };
             };
           };
         };
