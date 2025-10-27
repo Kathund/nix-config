@@ -4,12 +4,12 @@
   ...
 }:
 let
-  service = "microbin";
-  cfg = config.homelab.services.${service};
-  homelab = config.homelab;
+  service = "lidarr";
+  cfg = config.programs.homelab.services.${service};
+  homelab = config.programs.homelab;
 in
 {
-  options.homelab.services.${service} = {
+  options.programs.homelab.services.${service} = {
     enable = lib.mkEnableOption {
       description = "Enable ${service}";
     };
@@ -32,11 +32,11 @@ in
       };
       description = lib.mkOption {
         type = lib.types.str;
-        default = "A minimal pastebin";
+        default = "Music collection manager";
       };
       category = lib.mkOption {
         type = lib.types.str;
-        default = "Services";
+        default = "Arr";
       };
     };
   };
@@ -45,22 +45,12 @@ in
     services = {
       ${service} = {
         enable = true;
+        user = homelab.user;
+        group = homelab.group;
         settings = {
-          MICROBIN_WIDE = true;
-          MICROBIN_PUBLIC_PATH = "https://${cfg.url}/";
-          MICROBIN_BIND = "127.0.0.1";
-          MICROBIN_PORT = cfg.port;
-          MICROBIN_HIDE_LOGO = true;
-          MICROBIN_HIDE_FOOTER = true;
-          MICROBIN_HIDE_HEADER = true;
-          MICROBIN_DISABLE_TELEMETRY = true;
-          MICROBIN_SHOW_READ_STATS = true;
-          MICROBIN_EDITABLE = false;
-          MICROBIN_ENABLE_BURN_AFTER = true;
-          MICROBIN_ETERNAL_PASTA = true;
-          MICROBIN_DEFAULT_EXPIRY = "1week";
-          MICROBIN_PRIVATE = false;
-          MICROBIN_HIGHLIGHTSYNTAX = true;
+          server = {
+            port = cfg.port;
+          };
         };
       };
     };

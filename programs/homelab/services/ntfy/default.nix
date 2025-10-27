@@ -4,12 +4,12 @@
   ...
 }:
 let
-  service = "bazarr";
-  cfg = config.homelab.services.${service};
-  homelab = config.homelab;
+  service = "ntfy-sh";
+  cfg = config.programs.homelab.services.${service};
+  homelab = config.programs.homelab;
 in
 {
-  options.homelab.services.${service} = {
+  options.programs.homelab.services.${service} = {
     enable = lib.mkEnableOption {
       description = "Enable ${service}";
     };
@@ -32,11 +32,11 @@ in
       };
       description = lib.mkOption {
         type = lib.types.str;
-        default = "Subtitle manager";
+        default = "Mobile notfication tool";
       };
       category = lib.mkOption {
         type = lib.types.str;
-        default = "Arr";
+        default = "Services";
       };
     };
   };
@@ -45,9 +45,12 @@ in
     services = {
       ${service} = {
         enable = true;
-        user = homelab.user;
-        group = homelab.group;
-        listenPort = cfg.port;
+        settings = {
+          base-url = "https://${cfg.url}";
+          listen-http = ":${toString cfg.port}";
+          web-root = "disable";
+          auth-default-access = "read-only";
+        };
       };
     };
   };

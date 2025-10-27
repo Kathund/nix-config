@@ -6,10 +6,10 @@
 }:
 let
   service = "cloudflared";
-  cfg = config.homelab.services.${service};
+  cfg = config.programs.homelab.services.${service};
 in
 {
-  options.homelab.services.${service} = {
+  options.programs.homelab.services.${service} = {
     enable = lib.mkEnableOption {
       description = "Enable ${service}";
     };

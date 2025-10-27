@@ -1,9 +1,9 @@
 { lib, config, ... }:
 let
-  cfg = config.homelab;
+  cfg = config.programs.homelab;
 in
 {
-  options.homelab = {
+  options.programs.homelab = {
     enable = lib.mkEnableOption "The homelab services and configuration variables";
     user = lib.mkOption {
       default = "share";

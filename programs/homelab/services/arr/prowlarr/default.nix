@@ -5,11 +5,11 @@
 }:
 let
   service = "prowlarr";
-  cfg = config.homelab.services.${service};
-  homelab = config.homelab;
+  cfg = config.programs.homelab.services.${service};
+  homelab = config.programs.homelab;
 in
 {
-  options.homelab.services.${service} = {
+  options.programs.homelab.services.${service} = {
     enable = lib.mkEnableOption {
       description = "Enable ${service}";
     };

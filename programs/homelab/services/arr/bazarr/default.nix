@@ -4,12 +4,12 @@
   ...
 }:
 let
-  service = "lidarr";
-  cfg = config.homelab.services.${service};
-  homelab = config.homelab;
+  service = "bazarr";
+  cfg = config.programs.homelab.services.${service};
+  homelab = config.programs.homelab;
 in
 {
-  options.homelab.services.${service} = {
+  options.programs.homelab.services.${service} = {
     enable = lib.mkEnableOption {
       description = "Enable ${service}";
     };
@@ -32,7 +32,7 @@ in
       };
       description = lib.mkOption {
         type = lib.types.str;
-        default = "Music collection manager";
+        default = "Subtitle manager";
       };
       category = lib.mkOption {
         type = lib.types.str;
@@ -47,11 +47,7 @@ in
         enable = true;
         user = homelab.user;
         group = homelab.group;
-        settings = {
-          server = {
-            port = cfg.port;
-          };
-        };
+        listenPort = cfg.port;
       };
     };
   };

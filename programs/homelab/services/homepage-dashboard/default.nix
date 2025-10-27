@@ -5,11 +5,11 @@
 }:
 let
   service = "homepage-dashboard";
-  cfg = config.homelab.services.${service};
-  homelab = config.homelab;
+  cfg = config.programs.homelab.services.${service};
+  homelab = config.programs.homelab;
 in
 {
-  options.homelab.services.${service} = {
+  options.programs.homelab.services.${service} = {
     enable = lib.mkEnableOption {
       description = "Enable ${service}";
     };
@@ -75,7 +75,7 @@ in
               "Downloads"
               "Services"
             ];
-            hl = config.homelab.services;
+            hl = config.programs.homelab.services;
             homepage-dsahboardServices =
               x:
               (lib.attrsets.filterAttrs (

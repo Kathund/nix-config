@@ -35,7 +35,6 @@
         nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs machine username; };
           modules = [
-            ./homelab
             ./machines/common
             ./machines/${machine}
             ./programs

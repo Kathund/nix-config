@@ -4,12 +4,12 @@
   ...
 }:
 let
-  service = "uptime-kuma";
-  cfg = config.homelab.services.${service};
-  homelab = config.homelab;
+  service = "sonarr";
+  cfg = config.programs.homelab.services.${service};
+  homelab = config.programs.homelab;
 in
 {
-  options.homelab.services.${service} = {
+  options.programs.homelab.services.${service} = {
     enable = lib.mkEnableOption {
       description = "Enable ${service}";
     };
@@ -32,11 +32,15 @@ in
       };
       description = lib.mkOption {
         type = lib.types.str;
-        default = "Service monitoring tool";
+        default = "TV Show collection manager";
+      };
+      icon = lib.mkOption {
+        type = lib.types.str;
+        default = "${service}.svg";
       };
       category = lib.mkOption {
         type = lib.types.str;
-        default = "Services";
+        default = "Arr";
       };
     };
   };
@@ -45,8 +49,12 @@ in
     services = {
       ${service} = {
         enable = true;
+        user = homelab.user;
+        group = homelab.group;
         settings = {
-          UPTIME_KUMA_PORT = toString cfg.port;
+          server = {
+            port = cfg.port;
+          };
         };
       };
     };
