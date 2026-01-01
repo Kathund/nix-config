@@ -29,6 +29,15 @@ in
               kdePackages.kio-extras
               kdePackages.dolphin
             ];
+            wayland = {
+              windowManager = {
+                hyprland = {
+                  settings = {
+                    bind = [ "SUPER, E, exec, ${program}" ];
+                  };
+                };
+              };
+            };
           };
       };
     };
