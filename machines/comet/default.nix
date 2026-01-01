@@ -23,12 +23,6 @@
     };
   };
 
-  programs = {
-    firefox = {
-      enable = true;
-    };
-  };
-
   boot = {
     loader = {
       grub = {

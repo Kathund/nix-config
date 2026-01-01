@@ -6,6 +6,18 @@
   config = {
     modules = {
       configPath = "/home/${username}/github/nix-config";
+      browsers = {
+        chromium = {
+          enable = true;
+        };
+        firefox = {
+          enable = true;
+        };
+        librewolf = {
+          enable = true;
+          hyprlandBind = true;
+        };
+      };
       dev = {
         nix = {
           enable = true;

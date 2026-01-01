@@ -1,6 +1,12 @@
 {
   config = {
     modules = {
+      browsers = {
+        librewolf = {
+          enable = true;
+          hyprlandBind = true;
+        };
+      };
       dev = {
         nix = {
           enable = true;
