@@ -15,6 +15,37 @@ in
     enable = lib.mkEnableOption {
       description = "Enable hypr${program}";
     };
+    bar = {
+      transparent = lib.mkOption {
+        type = lib.types.bool;
+        default = false;
+      };
+      location = lib.mkOption {
+        type = lib.types.enum [
+          "top"
+          "bottom"
+        ];
+        default = "bottom";
+        description = "Change hypr${program}'s bar location";
+      };
+    };
+    osd = {
+      location = lib.mkOption {
+        type = lib.types.enum [
+          "top"
+          "bottom"
+        ];
+        default = "top";
+        description = "Change hypr${program}'s osd location";
+      };
+    };
+    font = {
+      size = lib.mkOption {
+        type = lib.types.str;
+        default = "16px";
+        description = "Change hypr${program}'s font size";
+      };
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -28,12 +59,16 @@ in
               settings = {
                 theme = {
                   bar = {
-                    location = "bottom";
+                    transparent = cfg.bar.transparent;
+                    location = cfg.bar.location;
                   };
                   osd = {
                     duration = 1500;
                     orientation = "horizontal";
-                    location = "top";
+                    location = cfg.osd.location;
+                  };
+                  font = {
+                    size = cfg.font.size;
                   };
                 };
                 bar = {
@@ -65,7 +100,7 @@ in
                     showWifiInfo = true;
                   };
                   clock = {
-                    format = "%d  %I:%M";
+                    format = "%d %H:%M";
                   };
                   notifications = {
                     hideCountWhenZero = true;
@@ -138,6 +173,9 @@ in
                     };
                     directories = {
                       enabled = false;
+                    };
+                    stats = {
+                      enable_gpu = true;
                     };
                   };
                 };
