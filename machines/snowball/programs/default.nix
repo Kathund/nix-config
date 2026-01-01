@@ -1,5 +1,10 @@
 {
   config.programs = {
+    hardware = {
+      grub = {
+        enable = true;
+      };
+    };
     homelab = {
       enable = true;
       baseDomain = "kath.lol";

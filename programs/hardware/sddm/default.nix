@@ -21,7 +21,7 @@ in
         flavor = "mocha";
         accent = "sapphire";
         font = "JetBrainsMono Nerd Font";
-        fontSize = "24";
+        fontSize = "16";
         loginBackground = false;
       })
     ];

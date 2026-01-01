@@ -20,7 +20,7 @@ in
       monocraft
       open-sans
       merriweather
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       nerd-fonts.jetbrains-mono
       jetbrains-mono
     ];
