@@ -106,6 +106,11 @@
       };
     };
     misc = {
+      games = {
+        steam = {
+          enable = true;
+        };
+      };
       obs-studio = {
         enable = true;
       };
