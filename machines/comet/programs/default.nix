@@ -64,7 +64,7 @@
         };
         hyfetch = {
           enable = true;
-          brightness = 0.82;
+          brightness = 0.50;
           backend = "fastfetch";
           preset = "bisexual";
         };
