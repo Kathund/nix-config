@@ -1,5 +1,10 @@
 {
+  username,
+  ...
+}:
+{
   config.programs = {
+    configPath = "/home/${username}/github/nix-config";
     dev = {
       nix = {
         enable = true;

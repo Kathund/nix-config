@@ -17,7 +17,7 @@ in
     };
     lockscreen = lib.mkOption {
       type = lib.types.str;
-      default = "/home/${username}/nix-config/assets/lockscreen.png";
+      default = "${config.programs.configPath}/assets/lockscreen.png";
     };
   };
 

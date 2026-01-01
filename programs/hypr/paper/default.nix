@@ -15,7 +15,7 @@ in
     };
     wallpaper = lib.mkOption {
       type = lib.types.str;
-      default = "/home/${username}/nix-config/assets/wallpaper.png";
+      default = "${config.programs.configPath}/assets/wallpaper.png";
     };
   };
 
