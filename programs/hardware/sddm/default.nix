@@ -13,6 +13,10 @@ in
     enable = lib.mkEnableOption {
       description = "Enable ${program}";
     };
+    fontSize = lib.mkOption {
+      type = lib.types.str;
+      default = "24";
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -21,7 +25,7 @@ in
         flavor = "mocha";
         accent = "sapphire";
         font = "JetBrainsMono Nerd Font";
-        fontSize = "16";
+        fontSize = cfg.fontSize;
         loginBackground = false;
       })
     ];

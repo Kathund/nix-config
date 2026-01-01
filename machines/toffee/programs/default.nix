@@ -16,6 +16,7 @@
       };
       sddm = {
         enable = true;
+        fontSize = "16";
       };
       sound = {
         enable = true;
