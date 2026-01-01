@@ -17,6 +17,11 @@ in
   };
 
   config = lib.mkIf cfg.enable {
+    services = {
+      udisks2 = {
+        enable = true;
+      };
+    };
     home-manager = {
       users = {
         ${username} =
@@ -28,6 +33,7 @@ in
               kdePackages.kio-fuse
               kdePackages.kio-extras
               kdePackages.dolphin
+              kdePackages.dolphin-plugins
             ];
             wayland = {
               windowManager = {
