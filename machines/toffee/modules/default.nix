@@ -134,6 +134,9 @@
         };
       };
       misc = {
+        flatpak = {
+          enable = true;
+        };
         games = {
           steam = {
             enable = true;
