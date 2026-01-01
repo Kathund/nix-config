@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  username,
   ...
 }:
 let
@@ -16,8 +17,16 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [
-      spotify
-    ];
+    home-manager = {
+      users = {
+        ${username} =
+          { pkgs, ... }:
+          {
+            home.packages = with pkgs; [
+              spotify
+            ];
+          };
+      };
+    };
   };
 }
