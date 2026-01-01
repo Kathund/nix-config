@@ -37,7 +37,7 @@
           modules = [
             ./machines/common
             ./machines/${machine}
-            ./programs
+            ./modules
             ./users/${username}
           ];
         };

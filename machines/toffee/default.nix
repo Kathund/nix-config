@@ -1,7 +1,7 @@
 {
   imports = [
+    ./modules
     ./hardware-configuration.nix
-    ./programs
   ];
 
   networking = {
@@ -16,12 +16,18 @@
       enable = true;
     };
   };
+
   security = {
     rtkit = {
       enable = true;
     };
   };
-  programs.firefox.enable = true;
+
+  programs = {
+    firefox = {
+      enable = true;
+    };
+  };
 
   boot = {
     loader = {

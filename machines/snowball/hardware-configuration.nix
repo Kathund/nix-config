@@ -13,30 +13,34 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.initrd.availableKernelModules = [
-    "xhci_pci"
-    "ahci"
-    "usbhid"
-    "usb_storage"
-    "sd_mod"
-  ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
-
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/b20dd920-a6bf-4cb5-87eb-e7088352fc77";
-    fsType = "ext4";
+  boot = {
+    initrd = {
+      availableKernelModules = [
+        "xhci_pci"
+        "ahci"
+        "usbhid"
+        "usb_storage"
+        "sd_mod"
+      ];
+      kernelModules = [ ];
+    };
+    kernelModules = [ "kvm-amd" ];
+    extraModulePackages = [ ];
   };
 
-  fileSystems."/mnt/data/movies" = {
-    device = "/dev/disk/by-uuid/9bd0f231-e59f-4eb7-a3d8-8e899088afa2";
-    fsType = "ext4";
-  };
-
-  fileSystems."/mnt/data/shows" = {
-    device = "/dev/disk/by-uuid/46214593-4ec5-406b-bf12-d90d2014add4";
-    fsType = "ext4";
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/b20dd920-a6bf-4cb5-87eb-e7088352fc77";
+      fsType = "ext4";
+    };
+    "/mnt/data/movies" = {
+      device = "/dev/disk/by-uuid/9bd0f231-e59f-4eb7-a3d8-8e899088afa2";
+      fsType = "ext4";
+    };
+    "/mnt/data/shows" = {
+      device = "/dev/disk/by-uuid/46214593-4ec5-406b-bf12-d90d2014add4";
+      fsType = "ext4";
+    };
   };
 
   swapDevices = [ ];
@@ -45,9 +49,20 @@
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
+  networking = {
+    useDHCP = lib.mkDefault true;
+  };
   # networking.interfaces.enp6s0.useDHCP = lib.mkDefault true;
 
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  nixpkgs = {
+    hostPlatform = lib.mkDefault "x86_64-linux";
+  };
+
+  hardware = {
+    cpu = {
+      amd = {
+        updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+      };
+    };
+  };
 }

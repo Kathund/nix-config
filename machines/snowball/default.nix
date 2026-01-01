@@ -1,7 +1,7 @@
 {
   imports = [
+    ./modules
     ./hardware-configuration.nix
-    ./programs
   ];
 
   networking = {
