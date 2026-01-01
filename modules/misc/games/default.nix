@@ -1,5 +1,6 @@
 {
   imports = [
+    ./prism-launcher
     ./steam
   ];
 }

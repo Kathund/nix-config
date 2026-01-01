@@ -138,6 +138,9 @@
           enable = true;
         };
         games = {
+          prism-launcher = {
+            enable = true;
+          };
           steam = {
             enable = true;
           };
