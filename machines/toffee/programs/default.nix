@@ -89,6 +89,9 @@
       };
     };
     misc = {
+      obs-studio = {
+        enable = true;
+      };
       rofi = {
         enable = true;
       };
