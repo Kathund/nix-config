@@ -46,6 +46,23 @@
         enable = true;
       };
     };
+    kde = {
+      ark = {
+        enable = true;
+      };
+      dolphin = {
+        enable = true;
+      };
+      gwenview = {
+        enable = true;
+      };
+      kate = {
+        enable = true;
+      };
+      krita = {
+        enable = true;
+      };
+    };
     styles = {
       fonts = {
         enable = true;

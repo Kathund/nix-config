@@ -5,6 +5,7 @@
     ./hardware
     ./homelab
     ./hypr
+    ./kde
     ./misc
     ./styles
     ./terminal
