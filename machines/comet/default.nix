@@ -1,4 +1,8 @@
 {
+  username,
+  ...
+}:
+{
   imports = [
     ./modules
     ./hardware-configuration.nix
@@ -24,6 +28,22 @@
     loader = {
       grub = {
         device = "/dev/sda";
+      };
+    };
+  };
+
+  home-manager = {
+    users = {
+      ${username} = {
+        wayland = {
+          windowManager = {
+            hyprland = {
+              settings = {
+                monitor = [ ", preferred, auto, 1" ];
+              };
+            };
+          };
+        };
       };
     };
   };

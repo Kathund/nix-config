@@ -45,7 +45,6 @@ in
                 portalPackage =
                   inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
                 settings = {
-                  monitor = [ ", preferred, auto, 1" ];
                   env = [
                     "NIXOS_OZONE_WL, 1"
                     "XCURSER_SIZE, 24"
