@@ -16,6 +16,7 @@
         librewolf = {
           enable = true;
           hyprlandBind = true;
+          setDefault = true;
         };
       };
       dev = {

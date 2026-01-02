@@ -17,6 +17,10 @@ in
       type = lib.types.bool;
       default = false;
     };
+    setDefault = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -34,6 +38,18 @@ in
                 settings = {
                   bind = [ "SUPER, S, exec, ${program}" ];
                 };
+              };
+            };
+          };
+          xdg = lib.mkIf cfg.setDefault {
+            mimeApps = {
+              enable = true;
+              defaultApplications = {
+                "text/html" = "chromium-browser.desktop";
+                "x-scheme-handler/http" = "chromium-browser.desktop";
+                "x-scheme-handler/https" = "chromium-browser.desktop";
+                "x-scheme-handler/about" = "chromium-browser.desktop";
+                "x-scheme-handler/unknown" = "chromium-browser.desktop";
               };
             };
           };
