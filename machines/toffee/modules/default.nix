@@ -134,6 +134,9 @@
         };
       };
       misc = {
+        cliphist = {
+          enable = true;
+        };
         flatpak = {
           enable = true;
         };
