@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 let
@@ -15,6 +16,9 @@ in
   };
 
   config = lib.mkIf cfg.enable {
+    environment.systemPackages = with pkgs; [
+      protonup-qt
+    ];
     programs = {
       ${program} = {
         enable = true;
@@ -24,6 +28,9 @@ in
         dedicatedServer = {
           openFirewall = true;
         };
+        extraCompatPackages = with pkgs; [
+          proton-ge-bin
+        ];
       };
       gamemode = {
         enable = true;
