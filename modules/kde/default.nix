@@ -5,5 +5,6 @@
     ./gwenview
     ./kate
     ./krita
+    ./plasma
   ];
 }

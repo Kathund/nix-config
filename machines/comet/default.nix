@@ -9,9 +9,6 @@
   };
 
   services = {
-    xserver = {
-      enable = true;
-    };
     printing = {
       enable = true;
     };

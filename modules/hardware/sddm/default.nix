@@ -34,7 +34,7 @@ in
         sddm = {
           enable = true;
           theme = "catppuccin-mocha-sapphire";
-          package = pkgs.kdePackages.sddm;
+          package = lib.mkDefault pkgs.kdePackages.sddm;
           wayland = {
             enable = true;
           };

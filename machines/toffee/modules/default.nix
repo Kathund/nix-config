@@ -91,6 +91,9 @@
         krita = {
           enable = true;
         };
+        plasma = {
+          enable = true;
+        };
       };
       styles = {
         fonts = {
