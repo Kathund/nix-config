@@ -142,6 +142,8 @@ in
                     "SUPER, right, movefocus, r"
                     "SUPER, up, movefocus, u"
                     "SUPER, down, movefocus, d"
+                    "SUPER, 0, workspace, 10"
+                    "SUPER SHIFT, 0, movetoworkspace, 10"
                   ]
                   ++
                     # workspaces: binds SUPER + [shift +] {1..9} to [move to] workspace {1..9}
