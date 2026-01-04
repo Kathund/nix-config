@@ -100,7 +100,7 @@ in
                     showWifiInfo = true;
                   };
                   clock = {
-                    format = "%d %H:%M";
+                    format = "%d %H:%M:%S";
                   };
                   notifications = {
                     hideCountWhenZero = true;
