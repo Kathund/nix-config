@@ -7,16 +7,39 @@
 }:
 let
   program = "nix";
-  cfg = config.modules.dev.${program};
+  cfg = config.modules.dev.languages.${program};
 in
 {
-  options.modules.dev.${program} = {
+  options.modules.dev.languages.${program} = {
     enable = lib.mkEnableOption {
       description = "Enable ${program}";
     };
   };
 
   config = lib.mkIf cfg.enable {
+    programs = {
+      nvf = {
+        settings = {
+          vim = {
+            languages = {
+              nix = {
+                enable = true;
+                format = {
+                  enable = true;
+                  type = [ "nixfmt" ];
+                };
+                lsp = {
+                  enable = true;
+                };
+                treesitter = {
+                  enable = true;
+                };
+              };
+            };
+          };
+        };
+      };
+    };
     home-manager = {
       users = {
         ${username} =
@@ -38,7 +61,9 @@ in
                 compose2nix
               ];
             };
-            nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+            nix = {
+              nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+            };
           };
       };
     };

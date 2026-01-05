@@ -18,7 +18,6 @@ in
   imports = [
     ./browsers
     ./dev
-    ./editors
     ./hardware
     ./homelab
     ./hypr

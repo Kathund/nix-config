@@ -8,6 +8,7 @@
     ./lazygit
     ./neofetch
     ./qwqfetch
+    ./ripgrep
     ./starship
     ./zsh
   ];

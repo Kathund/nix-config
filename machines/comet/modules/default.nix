@@ -8,11 +8,13 @@
         };
       };
       dev = {
-        nix = {
-          enable = true;
-        };
-        nodejs = {
-          enable = true;
+        languages = {
+          nodejs = {
+            enable = true;
+          };
+          json = {
+            enable = true;
+          };
         };
       };
       hardware = {
@@ -61,21 +63,6 @@
             enable = true;
           };
           fzf = {
-            enable = true;
-          };
-          gh = {
-            enable = true;
-          };
-          git = {
-            enable = true;
-          };
-          hyfetch = {
-            enable = true;
-            brightness = 0.50;
-            backend = "fastfetch";
-            preset = "bisexual";
-          };
-          lazygit = {
             enable = true;
           };
           starship = {
