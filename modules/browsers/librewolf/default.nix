@@ -176,6 +176,11 @@ in
                     install_url = "https://addons.mozilla.org/firefox/downloads/latest/firefox-color/latest.xpi";
                     installation_mode = "force_installed";
                   };
+                  # 7tv nightly:
+                  "moz-addon@7tv.app" = {
+                    install_url = "https://addons.mozilla.org/firefox/downloads/latest/7tv-nightly-extension/latest.xpi";
+                    installation_mode = "force_installed";
+                  };
                 };
               };
             };
