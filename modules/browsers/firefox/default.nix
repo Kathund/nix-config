@@ -166,6 +166,16 @@ in
                     install_url = "https://addons.mozilla.org/firefox/downloads/latest/clearurls/latest.xpi";
                     installation_mode = "force_installed";
                   };
+                  # Indie Wiki Buddy:
+                  "{cb31ec5d-c49a-4e5a-b240-16c767444f62}" = {
+                    install_url = "https://addons.mozilla.org/firefox/downloads/latest/indie-wiki-buddy/latest.xpi";
+                    installation_mode = "force_installed";
+                  };
+                  # Firefox Color:
+                  "FirefoxColor@mozilla.com" = {
+                    install_url = "https://addons.mozilla.org/firefox/downloads/latest/firefox-color/latest.xpi";
+                    installation_mode = "force_installed";
+                  };
                 };
               };
             };
