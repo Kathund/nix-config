@@ -27,11 +27,13 @@ in
             "hypr${program}" = {
               enable = true;
               settings = {
-                ipc = "on";
                 splash = false;
-                splash_offset = 2.0;
-                preload = [ cfg.wallpaper ];
-                wallpaper = [ ", ${cfg.wallpaper}" ];
+                wallpaper = [
+                  {
+                    monitor = "DP-1";
+                    path = cfg.wallpaper;
+                  }
+                ];
               };
             };
           };
