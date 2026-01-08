@@ -50,7 +50,7 @@ in
                     "browser.fixup.alternate.enabled" = false;
                     "browser.newtab.preload" = true;
                     "browser.newtabpage.activity-stream.section.highlights.includePocket" = false;
-                    "browser.newtabpage.enabled" = false;
+                    "browser.newtabpage.enabled" = true;
                     "browser.newtabpage.enhanced" = false;
                     "browser.newtabpage.introShown" = true;
                     "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons" = false;
