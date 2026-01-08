@@ -1,0 +1,14 @@
+{
+  "custom/mic": {
+    "execute": "wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q \"MUTED\" && echo '{\"alt\": \"off\"}' || echo '{\"alt\": \"on\"}'",
+    "executeOnAction": "",
+    "interval": 250,
+    "icon": {
+      "on": "󰍬",
+      "off": "󰍭"
+    },
+    "actions": {
+      "onLeftClick": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+    }
+  }
+}

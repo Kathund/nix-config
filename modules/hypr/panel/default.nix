@@ -79,7 +79,9 @@ in
                         "workspaces"
                         "windowtitle"
                       ];
+                      middle = [ ];
                       right = [
+                        "custom/mic"
                         "network"
                         "systray"
                         "clock"
@@ -175,7 +177,7 @@ in
                       enabled = false;
                     };
                     stats = {
-                      enable_gpu = true;
+                      enable_gpu = false;
                     };
                   };
                 };
@@ -188,6 +190,14 @@ in
                 settings = {
                   exec-once = [ "hypr${program}" ];
                 };
+              };
+            };
+          };
+
+          home = {
+            file = {
+              ".config/hyprpanel/modules.json" = {
+                source = ./modules.json;
               };
             };
           };
