@@ -2,5 +2,6 @@
   imports = [
     ./editors
     ./languages
+    ./other
   ];
 }

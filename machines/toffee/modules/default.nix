@@ -31,6 +31,11 @@
             enable = true;
           };
         };
+        other = {
+          mongodb-compass = {
+            enable = true;
+          };
+        };
       };
       hardware = {
         drivers = {
