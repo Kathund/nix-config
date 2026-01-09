@@ -33,6 +33,15 @@ in
                 treesitter = {
                   enable = true;
                 };
+                extensions = {
+                  ts-error-translator = {
+                    enable = true;
+                  };
+                };
+                extraDiagnostics = {
+                  enable = true;
+                  types = [ "eslint_d" ];
+                };
               };
             };
           };
