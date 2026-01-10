@@ -20,6 +20,13 @@
         };
       };
       dev = {
+        editors = {
+          jetbrains = {
+            idea = {
+              enable = true;
+            };
+          };
+        };
         languages = {
           nodejs = {
             enable = true;
