@@ -19,6 +19,10 @@ in
     email = lib.mkOption {
       type = lib.types.str;
     };
+    signCommits = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -33,6 +37,9 @@ in
                   name = cfg.username;
                   email = cfg.email;
                 };
+              };
+              signing = {
+                signByDefault = cfg.signCommits;
               };
             };
           };

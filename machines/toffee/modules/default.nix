@@ -137,6 +137,9 @@
           zsh = {
             enable = true;
           };
+          git = {
+            signCommits = true;
+          };
         };
       };
       misc = {

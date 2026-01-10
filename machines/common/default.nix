@@ -57,6 +57,15 @@
     };
   };
 
+  programs = {
+    gnupg = {
+      agent = {
+        enable = true;
+        enableSSHSupport = true;
+      };
+    };
+  };
+
   system = {
     stateVersion = "26.11";
   };

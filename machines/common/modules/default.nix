@@ -24,7 +24,7 @@
           git = {
             enable = true;
             username = "Jacob";
-            email = "admin@kath.lol";
+            email = "kathund@proton.me";
           };
           ripgrep = {
             enable = true;
