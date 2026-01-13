@@ -82,6 +82,11 @@ in
               };
             };
           };
+          catppuccin = {
+            ${program} = {
+              enable = false;
+            };
+          };
         };
       };
     };

@@ -118,14 +118,6 @@
           enable = true;
         };
       };
-      styles = {
-        fonts = {
-          enable = true;
-        };
-        gtk = {
-          enable = true;
-        };
-      };
       terminal = {
         kitty = {
           enable = true;

@@ -44,6 +44,11 @@ in
                 initContent = '''';
               };
             };
+            catppuccin = {
+              zsh-syntax-highlighting = {
+                enable = false;
+              };
+            };
           };
       };
     };

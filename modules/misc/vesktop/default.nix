@@ -24,6 +24,11 @@ in
               enable = true;
             };
           };
+          catppuccin = {
+            ${program} = {
+              enable = false;
+            };
+          };
         };
       };
     };

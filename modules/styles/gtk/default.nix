@@ -39,10 +39,6 @@ in
               package = pkgs.catppuccin-gtk;
               name = "Catppuccin";
             };
-            iconTheme = {
-              package = pkgs.adwaita-icon-theme;
-              name = "Adwaita";
-            };
             font = {
               name = "JetBrainsMono Nerd Font";
               size = 12;

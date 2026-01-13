@@ -24,7 +24,7 @@ in
             ${program} = {
               enable = true;
               package = pkgs.rofi;
-              theme = "${config.modules.configPath}/modules/misc/rofi/themes/rounded-nord-dark.rasi";
+              theme = lib.mkForce "${config.modules.configPath}/modules/misc/rofi/themes/rounded-nord-dark.rasi";
             };
           };
           wayland = {

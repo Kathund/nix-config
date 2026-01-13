@@ -156,11 +156,6 @@ in
                     install_url = "https://addons.mozilla.org/firefox/downloads/latest/proton-pass/latest.xpi";
                     installation_mode = "force_installed";
                   };
-                  # catppuccin github file explorer:
-                  "{bbb880ce-43c9-47ae-b746-c3e0096c5b76}" = {
-                    install_url = "https://addons.mozilla.org/firefox/downloads/latest/catppuccin-gh-file-explorer/latest.xpi";
-                    installation_mode = "force_installed";
-                  };
                   # clearURLs:
                   "{74145f27-f039-47ce-a470-a662b129930a}" = {
                     install_url = "https://addons.mozilla.org/firefox/downloads/latest/clearurls/latest.xpi";
@@ -179,6 +174,11 @@ in
                   # 7tv nightly:
                   "moz-addon@7tv.app" = {
                     install_url = "https://addons.mozilla.org/firefox/downloads/latest/7tv-nightly-extension/latest.xpi";
+                    installation_mode = "force_installed";
+                  };
+                  # Catppuccin for Web File Explorer Icons:
+                  "{bbb880ce-43c9-47ae-b746-c3e0096c5b76}" = {
+                    install_url = "https://addons.mozilla.org/firefox/downloads/latest/catppuccin-web-file-icons/latest.xpi";
                     installation_mode = "force_installed";
                   };
                 };
