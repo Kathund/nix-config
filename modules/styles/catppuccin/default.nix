@@ -44,14 +44,14 @@ in
     };
   };
 
-  config = lib.mkIf cfg.enable {
+  config = {
     home-manager = {
       users = {
         ${username} = {
           imports = [
             inputs.catppuccin.homeModules.catppuccin
           ];
-          catppuccin = {
+          catppuccin = lib.mkIf cfg.enable {
             enable = true;
             flavor = cfg.flavor;
             accent = cfg.accent;

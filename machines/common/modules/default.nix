@@ -40,17 +40,6 @@
           };
         };
       };
-      styles = {
-        catppuccin = {
-          enable = true;
-        };
-        fonts = {
-          enable = true;
-        };
-        gtk = {
-          enable = true;
-        };
-      };
     };
   };
 }
