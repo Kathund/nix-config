@@ -6,6 +6,14 @@
 
   networking = {
     hostName = "snowball";
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [
+        80
+        25565
+        44361
+      ];
+    };
   };
 
   boot = {
