@@ -55,7 +55,7 @@ in
             };
             home = {
               packages = with pkgs; [
-                nixfmt-rfc-style
+                nixfmt
                 nixfmt-tree
                 nixd
                 compose2nix
