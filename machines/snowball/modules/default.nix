@@ -23,6 +23,9 @@
         };
       };
       terminal = {
+        kitty = {
+          enable = true;
+        };
         cli = {
           fastfetch = {
             enable = true;
