@@ -67,6 +67,6 @@
   };
 
   system = {
-    stateVersion = "26.11";
+    stateVersion = "26.05";
   };
 }
