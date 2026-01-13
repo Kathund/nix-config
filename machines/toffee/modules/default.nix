@@ -28,13 +28,19 @@
           };
         };
         languages = {
+          java = {
+            enable = true;
+          };
+          markdown = {
+            enable = true;
+          };
           nodejs = {
             enable = true;
           };
-          json = {
+          rust = {
             enable = true;
           };
-          rust = {
+          web = {
             enable = true;
           };
         };

@@ -1,10 +1,12 @@
 {
   config,
+  inputs,
   lib,
+  username,
   ...
 }:
 let
-  program = "json";
+  program = "java";
   cfg = config.modules.dev.languages.${program};
 in
 {
@@ -20,11 +22,19 @@ in
         settings = {
           vim = {
             languages = {
-              json = {
+              java = {
                 enable = true;
-                format = {
+                lsp = {
                   enable = true;
-                  type = [ "jsonfmt" ];
+                };
+                treesitter = {
+                  enable = true;
+                };
+              };
+              kotlin = {
+                enable = true;
+                extraDiagnostics = {
+                  enable = true;
                 };
                 lsp = {
                   enable = true;
@@ -36,6 +46,19 @@ in
             };
           };
         };
+      };
+    };
+    home-manager = {
+      users = {
+        ${username} =
+          { pkgs, ... }:
+          {
+            home = {
+              packages = with pkgs; [
+                zulu17
+              ];
+            };
+          };
       };
     };
   };

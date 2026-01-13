@@ -5,7 +5,7 @@
   ...
 }:
 let
-  program = "nodejs";
+  program = "web";
   cfg = config.modules.dev.languages.${program};
 in
 {
@@ -21,7 +21,7 @@ in
         settings = {
           vim = {
             languages = {
-              ts = {
+              css = {
                 enable = true;
                 format = {
                   enable = true;
@@ -33,26 +33,28 @@ in
                 treesitter = {
                   enable = true;
                 };
-                extensions = {
-                  ts-error-translator = {
-                    enable = true;
-                  };
-                };
+              };
+              html = {
+                enable = true;
                 extraDiagnostics = {
                   enable = true;
-                  types = [ "eslint_d" ];
+                  types = [ "htmlhint" ];
                 };
-              };
-              json = {
-                enable = true;
                 format = {
                   enable = true;
-                  type = [ "jsonfmt" ];
+                  type = [ "superhtml" ];
                 };
                 lsp = {
                   enable = true;
                 };
                 treesitter = {
+                  enable = true;
+                  autotagHtml = true;
+                };
+              };
+              tailwind = {
+                enable = true;
+                lsp = {
                   enable = true;
                 };
               };
@@ -68,12 +70,7 @@ in
           {
             home = {
               packages = with pkgs; [
-                nodejs_24
-                pnpm
-                prettier
-                eslint
-                tsx
-                typescript
+                tailwindcss
               ];
             };
           };

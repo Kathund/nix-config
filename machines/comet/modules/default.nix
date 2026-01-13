@@ -12,9 +12,6 @@
           nodejs = {
             enable = true;
           };
-          json = {
-            enable = true;
-          };
         };
       };
       hardware = {

@@ -65,9 +65,6 @@
           nodejs = {
             enable = true;
           };
-          json = {
-            enable = true;
-          };
         };
       };
       terminal = {

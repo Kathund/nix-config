@@ -1,11 +1,10 @@
 {
   config,
   lib,
-  username,
   ...
 }:
 let
-  program = "nodejs";
+  program = "markdown";
   cfg = config.modules.dev.languages.${program};
 in
 {
@@ -21,33 +20,19 @@ in
         settings = {
           vim = {
             languages = {
-              ts = {
+              markdown = {
                 enable = true;
-                format = {
-                  enable = true;
-                  type = [ "prettier" ];
-                };
-                lsp = {
-                  enable = true;
-                };
-                treesitter = {
-                  enable = true;
-                };
                 extensions = {
-                  ts-error-translator = {
+                  markview-nvim = {
                     enable = true;
                   };
                 };
                 extraDiagnostics = {
                   enable = true;
-                  types = [ "eslint_d" ];
                 };
-              };
-              json = {
-                enable = true;
                 format = {
                   enable = true;
-                  type = [ "jsonfmt" ];
+                  type = [ "prettierd" ];
                 };
                 lsp = {
                   enable = true;
@@ -59,24 +44,6 @@ in
             };
           };
         };
-      };
-    };
-    home-manager = {
-      users = {
-        ${username} =
-          { pkgs, ... }:
-          {
-            home = {
-              packages = with pkgs; [
-                nodejs_24
-                pnpm
-                prettier
-                eslint
-                tsx
-                typescript
-              ];
-            };
-          };
       };
     };
   };

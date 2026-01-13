@@ -1,9 +1,11 @@
 {
   imports = [
     ./c
-    ./json
+    ./java
+    ./markdown
     ./nix
     ./nodejs
     ./rust
+    ./web
   ];
 }
