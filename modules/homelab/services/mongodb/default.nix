@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 let
@@ -22,6 +23,7 @@ in
     services = {
       ${service} = {
         enable = true;
+        package = pkgs.mongodb-ce;
       };
     };
   };
