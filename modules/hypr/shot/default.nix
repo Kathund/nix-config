@@ -30,7 +30,10 @@ in
               windowManager = {
                 hyprland = {
                   settings = {
-                    bind = [ ", PRINT, exec, hyprshot -m region --freeze --clipboard-only" ];
+                    bind = [
+                      ", PRINT, exec, hyprshot -m region --freeze --clipboard-only"
+                      "SUPER, PRINT, exec, killall slurp grimp hyprpicker hyprshot"
+                    ];
                   };
                 };
               };

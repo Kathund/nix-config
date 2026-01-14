@@ -1,4 +1,8 @@
 {
+  pkgs,
+  ...
+}:
+{
   imports = [
     ./modules
     ./nix
@@ -64,6 +68,12 @@
         enableSSHSupport = true;
       };
     };
+  };
+
+  environment = {
+    systemPackages = with pkgs; [
+      killall
+    ];
   };
 
   system = {
