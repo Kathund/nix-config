@@ -74,6 +74,10 @@
         land = {
           enable = true;
         };
+        launcher = {
+          enable = true;
+          hyprlandBind = true;
+        };
         lock = {
           enable = true;
           lockscreen = "screenshot";
@@ -156,9 +160,6 @@
           };
         };
         obs-studio = {
-          enable = true;
-        };
-        rofi = {
           enable = true;
         };
         spotify = {

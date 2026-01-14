@@ -2,17 +2,16 @@
   config,
   lib,
   username,
-  pkgs,
   ...
 }:
 let
-  program = "rofi";
-  cfg = config.modules.misc.${program};
+  program = "launcher";
+  cfg = config.modules.hypr.${program};
 in
 {
-  options.modules.misc.${program} = {
+  options.modules.hypr.${program} = {
     enable = lib.mkEnableOption {
-      description = "Enable ${program}";
+      description = "Enable hypr${program}";
     };
     hyprlandBind = lib.mkOption {
       type = lib.types.bool;
@@ -24,18 +23,16 @@ in
     home-manager = {
       users = {
         ${username} = {
-          programs = {
-            ${program} = {
+          services = {
+            "hypr${program}" = {
               enable = true;
-              package = pkgs.rofi;
-              theme = lib.mkForce "${config.modules.configPath}/modules/misc/rofi/themes/rounded-nord-dark.rasi";
             };
           };
           wayland = lib.mkIf cfg.hyprlandBind {
             windowManager = {
               hyprland = {
                 settings = {
-                  bind = [ "SUPERSHIFT, S, exec, rofi -show drun -show-icons" ];
+                  bind = [ "SUPERSHIFT, S, exec, hypr${program}" ];
                 };
               };
             };
