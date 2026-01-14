@@ -24,6 +24,7 @@ in
       ${service} = {
         enable = true;
         package = pkgs.mongodb-ce;
+        bind_ip = "0.0.0.0";
       };
     };
   };
