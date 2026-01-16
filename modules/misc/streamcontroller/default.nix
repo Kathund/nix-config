@@ -30,7 +30,7 @@ in
               windowManager = {
                 hyprland = {
                   settings = {
-                    exec-once = [ "streamcontroller" ];
+                    exec-once = [ "streamcontroller -b" ];
                   };
                 };
               };
