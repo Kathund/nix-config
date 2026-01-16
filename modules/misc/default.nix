@@ -6,6 +6,7 @@
     ./obs-studio
     ./rofi
     ./spotify
+    ./streamcontroller
     ./vesktop
   ];
 }

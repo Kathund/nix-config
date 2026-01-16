@@ -165,6 +165,9 @@
         spotify = {
           enable = true;
         };
+        streamcontroller = {
+          enable = true;
+        };
         vesktop = {
           enable = true;
         };
