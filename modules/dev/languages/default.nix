@@ -6,6 +6,7 @@
     ./nix
     ./nodejs
     ./rust
+    ./python
     ./web
   ];
 }

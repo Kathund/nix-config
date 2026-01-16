@@ -40,6 +40,9 @@
           rust = {
             enable = true;
           };
+          python = {
+            enable = true;
+          };
           web = {
             enable = true;
           };
