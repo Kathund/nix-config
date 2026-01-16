@@ -13,6 +13,9 @@
           mongodb = {
             enable = true;
           };
+          pm2 = {
+            enable = true;
+          };
         };
       };
       dev = {

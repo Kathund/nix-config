@@ -125,6 +125,13 @@
           enable = true;
         };
       };
+      homelab = {
+        services = {
+          pm2 = {
+            enable = true;
+          };
+        };
+      };
       terminal = {
         kitty = {
           enable = true;
