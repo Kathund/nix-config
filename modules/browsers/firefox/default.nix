@@ -69,7 +69,7 @@ in
                     "browser.search.suggest.enabled" = false;
                     "browser.selfsupport.url" = "";
                     "browser.sessionstore.privacy_level" = 0;
-                    "browser.startup.homepage_override.mstone" = ''ignore'';
+                    "browser.startup.homepage_override.mstone" = "ignore";
                     "browser.tabs.groups.smart.userEnabled" = false;
                     "browser.tabs.crashReporting.sendReport" = false;
                     "browser.urlbar.groupLabels.enabled" = false;

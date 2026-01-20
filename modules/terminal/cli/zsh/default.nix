@@ -41,7 +41,7 @@ in
                 shellAliases = {
                 };
 
-                initContent = '''';
+                initContent = "";
               };
             };
             catppuccin = {
