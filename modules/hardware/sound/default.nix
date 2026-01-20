@@ -3,6 +3,7 @@
   lib,
   pkgs,
   username,
+  inputs,
   ...
 }:
 let
@@ -17,9 +18,15 @@ in
   };
 
   config = lib.mkIf cfg.enable {
+    nixpkgs.overlays = [
+      (_: prev: {
+        pipeweaver = inputs.pipeweaver.legacyPackages.${prev.system}.pipeweaver;
+      })
+    ];
     environment.systemPackages = with pkgs; [
       playerctl
       qpwgraph
+      inputs.pipeweaver.legacyPackages.${pkgs.stdenv.hostPlatform.system}.pipeweaver
     ];
     services = {
       pipewire = {
@@ -85,6 +92,10 @@ in
                     ", XF86AudioPlay, exec, playerctl play-pause"
                     ", XF86AudioPrev, exec, playerctl previous"
                     ", XF86AudioNext, exec, playerctl next"
+                  ];
+                  exec-once = [
+                    "qpwgraph"
+                    "pipeweaver"
                   ];
                 };
               };

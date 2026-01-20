@@ -33,6 +33,11 @@
       url = "github:catppuccin/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    pipeweaver = {
+      url = "github:BridgeSenseDev/nixpkgs/pipeweaver-init";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

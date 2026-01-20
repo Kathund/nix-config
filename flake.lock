@@ -624,6 +624,22 @@
         "type": "github"
       }
     },
+    "pipeweaver": {
+      "locked": {
+        "lastModified": 1768779470,
+        "narHash": "sha256-ERQQbDgp70rONU4ka78YrTCNkM5LlyBH6y1s60YRXtI=",
+        "owner": "BridgeSenseDev",
+        "repo": "nixpkgs",
+        "rev": "286c409b069f89a6ce4f9bd772494af2ab9cb2bf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "BridgeSenseDev",
+        "ref": "pipeweaver-init",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -676,6 +692,7 @@
         "hyprpanel": "hyprpanel",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
+        "pipeweaver": "pipeweaver",
         "prismlauncher": "prismlauncher"
       }
     },
