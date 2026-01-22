@@ -8,5 +8,6 @@
     ./spotify
     ./streamcontroller
     ./vesktop
+    ./vlc
   ];
 }

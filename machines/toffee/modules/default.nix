@@ -181,6 +181,9 @@
         vesktop = {
           enable = true;
         };
+        vlc = {
+          enable = true;
+        };
       };
       styles = {
         catppuccin = {
