@@ -323,21 +323,21 @@ in
                 desc = "File Picker";
               }
               {
-                key = "<leader>gi";
+                key = "<leader>gI";
                 mode = "n";
                 action = "function() Snacks.picker.gh_issue() end";
                 lua = true;
                 desc = "Github Issues";
               }
               {
-                key = "<leader>gp";
+                key = "<leader>gP";
                 mode = "n";
                 action = "function() Snacks.picker.gh_pr() end";
                 lua = true;
                 desc = "Github Pull Requests";
               }
               {
-                key = "<leader>gg";
+                key = "<leader>gG";
                 mode = "n";
                 action = "function() Snacks.lazygit() end";
                 lua = true;
