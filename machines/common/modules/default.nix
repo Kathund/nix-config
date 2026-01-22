@@ -18,6 +18,9 @@
       };
       terminal = {
         cli = {
+          btop = {
+            enable = true;
+          };
           gh = {
             enable = true;
           };

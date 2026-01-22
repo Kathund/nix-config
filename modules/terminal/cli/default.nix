@@ -1,5 +1,6 @@
 {
   imports = [
+    ./btop
     ./fastfetch
     ./fzf
     ./gh
