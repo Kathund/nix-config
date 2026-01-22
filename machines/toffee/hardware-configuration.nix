@@ -37,6 +37,10 @@
       device = "/dev/disk/by-uuid/C074-BE26";
       fsType = "vfat";
     };
+    "/mnt/ssd" = {
+      device = "/dev/disk/by-uuid/64CC0DFCCC0DC8EE";
+      fsType = "ntfs";
+    };
   };
 
   swapDevices = [
