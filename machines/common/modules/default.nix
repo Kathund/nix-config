@@ -26,6 +26,9 @@
             username = "Jacob";
             email = "kathund@proton.me";
           };
+          htop = {
+            enable = true;
+          };
           ripgrep = {
             enable = true;
           };

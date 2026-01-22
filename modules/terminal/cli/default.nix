@@ -4,6 +4,7 @@
     ./fzf
     ./gh
     ./git
+    ./htop
     ./hyfetch
     ./lazygit
     ./neofetch
