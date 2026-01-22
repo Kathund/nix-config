@@ -75,6 +75,7 @@ in
                 listReferences = "<leader>lr";
                 nextDiagnostic = "<leader>gn";
                 previousDiagnostic = "<leader>gp";
+                renameSymbol = "<leader>cr";
               };
               trouble = {
                 enable = true;
