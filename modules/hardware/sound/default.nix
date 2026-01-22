@@ -49,6 +49,11 @@ in
     home-manager = {
       users = {
         ${username} = {
+          services = {
+            easyeffects = {
+              enable = true;
+            };
+          };
           programs = {
             hyprpanel = {
               settings = {
