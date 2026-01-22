@@ -94,7 +94,7 @@ in
                     ", XF86AudioNext, exec, playerctl next"
                   ];
                   exec-once = [
-                    "qpwgraph"
+                    "qpwgraph -m"
                     "pipeweaver-daemon"
                   ];
                 };
