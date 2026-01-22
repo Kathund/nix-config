@@ -95,7 +95,7 @@ in
                   ];
                   exec-once = [
                     "qpwgraph"
-                    "pipeweaver"
+                    "pipeweaver-daemon"
                   ];
                 };
               };
