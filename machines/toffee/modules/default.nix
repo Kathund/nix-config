@@ -154,6 +154,9 @@
         cliphist = {
           enable = true;
         };
+        dconf = {
+          enable = true;
+        };
         flatpak = {
           enable = true;
         };

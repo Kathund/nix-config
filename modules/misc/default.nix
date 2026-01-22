@@ -1,6 +1,7 @@
 {
   imports = [
     ./cliphist
+    ./dconf
     ./flatpak
     ./games
     ./obs-studio
