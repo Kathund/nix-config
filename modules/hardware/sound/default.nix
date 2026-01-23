@@ -3,7 +3,6 @@
   lib,
   pkgs,
   username,
-  inputs,
   ...
 }:
 let
@@ -16,18 +15,13 @@ in
       description = "Enable ${program}";
     };
   };
-
+  imports = [
+    ./easyeffects
+    ./pipeweaver
+    ./playerctld
+    ./qpwgraph
+  ];
   config = lib.mkIf cfg.enable {
-    nixpkgs.overlays = [
-      (_: prev: {
-        pipeweaver = inputs.pipeweaver.legacyPackages.${prev.system}.pipeweaver;
-      })
-    ];
-    environment.systemPackages = with pkgs; [
-      playerctl
-      qpwgraph
-      inputs.pipeweaver.legacyPackages.${pkgs.stdenv.hostPlatform.system}.pipeweaver
-    ];
     services = {
       pipewire = {
         enable = true;
@@ -42,18 +36,10 @@ in
           enable = true;
         };
       };
-      pulseaudio = {
-        enable = false;
-      };
     };
     home-manager = {
       users = {
         ${username} = {
-          services = {
-            easyeffects = {
-              enable = true;
-            };
-          };
           programs = {
             hyprpanel = {
               settings = {
@@ -94,13 +80,6 @@ in
                   bindl = [
                     ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
                     "SHIFT, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-                    ", XF86AudioPlay, exec, playerctl play-pause"
-                    ", XF86AudioPrev, exec, playerctl previous"
-                    ", XF86AudioNext, exec, playerctl next"
-                  ];
-                  exec-once = [
-                    "qpwgraph -m"
-                    "pipeweaver-daemon"
                   ];
                 };
               };

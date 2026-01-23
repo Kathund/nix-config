@@ -65,6 +65,15 @@
         };
         sound = {
           enable = true;
+          pipeweaver = {
+            enable = true;
+          };
+          playerctld = {
+            enable = true;
+          };
+          qpwgraph = {
+            enable = true;
+          };
         };
         grub = {
           enable = false;
