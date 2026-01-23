@@ -7,8 +7,6 @@
         };
       };
       homelab = {
-        enable = true;
-        baseDomain = "kath.lol";
         services = {
           mongodb = {
             enable = true;

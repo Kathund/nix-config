@@ -1,7 +1,7 @@
 {
   config,
-  lib,
   pkgs,
+  lib,
   ...
 }:
 let
@@ -12,10 +12,6 @@ in
   options.modules.homelab.services.${service} = {
     enable = lib.mkEnableOption {
       description = "Enable ${service}";
-    };
-    configDir = lib.mkOption {
-      type = lib.types.str;
-      default = "/var/lib/${service}";
     };
   };
 
