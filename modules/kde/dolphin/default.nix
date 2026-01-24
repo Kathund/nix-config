@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   username,
   ...
 }:
@@ -27,14 +26,16 @@ in
         ${username} =
           { pkgs, ... }:
           {
-            home.packages = with pkgs; [
-              kdePackages.qtsvg
-              kdePackages.kio
-              kdePackages.kio-fuse
-              kdePackages.kio-extras
-              kdePackages.dolphin
-              kdePackages.dolphin-plugins
-            ];
+            home = {
+              packages = with pkgs; [
+                kdePackages.qtsvg
+                kdePackages.kio
+                kdePackages.kio-fuse
+                kdePackages.kio-extras
+                kdePackages.dolphin
+                kdePackages.dolphin-plugins
+              ];
+            };
             wayland = {
               windowManager = {
                 hyprland = {

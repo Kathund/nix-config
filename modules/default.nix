@@ -4,9 +4,6 @@
   username,
   ...
 }:
-let
-  cfg = config.modules;
-in
 {
   options.modules = {
     configPath = lib.mkOption {

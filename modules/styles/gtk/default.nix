@@ -22,8 +22,12 @@ in
         ${username} = {
           home = {
             pointerCursor = {
-              gtk.enable = true;
-              x11.enable = true;
+              gtk = {
+                enable = true;
+              };
+              x11 = {
+                enable = true;
+              };
               package = pkgs.catppuccin-cursors.mochaPink;
               name = "Catppuccin";
               size = 16;
@@ -32,7 +36,7 @@ in
           gtk = {
             enable = true;
             cursorTheme = {
-              package = pkgs.catppuccin-cursors.mochaBlue;
+              package = pkgs.catppuccin-cursors.mochaPink;
               name = "Catppuccin";
             };
             theme = {

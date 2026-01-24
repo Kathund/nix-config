@@ -160,11 +160,6 @@ in
                       ) 9
                     ));
 
-                  bindel = [
-                    ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
-                    ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
-                  ];
-
                   bindm = [
                     "SUPER, mouse:272, movewindow"
                     "SUPER, mouse:273, resizewindow"

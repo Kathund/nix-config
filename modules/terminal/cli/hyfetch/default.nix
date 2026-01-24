@@ -136,11 +136,9 @@ in
     };
     backend = lib.mkOption {
       type = lib.types.enum [
-        "neofetch"
         "fastfetch"
-        "qwqfetch"
       ];
-      default = "neofetch";
+      default = "fastfetch";
       description = "Change what fetch backend ${program} uses";
     };
   };

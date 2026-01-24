@@ -5,11 +5,11 @@
   ...
 }:
 let
-  program = "spotify";
-  cfg = config.modules.misc.${program};
+  program = "protonup-qt";
+  cfg = config.modules.misc.games.${program};
 in
 {
-  options.modules.misc.${program} = {
+  options.modules.misc.games.${program} = {
     enable = lib.mkEnableOption {
       description = "Enable ${program}";
     };
@@ -23,7 +23,7 @@ in
           {
             home = {
               packages = with pkgs; [
-                spotify
+                protonup-qt
               ];
             };
           };

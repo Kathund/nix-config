@@ -5,11 +5,11 @@
   ...
 }:
 let
-  program = "neofetch";
-  cfg = config.modules.terminal.cli.${program};
+  program = "mangohud";
+  cfg = config.modules.misc.games.${program};
 in
 {
-  options.modules.terminal.cli.${program} = {
+  options.modules.misc.games.${program} = {
     enable = lib.mkEnableOption {
       description = "Enable ${program}";
     };

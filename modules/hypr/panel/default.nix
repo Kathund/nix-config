@@ -193,7 +193,6 @@ in
               };
             };
           };
-
           home = {
             file = {
               ".config/hyprpanel/modules.json" = {

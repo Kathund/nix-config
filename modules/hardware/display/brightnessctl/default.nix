@@ -5,11 +5,11 @@
   ...
 }:
 let
-  program = "qpwgraph";
-  cfg = config.modules.hardware.sound.${program};
+  program = "brightnessctl";
+  cfg = config.modules.hardware.display.${program};
 in
 {
-  options.modules.hardware.sound.${program} = {
+  options.modules.hardware.display.${program} = {
     enable = lib.mkEnableOption {
       description = "Enable ${program}";
     };
@@ -22,14 +22,17 @@ in
           {
             home = {
               packages = with pkgs; [
-                qpwgraph
+                brightnessctl
               ];
             };
             wayland = {
               windowManager = {
                 hyprland = {
                   settings = {
-                    exec-once = [ "qpwgraph -m" ];
+                    bindel = [
+                      ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
+                      ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+                    ];
                   };
                 };
               };

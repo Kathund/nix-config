@@ -4,7 +4,6 @@
   username,
   ...
 }:
-
 {
   users = {
     users = {
@@ -16,19 +15,12 @@
           "wheel"
         ];
         shell = pkgs.zsh;
-        packages = with pkgs; [ ];
       };
     };
   };
-
-  programs = {
-    zsh = {
-      enable = true;
-    };
-  };
-
-  imports = [ inputs.home-manager.nixosModules.home-manager ];
-
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+  ];
   home-manager = {
     useGlobalPkgs = true;
     extraSpecialArgs = { inherit inputs; };

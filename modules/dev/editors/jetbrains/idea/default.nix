@@ -21,9 +21,11 @@ in
         ${username} =
           { pkgs, ... }:
           {
-            home.packages = with pkgs; [
-              jetbrains.idea-oss
-            ];
+            home = {
+              packages = with pkgs; [
+                jetbrains.idea-oss
+              ];
+            };
           };
       };
     };

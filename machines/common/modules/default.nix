@@ -1,6 +1,11 @@
 {
   config = {
     modules = {
+      hardware = {
+        networking = {
+          enable = true;
+        };
+      };
       dev = {
         languages = {
           c = {

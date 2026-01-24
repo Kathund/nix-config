@@ -1,6 +1,5 @@
 {
   config,
-  inputs,
   lib,
   username,
   ...
@@ -14,10 +13,14 @@ in
     enable = lib.mkEnableOption {
       description = "Enable ${program}";
     };
+    nvf = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+    };
   };
 
   config = lib.mkIf cfg.enable {
-    programs = {
+    programs = lib.mkIf cfg.nvf {
       nvf = {
         settings = {
           vim = {

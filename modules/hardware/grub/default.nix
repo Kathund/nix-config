@@ -16,9 +16,11 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [
-      catppuccin-grub
-    ];
+    environment = {
+      systemPackages = with pkgs; [
+        catppuccin-grub
+      ];
+    };
     boot = {
       loader = {
         timeout = 10;
@@ -26,6 +28,7 @@ in
           enable = true;
           useOSProber = true;
           theme = pkgs.catppuccin-grub;
+          # TODO: Make this machine dependent
           gfxmodeEfi = "3840x2160";
           gfxmodeBios = "3840x2160";
         };

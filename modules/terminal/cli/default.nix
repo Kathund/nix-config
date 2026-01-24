@@ -8,8 +8,6 @@
     ./htop
     ./hyfetch
     ./lazygit
-    ./neofetch
-    ./qwqfetch
     ./ripgrep
     ./starship
     ./zsh

@@ -21,9 +21,11 @@ in
         ${username} =
           { pkgs, ... }:
           {
-            home.packages = with pkgs; [
-              vlc
-            ];
+            home = {
+              packages = with pkgs; [
+                vlc
+              ];
+            };
           };
       };
     };

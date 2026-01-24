@@ -1,8 +1,6 @@
 {
   config,
   lib,
-  inputs,
-  pkgs,
   username,
   ...
 }:
@@ -36,19 +34,6 @@ in
                   no_fade_in = false;
                   grace = 1;
                 };
-                label = [
-                  {
-                    text = "$TIME";
-                    color = "rgb(205, 214, 244)";
-                    font_size = 128;
-                    font_family = "JetBrainsMono Nerd Font";
-                    position = "0, -128";
-                    shadow_passes = 1;
-                    shadow_boost = 0.5;
-                    valign = "top";
-                    halign = "center";
-                  }
-                ];
                 background = {
                   path = cfg.lockscreen;
                   blur_passes = 2;
@@ -56,19 +41,6 @@ in
                   brightness = 0.8172;
                   vibrancy = 0.1696;
                   vibrancy_darkness = 0.0;
-                };
-                input-field = {
-                  size = "320, 64";
-                  inner_color = "rgba(69, 71, 90, 0.5)";
-                  outer_color = "rgba(255, 255, 255, 0)";
-                  fail_color = "rgb(243, 139, 168)";
-                  check_color = "rgba(49, 50, 68, 0.4)";
-                  font_color = "rgb(205, 214, 244)";
-                  fade_on_empty = true;
-                  position = "0, 128";
-                  font_family = "Open Sans";
-                  valign = "bottom";
-                  halign = "center";
                 };
               };
             };

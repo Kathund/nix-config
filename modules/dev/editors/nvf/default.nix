@@ -11,13 +11,12 @@ let
   cfg = config.modules.dev.editors.${program};
 in
 {
-  imports = [ inputs.nvf.nixosModules.default ];
   options.modules.dev.editors.${program} = {
     enable = lib.mkEnableOption {
       description = "Enable ${program}";
     };
   };
-
+  imports = [ inputs.nvf.nixosModules.default ];
   config = lib.mkIf cfg.enable {
     programs = {
       ${program} = {

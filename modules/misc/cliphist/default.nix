@@ -2,7 +2,6 @@
   config,
   lib,
   username,
-  pkgs,
   ...
 }:
 let
@@ -22,9 +21,11 @@ in
         ${username} =
           { pkgs, ... }:
           {
-            home.packages = with pkgs; [
-              wl-clipboard
-            ];
+            home = {
+              packages = with pkgs; [
+                wl-clipboard
+              ];
+            };
             services = {
               "${program}" = {
                 enable = true;

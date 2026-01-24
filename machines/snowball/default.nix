@@ -3,11 +3,9 @@
     ./modules
     ./hardware-configuration.nix
   ];
-
   networking = {
     hostName = "snowball";
     firewall = {
-      enable = true;
       allowedTCPPorts = [
         80
         25565
@@ -16,7 +14,6 @@
       ];
     };
   };
-
   boot = {
     loader = {
       grub = {

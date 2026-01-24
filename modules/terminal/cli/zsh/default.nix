@@ -16,13 +16,21 @@ in
   };
 
   config = lib.mkIf cfg.enable {
+    programs = {
+      ${program} = {
+        enable = true;
+      };
+    };
     home-manager = {
       users = {
         ${username} =
           { pkgs, ... }:
           {
-            home.packages = with pkgs; [ grc ];
-
+            home = {
+              packages = with pkgs; [
+                grc
+              ];
+            };
             programs = {
               ${program} = {
                 enable = true;
@@ -37,10 +45,6 @@ in
                     { name = "unixorn/warhol.plugin.zsh"; }
                   ];
                 };
-
-                shellAliases = {
-                };
-
                 initContent = "";
               };
             };

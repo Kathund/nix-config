@@ -170,7 +170,13 @@
           enable = true;
         };
         games = {
+          mangohud = {
+            enable = true;
+          };
           prism-launcher = {
+            enable = true;
+          };
+          protonup-qt = {
             enable = true;
           };
           steam = {

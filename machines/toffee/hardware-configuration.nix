@@ -7,12 +7,10 @@
   modulesPath,
   ...
 }:
-
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
-
   boot = {
     initrd = {
       availableKernelModules = [
@@ -27,7 +25,6 @@
     kernelModules = [ "kvm-amd" ];
     extraModulePackages = [ ];
   };
-
   fileSystems = {
     "/" = {
       device = "/dev/disk/by-uuid/0ebec014-2ee1-40ef-956c-e8e2c7f0a33b";
@@ -42,24 +39,12 @@
       fsType = "ntfs";
     };
   };
-
   swapDevices = [
     { device = "/dev/disk/by-uuid/3eadf6b5-b45f-4766-9dcd-4ff53aed4417"; }
   ];
-
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking = {
-    useDHCP = lib.mkDefault true;
-  };
-  # networking.interfaces.enp6s0.useDHCP = lib.mkDefault true;
-
   nixpkgs = {
     hostPlatform = lib.mkDefault "x86_64-linux";
   };
-
   hardware = {
     cpu = {
       amd = {

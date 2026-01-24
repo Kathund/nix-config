@@ -22,9 +22,11 @@ in
         ${username} =
           { pkgs, ... }:
           {
-            home.packages = with pkgs; [
-              inputs.prismlauncher.packages.${pkgs.stdenv.hostPlatform.system}.prismlauncher
-            ];
+            home = {
+              packages = with pkgs; [
+                inputs.prismlauncher.packages.${pkgs.stdenv.hostPlatform.system}.prismlauncher
+              ];
+            };
           };
       };
     };

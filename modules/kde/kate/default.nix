@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   username,
   ...
 }:
@@ -22,9 +21,11 @@ in
         ${username} =
           { pkgs, ... }:
           {
-            home.packages = with pkgs; [
-              kdePackages.kate
-            ];
+            home = {
+              packages = with pkgs; [
+                kdePackages.kate
+              ];
+            };
           };
       };
     };

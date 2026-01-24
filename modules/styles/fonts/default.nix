@@ -16,13 +16,22 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    fonts.packages = with pkgs; [
-      monocraft
-      open-sans
-      merriweather
-      noto-fonts-color-emoji
-      nerd-fonts.jetbrains-mono
-      jetbrains-mono
-    ];
+    fonts = {
+      packages = with pkgs; [
+        open-sans
+        noto-fonts-color-emoji
+        nerd-fonts.jetbrains-mono
+        jetbrains-mono
+      ];
+      fontconfig = {
+        enable = true;
+        defaultFonts = {
+          emoji = [ "Noto Color Emoji" ];
+          monospace = [ "JetBrainsMono Nerd Font" ];
+          sansSerif = [ "Open Sans" ];
+          serif = [ "Noto Serif" ];
+        };
+      };
+    };
   };
 }

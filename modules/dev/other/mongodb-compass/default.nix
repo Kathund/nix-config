@@ -21,9 +21,11 @@ in
         ${username} =
           { pkgs, ... }:
           {
-            home.packages = with pkgs; [
-              mongodb-compass
-            ];
+            home = {
+              packages = with pkgs; [
+                mongodb-compass
+              ];
+            };
           };
       };
     };

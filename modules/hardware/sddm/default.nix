@@ -20,20 +20,22 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = [
-      (pkgs.catppuccin-sddm.override {
-        flavor = "mocha";
-        accent = "sapphire";
-        font = "JetBrainsMono Nerd Font";
-        fontSize = cfg.fontSize;
-        loginBackground = false;
-      })
-    ];
+    environment = {
+      systemPackages = [
+        (pkgs.catppuccin-sddm.override {
+          flavor = config.modules.styles.catppuccin.flavor;
+          accent = config.modules.styles.catppuccin.accent;
+          font = "JetBrainsMono Nerd Font";
+          fontSize = cfg.fontSize;
+          loginBackground = false;
+        })
+      ];
+    };
     services = {
       displayManager = {
         sddm = {
           enable = true;
-          theme = "catppuccin-mocha-sapphire";
+          theme = "catppuccin-${config.modules.styles.catppuccin.flavor}-${config.modules.styles.catppuccin.accent}";
           package = lib.mkDefault pkgs.kdePackages.sddm;
           wayland = {
             enable = true;

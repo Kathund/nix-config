@@ -17,14 +17,18 @@ in
     };
   };
   config = lib.mkIf cfg.enable {
-    nixpkgs.overlays = [
-      (_: prev: {
-        pipeweaver = inputs.pipeweaver.legacyPackages.${prev.system}.pipeweaver;
-      })
-    ];
-    environment.systemPackages = with pkgs; [
-      inputs.pipeweaver.legacyPackages.${pkgs.stdenv.hostPlatform.system}.pipeweaver
-    ];
+    nixpkgs = {
+      overlays = [
+        (_: prev: {
+          pipeweaver = inputs.pipeweaver.legacyPackages.${prev.system}.pipeweaver;
+        })
+      ];
+    };
+    environment = {
+      systemPackages = with pkgs; [
+        inputs.pipeweaver.legacyPackages.${pkgs.stdenv.hostPlatform.system}.pipeweaver
+      ];
+    };
     home-manager = {
       users = {
         ${username} = {
