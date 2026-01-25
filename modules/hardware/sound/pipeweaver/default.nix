@@ -37,7 +37,7 @@ in
               hyprland = {
                 settings = {
                   exec-once = [
-                    "pipeweaver-daemon"
+                    "pipeweaver-daemon --background"
                   ];
                 };
               };
