@@ -1,12 +1,8 @@
 {
-  lib,
-  ...
-}:
-{
   nix = {
     gc = {
       automatic = true;
-      dates = "weekly";
+      dates = [ "weekly" ];
       options = "--delete-older-than 30d";
     };
     optimise = {
@@ -14,10 +10,11 @@
       dates = [ "weekly" ];
     };
     settings = {
-      experimental-features = lib.mkDefault [
+      experimental-features = [
         "nix-command"
         "flakes"
       ];
+      auto-optimise-store = true;
     };
   };
   nixpkgs = {
