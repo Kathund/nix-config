@@ -44,7 +44,21 @@
             enable = true;
           };
           web = {
-            enable = true;
+            astro = {
+              enable = true;
+            };
+            css = {
+              enable = true;
+            };
+            html = {
+              enable = true;
+            };
+            svelte = {
+              enable = true;
+            };
+            tailwind = {
+              enable = true;
+            };
           };
         };
         other = {
