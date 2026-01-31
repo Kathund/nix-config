@@ -5,7 +5,7 @@
   ...
 }:
 let
-  program = "nodejs";
+  program = "bun";
   cfg = config.modules.dev.languages.${program};
 in
 {
@@ -23,8 +23,7 @@ in
           {
             home = {
               packages = with pkgs; [
-                nodejs_24
-                pnpm
+                bun
               ];
             };
           };

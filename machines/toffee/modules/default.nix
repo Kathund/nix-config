@@ -28,7 +28,13 @@
           };
         };
         languages = {
+          bun = {
+            enable = true;
+          };
           java = {
+            enable = true;
+          };
+          javascript = {
             enable = true;
           };
           markdown = {
