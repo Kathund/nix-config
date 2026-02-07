@@ -82,7 +82,6 @@ in
                       middle = [ ];
                       right = [
                         "custom/mic"
-                        "network"
                         "systray"
                         "clock"
                         "notifications"
