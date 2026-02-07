@@ -18,6 +18,9 @@
           pm2 = {
             enable = true;
           };
+          redis = {
+            enable = true;
+          };
         };
       };
       dev = {
