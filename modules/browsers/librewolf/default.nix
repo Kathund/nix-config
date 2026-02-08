@@ -136,6 +136,8 @@ in
                     "privacy.usercontext.about_newtab_segregation.enabled" = true;
                     "privacy.fingerprintingProtection" = true;
                     "security.ssl.disable_session_identifiers" = true;
+                    "browser.eme.ui.enabled" = false;
+                    "media.eme.enabled" = false;
                   };
                 };
               };
