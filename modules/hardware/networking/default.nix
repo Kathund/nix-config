@@ -30,6 +30,10 @@ in
       kernelParams = [ "ipv6.disable=1" ];
     };
     networking = {
+      nameservers = [
+        "1.1.1.1"
+        "1.0.0.1"
+      ];
       useDHCP = lib.mkDefault true;
       enableIPv6 = !cfg.disableIPv6;
     };
