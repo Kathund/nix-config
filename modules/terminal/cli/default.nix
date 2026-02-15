@@ -5,6 +5,7 @@
     ./fzf
     ./gh
     ./git
+    ./gurk-rs
     ./htop
     ./hyfetch
     ./lazygit

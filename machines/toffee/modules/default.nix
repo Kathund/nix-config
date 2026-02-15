@@ -177,6 +177,9 @@
           git = {
             signCommits = true;
           };
+          gurk-rs = {
+            enable = true;
+          };
         };
       };
       misc = {
