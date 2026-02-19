@@ -15,6 +15,7 @@ in
     };
   };
   imports = [
+    ./audacity
     ./easyeffects
     ./pipeweaver
     ./playerctld

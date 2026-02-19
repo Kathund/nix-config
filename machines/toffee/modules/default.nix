@@ -85,6 +85,9 @@
         };
         sound = {
           enable = true;
+          audacity = {
+            enable = true;
+          };
           pipeweaver = {
             enable = true;
           };
