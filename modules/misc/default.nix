@@ -8,6 +8,7 @@
     ./rofi
     ./spotify
     ./streamcontroller
+    ./telegram-desktop
     ./vesktop
     ./vlc
   ];

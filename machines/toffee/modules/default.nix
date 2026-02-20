@@ -222,6 +222,9 @@
         streamcontroller = {
           enable = true;
         };
+        telegram-desktop = {
+          enable = true;
+        };
         vesktop = {
           enable = true;
         };
