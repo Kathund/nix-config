@@ -199,6 +199,9 @@
           mangohud = {
             enable = true;
           };
+          packwiz = {
+            enable = true;
+          };
           prism-launcher = {
             enable = true;
           };

@@ -624,6 +624,27 @@
         "type": "github"
       }
     },
+    "packwiz": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1771993286,
+        "narHash": "sha256-+Pyr8aFVi+SLS+dfrB3FkkVP7b3cyUnn51lXC91DFnA=",
+        "owner": "polyfrost",
+        "repo": "packwiz",
+        "rev": "91963c904dce0ec6d62209b1dceda39f69860d9b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "polyfrost",
+        "repo": "packwiz",
+        "rev": "91963c904dce0ec6d62209b1dceda39f69860d9b",
+        "type": "github"
+      }
+    },
     "pipeweaver": {
       "locked": {
         "lastModified": 1768779470,
@@ -692,6 +713,7 @@
         "hyprpanel": "hyprpanel",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
+        "packwiz": "packwiz",
         "pipeweaver": "pipeweaver",
         "prismlauncher": "prismlauncher"
       }
