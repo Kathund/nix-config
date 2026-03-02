@@ -127,7 +127,7 @@
           };
         };
         paper = {
-          enable = true;
+          enable = false;
         };
         shot = {
           enable = true;
