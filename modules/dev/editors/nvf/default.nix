@@ -265,6 +265,9 @@ in
                   };
                 };
               };
+              vim-wakatime = {
+                enable = true;
+              };
             };
             ui = {
               noice = {
