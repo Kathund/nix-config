@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  username,
   ...
 }:
 let
@@ -29,7 +30,7 @@ in
         enable = true;
         tunnels = {
           ${cfg.tunnel-id} = {
-            credentialsFile = "/home/kathund/.cloudflared/${cfg.tunnel-id}.json";
+            credentialsFile = "/home/${username}/.cloudflared/${cfg.tunnel-id}.json";
             default = "http_status:404";
           };
         };
