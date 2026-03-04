@@ -1,10 +1,9 @@
 {
   imports = [
+    ./boot
     ./display
     ./drivers
-    ./grub
     ./networking
-    ./sddm
     ./sound
   ];
 }

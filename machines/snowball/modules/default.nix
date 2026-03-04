@@ -2,8 +2,10 @@
   config = {
     modules = {
       hardware = {
-        grub = {
-          enable = true;
+        boot = {
+          grub = {
+            enable = true;
+          };
         };
       };
       homelab = {

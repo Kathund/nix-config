@@ -6,10 +6,10 @@
 }:
 let
   program = "sddm";
-  cfg = config.modules.hardware.${program};
+  cfg = config.modules.hardware.boot.${program};
 in
 {
-  options.modules.hardware.${program} = {
+  options.modules.hardware.boot.${program} = {
     enable = lib.mkEnableOption {
       description = "Enable ${program}";
     };
@@ -20,7 +20,19 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    environment = {
+    services = {
+      displayManager = {
+        sddm = {
+          enable = true;
+          package = lib.mkDefault pkgs.kdePackages.sddm;
+          wayland = {
+            enable = true;
+          };
+        };
+      };
+    };
+
+    environment = lib.mkIf config.modules.styles.catppuccin.enable {
       systemPackages = [
         (pkgs.catppuccin-sddm.override {
           flavor = config.modules.styles.catppuccin.flavor;
@@ -31,15 +43,11 @@ in
         })
       ];
     };
+
     services = {
       displayManager = {
         sddm = {
-          enable = true;
-          theme = "catppuccin-${config.modules.styles.catppuccin.flavor}-${config.modules.styles.catppuccin.accent}";
-          package = lib.mkDefault pkgs.kdePackages.sddm;
-          wayland = {
-            enable = true;
-          };
+          theme = lib.mkIf config.modules.styles.catppuccin.enable "catppuccin-${config.modules.styles.catppuccin.flavor}-${config.modules.styles.catppuccin.accent}";
         };
       };
     };

@@ -6,31 +6,37 @@
 }:
 let
   program = "grub";
-  cfg = config.modules.hardware.${program};
+  cfg = config.modules.hardware.boot.${program};
 in
 {
-  options.modules.hardware.${program} = {
+  options.modules.hardware.boot.${program} = {
     enable = lib.mkEnableOption {
       description = "Enable ${program}";
     };
   };
 
   config = lib.mkIf cfg.enable {
-    environment = {
+    boot = {
+      loader = {
+        grub = {
+          enable = true;
+          useOSProber = true;
+          # TODO: Make this machine dependent
+          gfxmodeEfi = "3840x2160";
+          gfxmodeBios = "3840x2160";
+        };
+      };
+    };
+
+    environment = lib.mkIf config.modules.styles.catppuccin.enable {
       systemPackages = with pkgs; [
         catppuccin-grub
       ];
     };
     boot = {
       loader = {
-        timeout = 10;
         grub = {
-          enable = true;
-          useOSProber = true;
-          theme = pkgs.catppuccin-grub;
-          # TODO: Make this machine dependent
-          gfxmodeEfi = "3840x2160";
-          gfxmodeBios = "3840x2160";
+          theme = lib.mkIf config.modules.styles.catppuccin.enable pkgs.catppuccin-grub;
         };
       };
     };

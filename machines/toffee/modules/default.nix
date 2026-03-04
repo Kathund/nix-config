@@ -79,10 +79,6 @@
             enable = true;
           };
         };
-        sddm = {
-          enable = true;
-          fontSize = "16";
-        };
         sound = {
           enable = true;
           audacity = {
@@ -98,8 +94,14 @@
             enable = true;
           };
         };
-        grub = {
-          enable = false;
+        boot = {
+          grub = {
+            enable = false;
+          };
+          sddm = {
+            enable = true;
+            fontSize = "16";
+          };
         };
       };
       hypr = {
