@@ -91,9 +91,8 @@
         x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt;
       };
       nixosConfigurations = {
-        toffee = nixosMachine { machine = "toffee"; };
-        comet = nixosMachine { machine = "comet"; };
         snowball = nixosMachine { machine = "snowball"; };
+        toffee = nixosMachine { machine = "toffee"; };
       };
     };
 }
