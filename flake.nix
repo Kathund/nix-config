@@ -68,6 +68,14 @@
         };
       };
     };
+    spotatui = {
+      url = "github:mayseikatsu/spotatui";
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
+      };
+    };
   };
 
   outputs =

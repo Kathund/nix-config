@@ -209,6 +209,9 @@
           desktop = {
             enable = true;
           };
+          spotatui = {
+            enable = true;
+          };
           spotifyd = {
             enable = true;
           };
