@@ -10,6 +10,7 @@
     ./hyfetch
     ./lazygit
     ./ripgrep
+    ./scdl
     ./starship
     ./zip
     ./zsh

@@ -183,6 +183,9 @@
           gurk-rs = {
             enable = true;
           };
+          scdl = {
+            enable = true;
+          };
         };
       };
       misc = {
