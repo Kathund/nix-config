@@ -28,18 +28,18 @@ in
               x11 = {
                 enable = true;
               };
-              package = pkgs.catppuccin-cursors.mochaPink;
-              name = "Catppuccin";
               size = 16;
+              package = lib.mkIf config.modules.styles.catppuccin.enable pkgs.catppuccin-cursors.mochaPink;
+              name = lib.mkIf config.modules.styles.catppuccin.enable "Catppuccin";
             };
           };
           gtk = {
             enable = true;
-            cursorTheme = {
+            cursorTheme = lib.mkIf config.modules.styles.catppuccin.enable {
               package = pkgs.catppuccin-cursors.mochaPink;
               name = "Catppuccin";
             };
-            theme = {
+            theme = lib.mkIf config.modules.styles.catppuccin.enable {
               package = pkgs.catppuccin-gtk;
               name = "Catppuccin";
             };

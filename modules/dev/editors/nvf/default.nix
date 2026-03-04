@@ -33,14 +33,14 @@ in
             };
             theme = {
               enable = true;
-              name = "catppuccin";
-              style = "mocha";
+              name = lib.mkIf config.modules.styles.catppuccin.enable "catppuccin";
+              style = lib.mkIf config.modules.styles.catppuccin.enable config.modules.styles.catppuccin.flavor;
               transparent = false;
             };
             statusline = {
               lualine = {
                 enable = true;
-                theme = "catppuccin";
+                theme = lib.mkIf config.modules.styles.catppuccin.enable "catppuccin";
               };
             };
             telescope = {
@@ -358,6 +358,7 @@ in
         };
       };
     };
+
     home-manager = {
       users = {
         ${username} =

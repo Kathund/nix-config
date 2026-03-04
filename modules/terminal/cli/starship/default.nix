@@ -82,7 +82,7 @@ in
               };
             };
           };
-          catppuccin = {
+          catppuccin = lib.mkIf config.modules.styles.catppuccin.enable {
             ${program} = {
               enable = false;
             };

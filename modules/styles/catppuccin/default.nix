@@ -48,9 +48,7 @@ in
     home-manager = {
       users = {
         ${username} = {
-          imports = [
-            inputs.catppuccin.homeModules.catppuccin
-          ];
+          imports = [ inputs.catppuccin.homeModules.catppuccin ];
           catppuccin = lib.mkIf cfg.enable {
             enable = true;
             flavor = cfg.flavor;
