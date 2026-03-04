@@ -202,6 +202,9 @@
           packwiz = {
             enable = true;
           };
+          mgba = {
+            enable = true;
+          };
           prism-launcher = {
             enable = true;
           };
