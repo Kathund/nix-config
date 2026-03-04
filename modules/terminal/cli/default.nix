@@ -11,6 +11,7 @@
     ./lazygit
     ./ripgrep
     ./starship
+    ./zip
     ./zsh
   ];
 }

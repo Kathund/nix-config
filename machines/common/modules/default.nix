@@ -49,6 +49,9 @@
           lazygit = {
             enable = true;
           };
+          zip = {
+            enable = true;
+          };
         };
       };
     };
