@@ -32,7 +32,9 @@ in
               enable = true;
               profiles = {
                 ${username} = {
-                  extensions.force = true;
+                  extensions = {
+                    force = true;
+                  };
                   id = 0;
                   isDefault = true;
                   search = {
