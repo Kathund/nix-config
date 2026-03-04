@@ -7,9 +7,6 @@
     ./modules
     ./hardware-configuration.nix
   ];
-  networking = {
-    hostName = "toffee";
-  };
   boot = {
     loader = {
       systemd-boot = {

@@ -4,7 +4,6 @@
     ./hardware-configuration.nix
   ];
   networking = {
-    hostName = "snowball";
     firewall = {
       allowedTCPPorts = [
         80

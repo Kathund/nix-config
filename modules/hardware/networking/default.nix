@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  machine,
   ...
 }:
 let
@@ -30,6 +31,7 @@ in
       kernelParams = [ "ipv6.disable=1" ];
     };
     networking = {
+      hostName = machine;
       nameservers = [
         "1.1.1.1"
         "1.0.0.1"
