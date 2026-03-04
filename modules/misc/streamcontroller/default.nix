@@ -13,6 +13,10 @@ in
     enable = lib.mkEnableOption {
       description = "Enable ${program}";
     };
+    loadOnStartup = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -26,7 +30,7 @@ in
                 streamcontroller
               ];
             };
-            wayland = {
+            wayland = lib.mkIf cfg.loadOnStartup {
               windowManager = {
                 hyprland = {
                   settings = {

@@ -1,6 +1,19 @@
 {
   config = {
     modules = {
+      dev = {
+        languages = {
+          bun = {
+            enable = true;
+          };
+          javascript = {
+            enable = true;
+          };
+          nodejs = {
+            enable = true;
+          };
+        };
+      };
       hardware = {
         boot = {
           grub = {
@@ -21,32 +34,6 @@
             enable = true;
           };
           redis = {
-            enable = true;
-          };
-        };
-      };
-      dev = {
-        languages = {
-          nodejs = {
-            enable = true;
-          };
-        };
-      };
-      terminal = {
-        kitty = {
-          enable = true;
-        };
-        cli = {
-          fastfetch = {
-            enable = true;
-          };
-          fzf = {
-            enable = true;
-          };
-          starship = {
-            enable = true;
-          };
-          zsh = {
             enable = true;
           };
         };

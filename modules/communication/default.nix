@@ -1,0 +1,6 @@
+{
+  imports = [
+    ./telegram-desktop
+    ./vesktop
+  ];
+}

@@ -15,6 +15,10 @@ in
     enable = lib.mkEnableOption {
       description = "Enable hypr${program}";
     };
+    loadOnStartup = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
     bar = {
       transparent = lib.mkOption {
         type = lib.types.bool;
@@ -183,7 +187,7 @@ in
               };
             };
           };
-          wayland = {
+          wayland = lib.mkIf cfg.loadOnStartup {
             windowManager = {
               hyprland = {
                 settings = {

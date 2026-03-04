@@ -1,12 +1,12 @@
 {
   config = {
     modules = {
-      hardware = {
-        networking = {
-          enable = true;
-        };
-      };
       dev = {
+        editors = {
+          nvf = {
+            enable = true;
+          };
+        };
         languages = {
           c = {
             enable = true;
@@ -15,10 +15,10 @@
             enable = true;
           };
         };
-        editors = {
-          nvf = {
-            enable = true;
-          };
+      };
+      hardware = {
+        networking = {
+          enable = true;
         };
       };
       terminal = {
@@ -26,18 +26,24 @@
           btop = {
             enable = true;
           };
-          gh = {
+          fastfetch = {
+            enable = true;
+          };
+          fzf = {
             enable = true;
           };
           git = {
             enable = true;
             username = "Jacob";
             email = "kathund@proton.me";
+            gh = {
+              enable = true;
+            };
+            lazygit = {
+              enable = true;
+            };
           };
           htop = {
-            enable = true;
-          };
-          ripgrep = {
             enable = true;
           };
           hyfetch = {
@@ -46,10 +52,16 @@
             backend = "fastfetch";
             preset = "bisexual";
           };
-          lazygit = {
+          ripgrep = {
+            enable = true;
+          };
+          starship = {
             enable = true;
           };
           zip = {
+            enable = true;
+          };
+          zsh = {
             enable = true;
           };
         };

@@ -15,6 +15,10 @@ in
     enable = lib.mkEnableOption {
       description = "Enable ${program}";
     };
+    loadOnStartup = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
   };
   config = lib.mkIf cfg.enable {
     nixpkgs = {
@@ -32,7 +36,7 @@ in
     home-manager = {
       users = {
         ${username} = {
-          wayland = {
+          wayland = lib.mkIf cfg.loadOnStartup {
             windowManager = {
               hyprland = {
                 settings = {

@@ -25,6 +25,11 @@ in
     };
   };
 
+  imports = [
+    ./gh
+    ./lazygit
+  ];
+
   config = lib.mkIf cfg.enable {
     home-manager = {
       users = {

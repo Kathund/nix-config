@@ -1,5 +1,5 @@
 {
   imports = [
-    ./streamcontroller
+    ./desktop
   ];
 }

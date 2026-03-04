@@ -9,11 +9,6 @@
   ];
   networking = {
     hostName = "toffee";
-    firewall = {
-      allowedTCPPorts = [
-        44461
-      ];
-    };
   };
   boot = {
     loader = {

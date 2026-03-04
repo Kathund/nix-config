@@ -19,6 +19,14 @@
           setDefault = true;
         };
       };
+      communication = {
+        telegram-desktop = {
+          enable = true;
+        };
+        vesktop = {
+          enable = true;
+        };
+      };
       dev = {
         editors = {
           jetbrains = {
@@ -43,10 +51,10 @@
           nodejs = {
             enable = true;
           };
-          rust = {
+          python = {
             enable = true;
           };
-          python = {
+          rust = {
             enable = true;
           };
           web = {
@@ -73,10 +81,40 @@
           };
         };
       };
-      hardware = {
-        drivers = {
-          nvidia = {
+      games = {
+        mangohud = {
+          enable = true;
+        };
+        mgba = {
+          enable = true;
+        };
+        minecraft = {
+          packwiz = {
             enable = true;
+          };
+          prism-launcher = {
+            enable = true;
+          };
+        };
+        protonup-qt = {
+          enable = true;
+        };
+        steam = {
+          enable = true;
+        };
+      };
+      hardware = {
+        boot = {
+          sddm = {
+            enable = true;
+            fontSize = "16";
+          };
+        };
+        display = {
+          drivers = {
+            nvidia = {
+              enable = true;
+            };
           };
         };
         sound = {
@@ -86,21 +124,21 @@
           };
           pipeweaver = {
             enable = true;
+            loadOnStartup = true;
           };
           playerctld = {
             enable = true;
           };
           qpwgraph = {
             enable = true;
+            loadOnStartup = true;
           };
         };
-        boot = {
-          grub = {
-            enable = false;
-          };
-          sddm = {
+      };
+      homelab = {
+        services = {
+          pm2 = {
             enable = true;
-            fontSize = "16";
           };
         };
       };
@@ -117,6 +155,7 @@
         };
         panel = {
           enable = true;
+          loadOnStartup = true;
           bar = {
             transparent = true;
             location = "top";
@@ -130,6 +169,7 @@
         };
         paper = {
           enable = false;
+          loadOnStartup = true;
         };
         shot = {
           enable = true;
@@ -155,92 +195,20 @@
           enable = true;
         };
       };
-      homelab = {
-        services = {
-          pm2 = {
-            enable = true;
-          };
-        };
-      };
-      terminal = {
-        kitty = {
-          enable = true;
-        };
-        cli = {
-          fastfetch = {
-            enable = true;
-          };
-          fzf = {
-            enable = true;
-          };
-          starship = {
-            enable = true;
-          };
-          zsh = {
-            enable = true;
-          };
-          git = {
-            signCommits = true;
-          };
-          gurk-rs = {
-            enable = true;
-          };
-          scdl = {
-            enable = true;
-          };
-        };
-      };
       misc = {
-        cliphist = {
-          enable = true;
-        };
-        dconf = {
-          enable = true;
-        };
-        flatpak = {
-          enable = true;
-        };
-        games = {
-          mangohud = {
-            enable = true;
-          };
-          packwiz = {
-            enable = true;
-          };
-          mgba = {
-            enable = true;
-          };
-          prism-launcher = {
-            enable = true;
-          };
-          protonup-qt = {
-            enable = true;
-          };
-          steam = {
-            enable = true;
-          };
-        };
-        obs-studio = {
-          enable = true;
-        };
-        rofi = {
-          enable = true;
-          hyprlandBind = true;
-        };
-        spotify = {
-          enable = true;
-        };
         streamcontroller = {
           enable = true;
+          loadOnStartup = true;
         };
-        telegram-desktop = {
+      };
+      music = {
+        scdl = {
           enable = true;
         };
-        vesktop = {
-          enable = true;
-        };
-        vlc = {
-          enable = true;
+        spotify = {
+          desktop = {
+            enable = true;
+          };
         };
       };
       styles = {
@@ -252,6 +220,38 @@
         };
         gtk = {
           enable = true;
+        };
+      };
+      terminal = {
+        cli = {
+          git = {
+            signCommits = true;
+          };
+        };
+        kitty = {
+          enable = true;
+        };
+      };
+      utilities = {
+        clipboard = {
+          enable = true;
+        };
+        flatpak = {
+          enable = true;
+        };
+        launchers = {
+          rofi = {
+            enable = true;
+            hyprlandBind = true;
+          };
+        };
+        video = {
+          obs-studio = {
+            enable = true;
+          };
+          vlc = {
+            enable = true;
+          };
         };
       };
     };

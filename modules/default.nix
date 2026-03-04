@@ -14,13 +14,17 @@
   };
   imports = [
     ./browsers
+    ./communication
     ./dev
+    ./games
     ./hardware
     ./homelab
     ./hypr
     ./kde
     ./misc
+    ./music
     ./styles
     ./terminal
+    ./utilities
   ];
 }

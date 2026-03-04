@@ -17,6 +17,10 @@ in
       type = lib.types.str;
       default = "${config.modules.configPath}/assets/wallpaper.png";
     };
+    loadOnStartup = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -37,7 +41,7 @@ in
               };
             };
           };
-          wayland = {
+          wayland = lib.mkIf cfg.loadOnStartup {
             windowManager = {
               hyprland = {
                 settings = {

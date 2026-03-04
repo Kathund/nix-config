@@ -1,0 +1,6 @@
+{
+  imports = [
+    ./obs-studio
+    ./vlc
+  ];
+}
