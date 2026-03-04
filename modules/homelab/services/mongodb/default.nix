@@ -5,19 +5,19 @@
   ...
 }:
 let
-  service = "mongodb";
-  cfg = config.modules.homelab.services.${service};
+  program = "mongodb";
+  cfg = config.modules.homelab.services.${program};
 in
 {
-  options.modules.homelab.services.${service} = {
+  options.modules.homelab.services.${program} = {
     enable = lib.mkEnableOption {
-      description = "Enable ${service}";
+      description = "Enable ${program}";
     };
   };
 
   config = lib.mkIf cfg.enable {
     services = {
-      ${service} = {
+      ${program} = {
         enable = true;
         package = pkgs.mongodb-ce;
         bind_ip = "0.0.0.0";

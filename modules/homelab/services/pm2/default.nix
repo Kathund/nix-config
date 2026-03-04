@@ -5,13 +5,13 @@
   ...
 }:
 let
-  service = "pm2";
-  cfg = config.modules.homelab.services.${service};
+  program = "pm2";
+  cfg = config.modules.homelab.services.${program};
 in
 {
-  options.modules.homelab.services.${service} = {
+  options.modules.homelab.services.${program} = {
     enable = lib.mkEnableOption {
-      description = "Enable ${service}";
+      description = "Enable ${program}";
     };
   };
 

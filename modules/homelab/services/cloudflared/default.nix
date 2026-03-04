@@ -6,13 +6,13 @@
   ...
 }:
 let
-  service = "cloudflared";
-  cfg = config.modules.homelab.services.${service};
+  program = "cloudflared";
+  cfg = config.modules.homelab.services.${program};
 in
 {
-  options.modules.homelab.services.${service} = {
+  options.modules.homelab.services.${program} = {
     enable = lib.mkEnableOption {
-      description = "Enable ${service}";
+      description = "Enable ${program}";
     };
     tunnel-id = lib.mkOption {
       type = lib.types.str;
@@ -26,7 +26,7 @@ in
     ];
 
     services = {
-      ${service} = {
+      ${program} = {
         enable = true;
         tunnels = {
           ${cfg.tunnel-id} = {

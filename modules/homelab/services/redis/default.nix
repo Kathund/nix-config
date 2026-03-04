@@ -4,19 +4,19 @@
   ...
 }:
 let
-  service = "redis";
-  cfg = config.modules.homelab.services.${service};
+  program = "redis";
+  cfg = config.modules.homelab.services.${program};
 in
 {
-  options.modules.homelab.services.${service} = {
+  options.modules.homelab.services.${program} = {
     enable = lib.mkEnableOption {
-      description = "Enable ${service}";
+      description = "Enable ${program}";
     };
   };
 
   config = lib.mkIf cfg.enable {
     services = {
-      ${service} = {
+      ${program} = {
         servers = {
           "skycrypt" = {
             enable = true;

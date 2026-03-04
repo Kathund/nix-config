@@ -4,19 +4,19 @@
   ...
 }:
 let
-  service = "flatpak";
-  cfg = config.modules.utilities.${service};
+  program = "flatpak";
+  cfg = config.modules.utilities.${program};
 in
 {
-  options.modules.utilities.${service} = {
+  options.modules.utilities.${program} = {
     enable = lib.mkEnableOption {
-      description = "Enable ${service}";
+      description = "Enable ${program}";
     };
   };
 
   config = lib.mkIf cfg.enable {
     services = {
-      ${service} = {
+      ${program} = {
         enable = true;
       };
     };
