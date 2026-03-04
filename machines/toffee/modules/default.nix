@@ -209,6 +209,9 @@
           desktop = {
             enable = true;
           };
+          spotifyd = {
+            enable = true;
+          };
         };
       };
       styles = {
