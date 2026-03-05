@@ -69,7 +69,7 @@
       };
     };
     spotatui = {
-      url = "github:mayseikatsu/spotatui";
+      url = "github:mayseikatsu/spotatui/59b7aeb68dfbe47ac32714454c0ccaba4b77b922";
       inputs = {
         nixpkgs = {
           follows = "nixpkgs";

@@ -745,16 +745,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1771942750,
-        "narHash": "sha256-gNUL8r1Kgoa/7DSUg6ImuXy9B+jactPAwbu0c2hhO/k=",
+        "lastModified": 1772689136,
+        "narHash": "sha256-cip0SLKAy7l1FTeveaGM1AmNsTtfOkzCr2bJ6k92ic4=",
         "owner": "mayseikatsu",
         "repo": "spotatui",
-        "rev": "5630c3f105a5ad0425008ee76199a50deda319ad",
+        "rev": "59b7aeb68dfbe47ac32714454c0ccaba4b77b922",
         "type": "github"
       },
       "original": {
         "owner": "mayseikatsu",
         "repo": "spotatui",
+        "rev": "59b7aeb68dfbe47ac32714454c0ccaba4b77b922",
         "type": "github"
       }
     },
