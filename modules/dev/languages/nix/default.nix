@@ -20,6 +20,10 @@ in
     };
   };
 
+  imports = [
+    ./mate
+  ];
+
   config = lib.mkIf cfg.enable {
     programs = lib.mkIf cfg.nvf {
       nvf = {

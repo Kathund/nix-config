@@ -76,6 +76,14 @@
         };
       };
     };
+    nixmate = {
+      url = "github:daskladas/nixmate";
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
+      };
+    };
   };
 
   outputs =

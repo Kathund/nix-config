@@ -12,6 +12,9 @@
             enable = true;
           };
           nix = {
+            mate = {
+              enable = true;
+            };
             enable = true;
           };
         };
