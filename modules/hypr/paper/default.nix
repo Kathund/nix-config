@@ -36,6 +36,7 @@ in
                   {
                     monitor = "DP-1";
                     path = cfg.wallpaper;
+                    timeout = 123456789;
                   }
                 ];
               };
