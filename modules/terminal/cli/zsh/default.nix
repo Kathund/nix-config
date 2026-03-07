@@ -2,6 +2,7 @@
   config,
   lib,
   username,
+  machine,
   ...
 }:
 let
@@ -26,15 +27,21 @@ in
         ${username} =
           { pkgs, ... }:
           {
-            home = {
-              packages = with pkgs; [
-                grc
-              ];
-            };
             programs = {
               ${program} = {
                 enable = true;
                 enableCompletion = false;
+                autosuggestion = {
+                  enable = true;
+                };
+                syntaxHighlighting = {
+                  enable = true;
+                };
+                shellAliases = {
+                  ll = "ls -l";
+                  ls = "ls --color";
+                  update = "sudo nixos-rebuild switch --flake ${config.modules.configPath}#${machine}";
+                };
                 zplug = {
                   enable = true;
                   plugins = [
