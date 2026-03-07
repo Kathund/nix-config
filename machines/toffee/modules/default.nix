@@ -157,14 +157,8 @@
           enable = true;
           loadOnStartup = true;
           bar = {
-            transparent = true;
-            location = "top";
-          };
-          osd = {
-            location = "top";
-          };
-          font = {
-            size = "14px";
+            transparent = false;
+            location = "bottom";
           };
         };
         paper = {

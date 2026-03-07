@@ -46,7 +46,7 @@ in
     font = {
       size = lib.mkOption {
         type = lib.types.str;
-        default = "16px";
+        default = "0.7rem";
         description = "Change hypr${program}'s font size";
       };
     };
@@ -65,6 +65,18 @@ in
                   bar = {
                     transparent = cfg.bar.transparent;
                     location = cfg.bar.location;
+                    border = {
+                      width = "0em";
+                    };
+                    border_radius = "0em";
+                    outer_spacing = "0.2em";
+                    buttons = {
+                      padding_x = "0.4rem";
+                      padding_y = "0rem";
+                      radius = "0em";
+                      spacing = "0.2em";
+                      y_margins = "0.2em";
+                    };
                   };
                   osd = {
                     duration = 1500;
@@ -73,19 +85,18 @@ in
                   };
                   font = {
                     size = cfg.font.size;
+                    name = "JetBrainsMonoNL Nerd Font Mono";
+                    label = "JetBrainsMonoNL Nerd Font Mono";
                   };
                 };
                 bar = {
                   layouts = {
                     "*" = {
                       left = [
-                        "dashboard"
                         "workspaces"
-                        "windowtitle"
                       ];
                       middle = [ ];
                       right = [
-                        "custom/mic"
                         "systray"
                         "clock"
                         "notifications"
@@ -98,8 +109,11 @@ in
                     icon = "fuck";
                   };
                   workspaces = {
-                    showWsIcons = true;
-                    showApplicationIcons = true;
+                    showApplicationIcons = false;
+                    showWsIcons = false;
+                    show_numbered = true;
+                    show_icons = false;
+                    spacing = 0.5;
                   };
                   network = {
                     showWifiInfo = true;
@@ -129,60 +143,6 @@ in
                       unit = "metric";
                     };
                   };
-                  dashboard = {
-                    shortcuts = {
-                      left = {
-                        shortcut1 = {
-                          icon = "󰈹";
-                          command = "firefox";
-                          tooltip = "firefox";
-                        };
-                        shortcut2 = {
-                          icon = "";
-                          command = "";
-                          tooltip = "";
-                        };
-                        shortcut3 = {
-                          icon = "󰄛";
-                          command = "kitty";
-                          tooltip = "meow";
-                        };
-                        shortcut4 = {
-                          icon = "";
-                          command = "";
-                          tooltip = "";
-                        };
-                      };
-                      right = {
-                        shortcut1 = {
-                          icon = "";
-                          command = "";
-                          tooltip = "";
-                        };
-                        shortcut2 = {
-                          icon = "";
-                          command = "";
-                          tooltip = "";
-                        };
-                        shortcut3 = {
-                          icon = "";
-                          command = "";
-                          tooltip = "";
-                        };
-                        shortcut4 = {
-                          icon = "";
-                          command = "";
-                          tooltip = "";
-                        };
-                      };
-                    };
-                    directories = {
-                      enabled = false;
-                    };
-                    stats = {
-                      enable_gpu = false;
-                    };
-                  };
                 };
               };
             };
@@ -193,13 +153,6 @@ in
                 settings = {
                   exec-once = [ "hypr${program}" ];
                 };
-              };
-            };
-          };
-          home = {
-            file = {
-              ".config/hyprpanel/modules.json" = {
-                source = ./modules.json;
               };
             };
           };

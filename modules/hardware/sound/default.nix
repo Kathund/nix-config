@@ -50,7 +50,6 @@ in
                 bar = {
                   layouts = {
                     "*" = {
-                      middle = [ "media" ];
                       right = [ "volume" ];
                     };
                   };
