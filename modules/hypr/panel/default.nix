@@ -94,6 +94,7 @@ in
                     "*" = {
                       left = [
                         "workspaces"
+                        "media"
                       ];
                       middle = [ ];
                       right = [
