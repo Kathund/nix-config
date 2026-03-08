@@ -255,6 +255,11 @@
           };
         };
       };
+      virtualization = {
+        virt = {
+          enable = true;
+        };
+      };
     };
   };
 }

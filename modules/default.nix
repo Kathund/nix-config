@@ -1,6 +1,5 @@
 {
   lib,
-  config,
   username,
   ...
 }:
@@ -26,5 +25,6 @@
     ./styles
     ./terminal
     ./utilities
+    ./virtualization
   ];
 }
