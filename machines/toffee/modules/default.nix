@@ -140,6 +140,10 @@
           pm2 = {
             enable = true;
           };
+          qbittorrent = {
+            enable = true;
+            port = 6625;
+          };
         };
       };
       hypr = {
