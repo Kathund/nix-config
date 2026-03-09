@@ -233,9 +233,6 @@
             signCommits = true;
           };
         };
-        kitty = {
-          enable = true;
-        };
       };
       utilities = {
         clipboard = {

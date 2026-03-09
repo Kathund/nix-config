@@ -68,6 +68,9 @@
             enable = true;
           };
         };
+        kitty = {
+          enable = true;
+        };
       };
     };
   };
