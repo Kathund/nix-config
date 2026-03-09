@@ -53,7 +53,12 @@ in
                       right = [ "volume" ];
                     };
                   };
+                  volume = {
+                    icon = "";
+                  };
                   media = {
+                    truncation_size = 1000;
+                    truncation = false;
                     show_active_only = true;
                   };
                 };

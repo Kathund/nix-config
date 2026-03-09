@@ -120,6 +120,7 @@ in
                     showWifiInfo = true;
                   };
                   clock = {
+                    icon = "";
                     format = "%d %H:%M:%S";
                   };
                   notifications = {
@@ -141,6 +142,7 @@ in
                       military = true;
                     };
                     weather = {
+                      enable = false;
                       unit = "metric";
                     };
                   };
