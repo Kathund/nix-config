@@ -61,6 +61,9 @@
           starship = {
             enable = true;
           };
+          wget = {
+            enable = true;
+          };
           zip = {
             enable = true;
           };

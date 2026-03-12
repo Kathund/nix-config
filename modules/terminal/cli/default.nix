@@ -8,6 +8,7 @@
     ./hyfetch
     ./ripgrep
     ./starship
+    ./wget
     ./zip
     ./zsh
   ];

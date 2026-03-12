@@ -1,8 +1,4 @@
 {
-  pkgs,
-  ...
-}:
-{
   imports = [
     ./modules
     ./nix
@@ -39,12 +35,6 @@
     command-not-found = {
       enable = false;
     };
-  };
-  environment = {
-    systemPackages = with pkgs; [
-      killall
-      wget
-    ];
   };
   system = {
     stateVersion = "26.05";

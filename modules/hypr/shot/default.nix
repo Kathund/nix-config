@@ -32,7 +32,6 @@ in
                   settings = {
                     bind = [
                       ", PRINT, exec, hyprshot -m region --freeze --clipboard-only"
-                      "SUPER, PRINT, exec, killall hyprpicker"
                     ];
                   };
                 };
