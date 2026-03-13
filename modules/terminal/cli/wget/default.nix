@@ -23,8 +23,7 @@ in
           {
             home = {
               packages = with pkgs; [
-                zip
-                unzip
+                wget
               ];
             };
           };
