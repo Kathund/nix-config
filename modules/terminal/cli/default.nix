@@ -6,6 +6,7 @@
     ./git
     ./htop
     ./hyfetch
+    ./ncdu
     ./ripgrep
     ./starship
     ./wget

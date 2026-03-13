@@ -55,6 +55,9 @@
             backend = "fastfetch";
             preset = "bisexual";
           };
+          ncdu = {
+            enable = true;
+          };
           ripgrep = {
             enable = true;
           };
