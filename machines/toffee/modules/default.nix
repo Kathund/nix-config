@@ -163,7 +163,7 @@
         };
         paper = {
           enable = true;
-          wallpaper = "/home/kathund/Pictures/Wallpapers/walls-catppuccin-mocha/";
+          wallpaper = "/home/${username}/Pictures/Wallpapers/walls-catppuccin-mocha/";
           loadOnStartup = true;
         };
         shot = {
