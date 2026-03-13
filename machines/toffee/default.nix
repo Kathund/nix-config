@@ -1,5 +1,6 @@
 {
   username,
+  pkgs,
   ...
 }:
 {
@@ -16,6 +17,29 @@
         canTouchEfiVariables = true;
       };
     };
+  };
+  environment = {
+    systemPackages = with pkgs; [
+      stdenv.cc.cc
+      glib
+      cups
+      alsa-lib
+      fontconfig
+      freetype
+      cairo
+      gtk3
+      ffmpeg.lib
+      gtk2
+
+      libX11
+      libXext
+      libXi
+      libXrender
+      libXtst
+      libXxf86vm
+      zlib
+      libGL
+    ];
   };
   home-manager = {
     users = {
