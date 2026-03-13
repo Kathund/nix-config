@@ -64,6 +64,9 @@
           starship = {
             enable = true;
           };
+          tree = {
+            enable = true;
+          };
           wget = {
             enable = true;
           };

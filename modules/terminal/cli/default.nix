@@ -9,6 +9,7 @@
     ./ncdu
     ./ripgrep
     ./starship
+    ./tree
     ./wget
     ./zip
     ./zsh
