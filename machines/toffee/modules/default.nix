@@ -183,6 +183,9 @@
         kate = {
           enable = true;
         };
+        kdenlive = {
+          enable = true;
+        };
         krita = {
           enable = true;
         };

@@ -4,6 +4,7 @@
     ./dolphin
     ./gwenview
     ./kate
+    ./kdenlive
     ./krita
     ./plasma
   ];
