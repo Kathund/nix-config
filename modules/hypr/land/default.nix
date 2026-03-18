@@ -137,7 +137,6 @@ in
                     "SUPER, V, togglefloating,"
                     "SUPER, M, exit,"
                     "SUPER, P, pseudo,"
-                    "SUPER, J, togglesplit,"
                     "SUPER, left, movefocus, l"
                     "SUPER, right, movefocus, r"
                     "SUPER, up, movefocus, u"
