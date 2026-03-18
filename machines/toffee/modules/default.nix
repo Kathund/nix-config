@@ -189,9 +189,6 @@
         krita = {
           enable = true;
         };
-        plasma = {
-          enable = true;
-        };
       };
       misc = {
         streamcontroller = {
