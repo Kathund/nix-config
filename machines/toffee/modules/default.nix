@@ -45,6 +45,9 @@
           javascript = {
             enable = true;
           };
+          kotlin = {
+            enable = true;
+          };
           markdown = {
             enable = true;
           };

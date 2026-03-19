@@ -4,6 +4,7 @@
     ./c
     ./java
     ./javascript
+    ./kotlin
     ./markdown
     ./nix
     ./nodejs
