@@ -24,6 +24,11 @@
           enable = true;
         };
       };
+      styles = {
+        catppuccin = {
+          enable = true;
+        };
+      };
       terminal = {
         cli = {
           btop = {
