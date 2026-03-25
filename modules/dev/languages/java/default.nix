@@ -34,18 +34,6 @@ in
                   enable = true;
                 };
               };
-              kotlin = {
-                enable = true;
-                extraDiagnostics = {
-                  enable = true;
-                };
-                lsp = {
-                  enable = true;
-                };
-                treesitter = {
-                  enable = true;
-                };
-              };
             };
           };
         };
@@ -60,8 +48,8 @@ in
               file =
                 let
                   javas = {
-                    jdk21 = pkgs.jdk21;
                     jdk25 = pkgs.jdk25;
+                    jdk21 = pkgs.jdk21;
                     jdk17 = pkgs.jdk17;
                     jdk11 = pkgs.jdk11;
                     jdk8 = pkgs.jdk8;
