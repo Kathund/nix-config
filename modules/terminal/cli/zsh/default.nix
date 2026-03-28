@@ -41,6 +41,7 @@ in
                   ll = "ls -l";
                   ls = "ls --color";
                   update = "sudo nixos-rebuild switch --flake ${config.modules.configPath}#${machine}";
+                  hm-check = "journalctl -xeu home-manager-${username}.service";
                 };
                 zplug = {
                   enable = true;
