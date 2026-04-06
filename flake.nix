@@ -37,7 +37,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spotatui = {
-      url = "github:mayseikatsu/spotatui/59b7aeb68dfbe47ac32714454c0ccaba4b77b922";
+      url = "github:LargeModGames/spotatui";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixmate = {

@@ -869,17 +869,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1772689136,
-        "narHash": "sha256-cip0SLKAy7l1FTeveaGM1AmNsTtfOkzCr2bJ6k92ic4=",
-        "owner": "mayseikatsu",
+        "lastModified": 1775460117,
+        "narHash": "sha256-mpiG6uWk9bc9IY0790sZnmt+sOxmiVmA/D+Rp6nrIUE=",
+        "owner": "LargeModGames",
         "repo": "spotatui",
-        "rev": "59b7aeb68dfbe47ac32714454c0ccaba4b77b922",
+        "rev": "6835ec5e31558d8c543c84552b03ff252f270fe5",
         "type": "github"
       },
       "original": {
-        "owner": "mayseikatsu",
+        "owner": "LargeModGames",
         "repo": "spotatui",
-        "rev": "59b7aeb68dfbe47ac32714454c0ccaba4b77b922",
         "type": "github"
       }
     },
