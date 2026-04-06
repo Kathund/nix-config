@@ -60,6 +60,9 @@
             backend = "fastfetch";
             preset = "bisexual";
           };
+          jq = {
+            enable = true;
+          };
           ncdu = {
             enable = true;
           };
