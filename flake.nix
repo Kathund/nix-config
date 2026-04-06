@@ -6,91 +6,47 @@
     };
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nvf = {
       url = "github:notashelf/nvf";
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland = {
       url = "github:hyprwm/Hyprland";
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprpanel = {
       url = "github:Jas-SinghFSU/HyprPanel";
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     prismlauncher = {
       url = "github:PrismLauncher/PrismLauncher";
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin = {
       url = "github:catppuccin/nix";
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     pipeweaver = {
       url = "github:BridgeSenseDev/nixpkgs/pipeweaver-init";
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     packwiz = {
       url = "github:polyfrost/packwiz/91963c904dce0ec6d62209b1dceda39f69860d9b";
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     spotatui = {
       url = "github:mayseikatsu/spotatui/59b7aeb68dfbe47ac32714454c0ccaba4b77b922";
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nixmate = {
       url = "github:daskladas/nixmate";
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     dix = {
       url = "github:faukah/dix";
-      inputs = {
-        nixpkgs = {
-          follows = "nixpkgs";
-        };
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
