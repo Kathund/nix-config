@@ -12,8 +12,13 @@
             enable = true;
           };
           nix = {
-            mate = {
-              enable = true;
+            tools = {
+              dix = {
+                enable = true;
+              };
+              nixmate = {
+                enable = true;
+              };
             };
             enable = true;
           };

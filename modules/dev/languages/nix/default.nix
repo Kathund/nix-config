@@ -21,7 +21,7 @@ in
   };
 
   imports = [
-    ./mate
+    ./tools
   ];
 
   config = lib.mkIf cfg.enable {

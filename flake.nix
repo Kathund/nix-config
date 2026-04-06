@@ -84,6 +84,14 @@
         };
       };
     };
+    dix = {
+      url = "github:faukah/dix";
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs";
+        };
+      };
+    };
   };
 
   outputs =
