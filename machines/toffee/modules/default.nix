@@ -20,6 +20,9 @@
         };
       };
       communication = {
+        element-desktop = {
+          enable = true;
+        };
         telegram-desktop = {
           enable = true;
         };
