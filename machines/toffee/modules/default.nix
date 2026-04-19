@@ -23,6 +23,9 @@
         element-desktop = {
           enable = true;
         };
+        signal-desktop = {
+          enable = true;
+        };
         telegram-desktop = {
           enable = true;
         };
