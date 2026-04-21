@@ -98,6 +98,9 @@
           enable = true;
         };
         minecraft = {
+          blockbench = {
+            enable = true;
+          };
           packwiz = {
             enable = true;
           };
