@@ -135,8 +135,8 @@
             enable = true;
           };
           pipeweaver = {
-            enable = true;
-            loadOnStartup = true;
+            enable = false; # Waiting for the pkg to get updated
+            loadOnStartup = false;
           };
           playerctld = {
             enable = true;
