@@ -101,6 +101,9 @@
           blockbench = {
             enable = true;
           };
+          lunar-client = {
+            enable = true;
+          };
           packwiz = {
             enable = true;
           };
