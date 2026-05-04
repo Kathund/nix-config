@@ -40,7 +40,6 @@ in
             statusline = {
               lualine = {
                 enable = true;
-                theme = lib.mkIf config.modules.styles.catppuccin.enable "catppuccin";
               };
             };
             telescope = {

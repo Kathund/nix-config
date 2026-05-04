@@ -25,7 +25,7 @@ in
         settings = {
           vim = {
             languages = {
-              ts = {
+              typescript = {
                 enable = true;
                 format = {
                   enable = true;

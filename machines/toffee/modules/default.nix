@@ -76,9 +76,6 @@
             html = {
               enable = true;
             };
-            svelte = {
-              enable = true;
-            };
             tailwind = {
               enable = true;
             };

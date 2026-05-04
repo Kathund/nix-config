@@ -24,10 +24,9 @@ in
       nvf = {
         settings = {
           vim = {
-            languages = {
-              ${program} = {
-                enable = true;
-                lsp = {
+            lsp = {
+              presets = {
+                tailwindcss-language-server = {
                   enable = true;
                 };
               };
