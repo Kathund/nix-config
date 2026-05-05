@@ -41,6 +41,7 @@ in
                   ll = "ls -l";
                   ls = "ls --color";
                   update = "sudo nixos-rebuild switch --flake ${config.modules.configPath}#${machine}";
+                  update-boot = "sudo nixos-rebuild boot --flake ${config.modules.configPath}#${machine}";
                   hm-check = "journalctl -xeu home-manager-${username}.service";
                   hm-clean = "rm ~/.gtkrc-2.0 ~/.config/mimeapps.list";
                 };
