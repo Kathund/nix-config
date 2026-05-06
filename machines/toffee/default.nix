@@ -50,7 +50,7 @@
               settings = {
                 monitor = [
                   "DP-1, 1920x1080@240, 0x0, 1"
-                  ", preferred, auto, 1, mirror, DP-1"
+                  "HDMI-A-1, 1920x1080@60, 1920x0, 1"
                 ];
               };
             };

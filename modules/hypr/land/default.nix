@@ -44,6 +44,9 @@ in
                 package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
                 portalPackage =
                   inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+                plugins = [
+                  inputs.split-monitor-workspaces.packages.${pkgs.stdenv.hostPlatform.system}.split-monitor-workspaces
+                ];
                 settings = {
                   env = [
                     "NIXOS_OZONE_WL, 1"
@@ -137,8 +140,8 @@ in
                     "SUPER, right, movefocus, r"
                     "SUPER, up, movefocus, u"
                     "SUPER, down, movefocus, d"
-                    "SUPER, 0, workspace, 10"
-                    "SUPER SHIFT, 0, movetoworkspace, 10"
+                    "SUPER, 0, split-workspace, 10"
+                    "SUPER SHIFT, 0, split-movetoworkspace, 10"
                   ]
                   ++
                     # workspaces: binds SUPER + [shift +] {1..9} to [move to] workspace {1..9}
@@ -149,8 +152,8 @@ in
                           ws = i + 1;
                         in
                         [
-                          "SUPER, code:1${toString i}, workspace, ${toString ws}"
-                          "SUPER SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+                          "SUPER, code:1${toString i}, split-workspace, ${toString ws}"
+                          "SUPER SHIFT, code:1${toString i}, split-movetoworkspace, ${toString ws}"
                         ]
                       ) 9
                     ));
