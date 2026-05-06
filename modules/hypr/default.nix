@@ -4,7 +4,6 @@
     ./land
     ./lock
     ./panel
-    ./paper
     ./shot
   ];
 }

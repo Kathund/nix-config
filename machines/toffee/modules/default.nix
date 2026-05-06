@@ -173,11 +173,6 @@
             location = "bottom";
           };
         };
-        paper = {
-          enable = true;
-          wallpaper = "/home/${username}/Pictures/Wallpapers/walls-catppuccin-mocha/";
-          loadOnStartup = true;
-        };
         shot = {
           enable = true;
         };
