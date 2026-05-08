@@ -22,6 +22,7 @@ in
           programs = {
             ${program} = {
               enable = true;
+              enableVirtualCamera = true;
             };
           };
         };
