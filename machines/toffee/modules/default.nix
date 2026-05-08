@@ -211,7 +211,7 @@
           enable = true;
         };
         spotify = {
-          desktop = {
+          spicetify = {
             enable = true;
           };
           spotatui = {
