@@ -1,5 +1,1 @@
-{
-  imports = [
-    ./idea
-  ];
-}
+{ imports = [ ./idea ]; }

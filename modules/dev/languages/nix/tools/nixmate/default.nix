@@ -11,9 +11,7 @@ let
 in
 {
   options.modules.dev.languages.nix.tools.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable nix${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable nix${program}"; };
   };
 
   config = lib.mkIf cfg.enable {
@@ -23,9 +21,7 @@ in
           { pkgs, ... }:
           {
             home = {
-              packages = with pkgs; [
-                inputs.nixmate.packages.${pkgs.stdenv.hostPlatform.system}.default
-              ];
+              packages = with pkgs; [ inputs.nixmate.packages.${pkgs.stdenv.hostPlatform.system}.default ];
             };
           };
       };

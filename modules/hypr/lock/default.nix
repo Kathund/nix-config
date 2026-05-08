@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.hypr.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable hypr${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable hypr${program}"; };
     lockscreen = lib.mkOption {
       type = lib.types.str;
       default = "${config.modules.configPath}/assets/lockscreen.png";

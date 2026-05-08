@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.dev.languages.web.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     nvf = lib.mkOption {
       type = lib.types.bool;
       default = true;
@@ -41,9 +39,7 @@ in
           { pkgs, ... }:
           {
             home = {
-              packages = with pkgs; [
-                tailwindcss
-              ];
+              packages = with pkgs; [ tailwindcss ];
             };
           };
       };

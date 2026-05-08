@@ -11,9 +11,7 @@ let
 in
 {
   options.modules.utilities.launchers.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     hyprlandBind = lib.mkOption {
       type = lib.types.bool;
       default = false;

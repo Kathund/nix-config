@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.hardware.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     disableIPv6 = lib.mkOption {
       type = lib.types.bool;
       default = true;

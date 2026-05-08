@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.hardware.boot.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     fontSize = lib.mkOption {
       type = lib.types.str;
       default = "24";
@@ -35,10 +33,10 @@ in
     environment = lib.mkIf config.modules.styles.catppuccin.enable {
       systemPackages = [
         (pkgs.catppuccin-sddm.override {
-          flavor = config.modules.styles.catppuccin.flavor;
-          accent = config.modules.styles.catppuccin.accent;
+          inherit (config.modules.styles.catppuccin) flavor;
+          inherit (config.modules.styles.catppuccin) accent;
           font = "JetBrainsMono Nerd Font";
-          fontSize = cfg.fontSize;
+          inherit (cfg) fontSize;
           loginBackground = false;
         })
       ];

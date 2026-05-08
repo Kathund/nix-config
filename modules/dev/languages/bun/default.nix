@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.dev.languages.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
   };
 
   config = lib.mkIf cfg.enable {
@@ -22,9 +20,7 @@ in
           { pkgs, ... }:
           {
             home = {
-              packages = with pkgs; [
-                bun
-              ];
+              packages = with pkgs; [ bun ];
             };
           };
       };

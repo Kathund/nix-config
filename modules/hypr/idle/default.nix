@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.hypr.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable hypr${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable hypr${program}"; };
   };
 
   config = lib.mkIf cfg.enable {

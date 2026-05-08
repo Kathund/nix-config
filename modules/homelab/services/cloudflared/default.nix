@@ -11,9 +11,7 @@ let
 in
 {
   options.modules.homelab.services.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     tunnel-id = lib.mkOption {
       type = lib.types.str;
       default = "00000000-0000-0000-0000-000000000000";
@@ -21,9 +19,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [
-      cloudflared
-    ];
+    environment.systemPackages = with pkgs; [ cloudflared ];
 
     services = {
       ${program} = {

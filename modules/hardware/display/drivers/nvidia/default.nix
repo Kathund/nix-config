@@ -1,8 +1,4 @@
-{
-  lib,
-  config,
-  ...
-}:
+{ lib, config, ... }:
 with lib;
 let
   program = "nvidia";
@@ -10,9 +6,7 @@ let
 in
 {
   options.modules.hardware.display.drivers.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
   };
 
   config = mkIf cfg.enable {

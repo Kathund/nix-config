@@ -12,9 +12,7 @@ let
 in
 {
   options.modules.hypr.land.plugins.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable hyprland plugin ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable hyprland plugin ${program}"; };
   };
 
   config = lib.mkIf cfg.enable {

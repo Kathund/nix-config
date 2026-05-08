@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.misc.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     loadOnStartup = lib.mkOption {
       type = lib.types.bool;
       default = false;

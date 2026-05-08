@@ -11,9 +11,7 @@ let
 in
 {
   options.modules.music.spotify.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
   };
 
   config = lib.mkIf cfg.enable {
@@ -23,9 +21,7 @@ in
           { pkgs, ... }:
           {
             home = {
-              packages = with pkgs; [
-                inputs.spotatui.packages.${pkgs.stdenv.hostPlatform.system}.default
-              ];
+              packages = with pkgs; [ inputs.spotatui.packages.${pkgs.stdenv.hostPlatform.system}.default ];
             };
           };
       };

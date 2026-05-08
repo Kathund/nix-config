@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.dev.languages.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     nvf = lib.mkOption {
       type = lib.types.bool;
       default = true;
@@ -52,9 +50,7 @@ in
           { pkgs, ... }:
           {
             home = {
-              packages = with pkgs; [
-                python314
-              ];
+              packages = with pkgs; [ python314 ];
             };
           };
       };

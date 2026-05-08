@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.communication.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
   };
 
   config = lib.mkIf cfg.enable {

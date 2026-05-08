@@ -11,18 +11,14 @@ let
 in
 {
   options.modules.virtualization.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
   };
 
   config = lib.mkIf cfg.enable {
     users = {
       users = {
         ${username} = {
-          extraGroups = [
-            "libvirtd"
-          ];
+          extraGroups = [ "libvirtd" ];
         };
       };
     };
@@ -48,9 +44,7 @@ in
       };
     };
     environment = {
-      systemPackages = with pkgs; [
-        dnsmasq
-      ];
+      systemPackages = with pkgs; [ dnsmasq ];
     };
     networking = {
       firewall = {

@@ -1,5 +1,1 @@
-{
-  imports = [
-    ./mongodb-compass
-  ];
-}
+{ imports = [ ./mongodb-compass ]; }

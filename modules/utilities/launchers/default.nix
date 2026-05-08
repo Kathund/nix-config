@@ -1,5 +1,1 @@
-{
-  imports = [
-    ./rofi
-  ];
-}
+{ imports = [ ./rofi ]; }

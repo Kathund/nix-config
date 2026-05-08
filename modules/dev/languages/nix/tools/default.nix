@@ -1,6 +1,7 @@
 {
   imports = [
     ./dix
+    ./fmt
     ./nixmate
   ];
 }

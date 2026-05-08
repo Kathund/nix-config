@@ -1,5 +1,1 @@
-{
-  imports = [
-    ./virt
-  ];
-}
+{ imports = [ ./virt ]; }

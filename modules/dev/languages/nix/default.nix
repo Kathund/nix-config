@@ -11,18 +11,14 @@ let
 in
 {
   options.modules.dev.languages.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     nvf = lib.mkOption {
       type = lib.types.bool;
       default = true;
     };
   };
 
-  imports = [
-    ./tools
-  ];
+  imports = [ ./tools ];
 
   config = lib.mkIf cfg.enable {
     programs = lib.mkIf cfg.nvf {
@@ -63,8 +59,6 @@ in
             };
             home = {
               packages = with pkgs; [
-                nixfmt
-                nixfmt-tree
                 nixd
                 compose2nix
               ];

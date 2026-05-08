@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.games.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
   };
 
   config = lib.mkIf cfg.enable {
@@ -25,9 +23,7 @@ in
         dedicatedServer = {
           openFirewall = true;
         };
-        extraCompatPackages = with pkgs; [
-          proton-ge-bin
-        ];
+        extraCompatPackages = with pkgs; [ proton-ge-bin ];
       };
       gamemode = {
         enable = true;

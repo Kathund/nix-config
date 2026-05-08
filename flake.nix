@@ -1,9 +1,7 @@
 {
   description = "meow :3";
   inputs = {
-    nixpkgs = {
-      url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    };
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -56,12 +54,18 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
     { nixpkgs, ... }@inputs:
     let
       username = "kathund";
+      mkPkgs = system: import nixpkgs { inherit system; };
+
       nixosMachine =
         { machine }:
         nixpkgs.lib.nixosSystem {
@@ -73,11 +77,13 @@
             ./users/${username}
           ];
         };
+      system = "x86_64-linux";
+      pkgs = mkPkgs system;
+      treefmt = inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix;
     in
     {
-      formatter = {
-        x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt;
-      };
+      formatter.${system} = treefmt.config.build.wrapper;
+      checks.formatting = treefmt.config.build.check inputs.self;
       nixosConfigurations = {
         snowball = nixosMachine { machine = "snowball"; };
         toffee = nixosMachine { machine = "toffee"; };

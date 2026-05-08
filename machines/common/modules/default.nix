@@ -16,6 +16,9 @@
               dix = {
                 enable = true;
               };
+              fmt = {
+                enable = true;
+              };
               nixmate = {
                 enable = true;
               };

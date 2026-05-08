@@ -1,5 +1,1 @@
-{
-  imports = [
-    ./split-monitor-workspaces
-  ];
-}
+{ imports = [ ./split-monitor-workspaces ]; }

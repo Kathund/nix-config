@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.misc.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     loadOnStartup = lib.mkOption {
       type = lib.types.bool;
       default = false;
@@ -26,9 +24,7 @@ in
           { pkgs, ... }:
           {
             home = {
-              packages = with pkgs; [
-                streamcontroller
-              ];
+              packages = with pkgs; [ streamcontroller ];
             };
             wayland = lib.mkIf cfg.loadOnStartup {
               windowManager = {

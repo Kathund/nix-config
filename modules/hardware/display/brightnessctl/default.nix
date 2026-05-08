@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.hardware.display.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
   };
   config = lib.mkIf cfg.enable {
     home-manager = {
@@ -21,9 +19,7 @@ in
           { pkgs, ... }:
           {
             home = {
-              packages = with pkgs; [
-                brightnessctl
-              ];
+              packages = with pkgs; [ brightnessctl ];
             };
             wayland = {
               windowManager = {

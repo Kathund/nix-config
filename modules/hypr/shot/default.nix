@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.hypr.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable hypr${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable hypr${program}"; };
   };
 
   config = lib.mkIf cfg.enable {
@@ -22,17 +20,13 @@ in
           { pkgs, ... }:
           {
             home = {
-              packages = with pkgs; [
-                hyprshot
-              ];
+              packages = with pkgs; [ hyprshot ];
             };
             wayland = {
               windowManager = {
                 hyprland = {
                   settings = {
-                    bind = [
-                      ", PRINT, exec, hyprshot -m region --freeze --clipboard-only"
-                    ];
+                    bind = [ ", PRINT, exec, hyprshot -m region --freeze --clipboard-only" ];
                   };
                 };
               };

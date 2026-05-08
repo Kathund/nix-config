@@ -1,8 +1,4 @@
-{
-  lib,
-  username,
-  ...
-}:
+{ lib, username, ... }:
 {
   options.modules = {
     configPath = lib.mkOption {

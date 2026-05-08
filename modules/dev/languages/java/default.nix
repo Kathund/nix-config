@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.dev.languages.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     nvf = lib.mkOption {
       type = lib.types.bool;
       default = true;
@@ -48,18 +46,15 @@ in
               file =
                 let
                   javas = {
-                    jdk25 = pkgs.jdk25;
-                    jdk21 = pkgs.jdk21;
-                    jdk17 = pkgs.jdk17;
-                    jdk11 = pkgs.jdk11;
-                    jdk8 = pkgs.jdk8;
+                    inherit (pkgs) jdk25;
+                    inherit (pkgs) jdk21;
+                    inherit (pkgs) jdk17;
+                    inherit (pkgs) jdk11;
+                    inherit (pkgs) jdk8;
                   };
                 in
                 (lib.attrsets.mapAttrs' (
-                  label: package:
-                  lib.attrsets.nameValuePair (".jdks/" + label) {
-                    source = package;
-                  }
+                  label: package: lib.attrsets.nameValuePair (".jdks/" + label) { source = package; }
                 ) javas)
                 // {
                   ".gradle/gradle.properties".source =

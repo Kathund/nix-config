@@ -1,12 +1,11 @@
 {
   config,
-  inputs,
   lib,
   username,
   ...
 }:
 let
-  program = "dix";
+  program = "fmt";
   cfg = config.modules.dev.languages.nix.tools.${program};
 in
 {
@@ -21,14 +20,10 @@ in
           { pkgs, ... }:
           {
             home = {
-              packages = with pkgs; [ inputs.dix.packages.${pkgs.stdenv.hostPlatform.system}.default ];
-            };
-            programs = {
-              zsh = {
-                shellAliases = {
-                  dix-latest = "${config.modules.configPath}/modules/dev/languages/nix/tools/${program}/dix-latest.sh";
-                };
-              };
+              packages = with pkgs; [
+                nixfmt
+                nixfmt-tree
+              ];
             };
           };
       };

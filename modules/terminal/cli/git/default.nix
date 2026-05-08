@@ -10,15 +10,9 @@ let
 in
 {
   options.modules.terminal.cli.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
-    username = lib.mkOption {
-      type = lib.types.str;
-    };
-    email = lib.mkOption {
-      type = lib.types.str;
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
+    username = lib.mkOption { type = lib.types.str; };
+    email = lib.mkOption { type = lib.types.str; };
     signCommits = lib.mkOption {
       type = lib.types.bool;
       default = false;
@@ -40,7 +34,7 @@ in
               settings = {
                 user = {
                   name = cfg.username;
-                  email = cfg.email;
+                  inherit (cfg) email;
                 };
               };
               signing = {

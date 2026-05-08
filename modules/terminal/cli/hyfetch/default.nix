@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.terminal.cli.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     mode = lib.mkOption {
       type = lib.types.str;
       default = "rgb";
@@ -135,9 +133,7 @@ in
       description = "Change ${program}'s color alignment";
     };
     backend = lib.mkOption {
-      type = lib.types.enum [
-        "fastfetch"
-      ];
+      type = lib.types.enum [ "fastfetch" ];
       default = "fastfetch";
       description = "Change what fetch backend ${program} uses";
     };
@@ -151,14 +147,14 @@ in
             ${program} = {
               enable = true;
               settings = {
-                mode = cfg.mode;
+                inherit (cfg) mode;
                 light_dark = cfg.theme;
-                preset = cfg.preset;
+                inherit (cfg) preset;
                 lightness = cfg.brightness;
                 color_align = {
                   mode = cfg.colorAlign;
                 };
-                backend = cfg.backend;
+                inherit (cfg) backend;
                 pride_month_disable = false;
               };
             };

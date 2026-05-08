@@ -10,16 +10,12 @@ let
 in
 {
   options.modules.homelab.services.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
   };
 
   config = lib.mkIf cfg.enable {
     environment = {
-      systemPackages = with pkgs; [
-        pm2
-      ];
+      systemPackages = with pkgs; [ pm2 ];
     };
   };
 }

@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.hardware.sound.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     loadOnStartup = lib.mkOption {
       type = lib.types.bool;
       default = false;
@@ -25,9 +23,7 @@ in
           { pkgs, ... }:
           {
             home = {
-              packages = with pkgs; [
-                qpwgraph
-              ];
+              packages = with pkgs; [ qpwgraph ];
             };
             wayland = lib.mkIf cfg.loadOnStartup {
               windowManager = {

@@ -11,9 +11,7 @@ let
 in
 {
   options.modules.styles.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     flavor = lib.mkOption {
       type = lib.types.enum [
         "mocha"
@@ -51,8 +49,8 @@ in
           imports = [ inputs.catppuccin.homeModules.catppuccin ];
           catppuccin = lib.mkIf cfg.enable {
             enable = true;
-            flavor = cfg.flavor;
-            accent = cfg.accent;
+            inherit (cfg) flavor;
+            inherit (cfg) accent;
           };
         };
       };

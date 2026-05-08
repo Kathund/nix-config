@@ -10,9 +10,7 @@ let
 in
 {
   options.modules.hardware.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
   };
   imports = [
     ./audacity

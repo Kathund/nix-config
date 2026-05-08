@@ -1,17 +1,11 @@
-{
-  config,
-  lib,
-  ...
-}:
+{ config, lib, ... }:
 let
   program = "html";
   cfg = config.modules.dev.languages.web.${program};
 in
 {
   options.modules.dev.languages.web.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     nvf = lib.mkOption {
       type = lib.types.bool;
       default = true;

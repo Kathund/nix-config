@@ -8,9 +8,7 @@
   ...
 }:
 {
-  imports = [
-    (modulesPath + "/installer/scan/not-detected.nix")
-  ];
+  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
   boot = {
     initrd = {
       availableKernelModules = [
@@ -39,9 +37,7 @@
       fsType = "ntfs";
     };
   };
-  swapDevices = [
-    { device = "/dev/disk/by-uuid/3eadf6b5-b45f-4766-9dcd-4ff53aed4417"; }
-  ];
+  swapDevices = [ { device = "/dev/disk/by-uuid/3eadf6b5-b45f-4766-9dcd-4ff53aed4417"; } ];
   nixpkgs = {
     hostPlatform = lib.mkDefault "x86_64-linux";
   };

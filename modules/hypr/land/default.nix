@@ -12,18 +12,14 @@ let
 in
 {
   options.modules.hypr.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable hypr${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable hypr${program}"; };
     loadWorkspaceBinds = lib.mkOption {
       type = lib.types.bool;
       default = true;
     };
   };
 
-  imports = [
-    ./plugins
-  ];
+  imports = [ ./plugins ];
 
   config = lib.mkIf cfg.enable {
     programs = {

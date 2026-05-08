@@ -12,9 +12,7 @@ let
 in
 {
   options.modules.music.spotify.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
   };
 
   config = lib.mkIf cfg.enable {
@@ -24,9 +22,7 @@ in
           services = {
             ${program} = {
               enable = true;
-              package = pkgs.spotifyd.override {
-                withMpris = true;
-              };
+              package = pkgs.spotifyd.override { withMpris = true; };
               settings = {
                 global = {
                   device_name = machine;

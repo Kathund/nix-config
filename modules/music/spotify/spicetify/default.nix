@@ -13,9 +13,7 @@ let
 in
 {
   options.modules.music.spotify.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable spotify ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable spotify ${program}"; };
   };
 
   config = lib.mkIf cfg.enable {

@@ -12,9 +12,7 @@ let
 in
 {
   options.modules.hypr.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable hypr${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable hypr${program}"; };
     loadOnStartup = lib.mkOption {
       type = lib.types.bool;
       default = false;
@@ -63,8 +61,8 @@ in
               settings = {
                 theme = {
                   bar = {
-                    transparent = cfg.bar.transparent;
-                    location = cfg.bar.location;
+                    inherit (cfg.bar) transparent;
+                    inherit (cfg.bar) location;
                     border = {
                       width = "0em";
                     };
@@ -81,10 +79,10 @@ in
                   osd = {
                     duration = 1500;
                     orientation = "horizontal";
-                    location = cfg.osd.location;
+                    inherit (cfg.osd) location;
                   };
                   font = {
-                    size = cfg.font.size;
+                    inherit (cfg.font) size;
                     name = "JetBrainsMonoNL Nerd Font Mono";
                     label = "JetBrainsMonoNL Nerd Font Mono";
                   };

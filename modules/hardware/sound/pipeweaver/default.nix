@@ -12,9 +12,7 @@ let
 in
 {
   options.modules.hardware.sound.${program} = {
-    enable = lib.mkEnableOption {
-      description = "Enable ${program}";
-    };
+    enable = lib.mkEnableOption { description = "Enable ${program}"; };
     loadOnStartup = lib.mkOption {
       type = lib.types.bool;
       default = false;
@@ -22,11 +20,7 @@ in
   };
   config = lib.mkIf cfg.enable {
     nixpkgs = {
-      overlays = [
-        (_: prev: {
-          pipeweaver = inputs.pipeweaver.legacyPackages.${prev.system}.pipeweaver;
-        })
-      ];
+      overlays = [ (_: prev: { inherit (inputs.pipeweaver.legacyPackages.${prev.system}) pipeweaver; }) ];
     };
     environment = {
       systemPackages = with pkgs; [
@@ -40,9 +34,7 @@ in
             windowManager = {
               hyprland = {
                 settings = {
-                  exec-once = [
-                    "pipeweaver-daemon --background"
-                  ];
+                  exec-once = [ "pipeweaver-daemon --background" ];
                 };
               };
             };

@@ -1,7 +1,4 @@
-{
-  username,
-  ...
-}:
+{ username, ... }:
 {
   config = {
     modules = {
