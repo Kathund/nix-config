@@ -1,0 +1,5 @@
+{
+  imports = [
+    ./split-monitor-workspaces
+  ];
+}

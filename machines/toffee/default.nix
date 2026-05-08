@@ -39,6 +39,8 @@
       libXxf86vm
       zlib
       libGL
+
+      fd
     ];
   };
   home-manager = {

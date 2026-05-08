@@ -160,18 +160,16 @@
         };
         land = {
           enable = true;
+          loadWorkspaceBinds = false;
+          plugins = {
+            split-monitor-workspaces = {
+              enable = true;
+            };
+          };
         };
         lock = {
           enable = true;
           lockscreen = "screenshot";
-        };
-        panel = {
-          enable = true;
-          loadOnStartup = true;
-          bar = {
-            transparent = false;
-            location = "bottom";
-          };
         };
         shot = {
           enable = true;
@@ -202,6 +200,10 @@
       };
       misc = {
         streamcontroller = {
+          enable = true;
+          loadOnStartup = true;
+        };
+        wayle = {
           enable = true;
           loadOnStartup = true;
         };
