@@ -27,7 +27,7 @@ in
               settings = {
                 bar = {
                   location = "bottom";
-                  scale = 0.5;
+                  scale = 0.65;
                   layout = {
                     monitor = "*";
                     show = true;
@@ -35,7 +35,6 @@ in
                       "hyprland-workspaces"
                       "media"
                     ];
-                    center = [ ];
                     right = [
                       "microphone"
                       "volume"
@@ -75,6 +74,7 @@ in
                     icon-color = "blue";
                     label-color = "blue";
                     popup-position = "bottom-right";
+                    middle-click = "wayle notify dismiss-all";
                   };
                   systray = {
                     icon-scale = 1.25;
