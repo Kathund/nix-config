@@ -1,1 +1,6 @@
-{ imports = [ ./rofi ]; }
+{
+  imports = [
+    ./rofi
+    ./vicinae
+  ];
+}

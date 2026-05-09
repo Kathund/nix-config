@@ -196,6 +196,9 @@
         };
       };
       misc = {
+        awww = {
+          enable = true;
+        };
         streamcontroller = {
           enable = true;
           loadOnStartup = true;
@@ -237,16 +240,12 @@
         };
       };
       utilities = {
-        clipboard = {
-          enable = true;
-        };
         flatpak = {
           enable = true;
         };
         launchers = {
-          rofi = {
+          vicinae = {
             enable = true;
-            hyprlandBind = true;
           };
         };
         video = {
@@ -257,9 +256,7 @@
             enable = true;
           };
         };
-      };
-      virtualization = {
-        virt = {
+        wl-clipboard = {
           enable = true;
         };
       };

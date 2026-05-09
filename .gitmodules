@@ -1,0 +1,3 @@
+[submodule "assets/walls-catppuccin-mocha"]
+	path = assets/walls-catppuccin-mocha
+	url = https://github.com/orangci/walls-catppuccin-mocha

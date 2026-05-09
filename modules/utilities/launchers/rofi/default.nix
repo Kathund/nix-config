@@ -33,7 +33,7 @@ in
             windowManager = {
               hyprland = {
                 settings = {
-                  bind = [ "SUPERSHIFT, S, exec, rofi -show drun -show-icons" ];
+                  bind = [ "SUPER_SHIFT, S, exec, rofi -show drun -show-icons" ];
                 };
               };
             };

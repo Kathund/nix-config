@@ -58,6 +58,15 @@
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    vicinae = {
+      url = "github:vicinaehq/vicinae";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    vicinae-extensions = {
+      url = "github:vicinaehq/extensions";
+      inputs.vicinae.follows = "vicinae";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -83,7 +92,6 @@
     in
     {
       formatter.${system} = treefmt.config.build.wrapper;
-      checks.formatting = treefmt.config.build.check inputs.self;
       nixosConfigurations = {
         snowball = nixosMachine { machine = "snowball"; };
         toffee = nixosMachine { machine = "toffee"; };

@@ -1,8 +1,8 @@
 {
   imports = [
-    ./clipboard
     ./flatpak
     ./launchers
     ./video
+    ./wl-clipboard
   ];
 }
