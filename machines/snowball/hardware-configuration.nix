@@ -23,21 +23,11 @@
     kernelModules = [ "kvm-amd" ];
     extraModulePackages = [ ];
   };
-  fileSystems = {
-    "/" = {
-      device = "/dev/disk/by-uuid/b20dd920-a6bf-4cb5-87eb-e7088352fc77";
-      fsType = "ext4";
-    };
+  fileSystems."/" = {
+    device = "/dev/disk/by-uuid/b20dd920-a6bf-4cb5-87eb-e7088352fc77";
+    fsType = "ext4";
   };
   swapDevices = [ ];
-  nixpkgs = {
-    hostPlatform = lib.mkDefault "x86_64-linux";
-  };
-  hardware = {
-    cpu = {
-      amd = {
-        updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-      };
-    };
-  };
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

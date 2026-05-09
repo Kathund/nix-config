@@ -14,10 +14,6 @@
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprpanel = {
-      url = "github:Jas-SinghFSU/HyprPanel";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     split-monitor-workspaces = {
       url = "github:zjeffer/split-monitor-workspaces";
       inputs.hyprland.follows = "hyprland";
@@ -36,18 +32,6 @@
     };
     packwiz = {
       url = "github:polyfrost/packwiz/91963c904dce0ec6d62209b1dceda39f69860d9b";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    spotatui = {
-      url = "github:LargeModGames/spotatui";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nixmate = {
-      url = "github:daskladas/nixmate";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    dix = {
-      url = "github:faukah/dix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix = {
@@ -83,7 +67,7 @@
             ./machines/common
             ./machines/${machine}
             ./modules
-            ./users/${username}
+            ./users/${username}.nix
           ];
         };
       system = "x86_64-linux";

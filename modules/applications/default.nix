@@ -1,0 +1,20 @@
+{
+  imports = [
+    ./browsers
+    ./communication
+    ./games
+    ./ark.nix
+    ./dolphin.nix
+    ./jetbrains-idea.nix
+    ./kate.nix
+    ./kdenlive.nix
+    ./kitty.nix
+    ./krita.nix
+    ./mongodb-compass.nix
+    ./nvf.nix
+    ./obs-studio.nix
+    ./spicetify.nix
+    ./streamcontroller.nix
+    ./vlc.nix
+  ];
+}

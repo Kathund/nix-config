@@ -8,19 +8,11 @@
     };
   };
   imports = [
-    ./browsers
-    ./communication
+    ./applications
+    ./desktop
     ./dev
-    ./games
     ./hardware
     ./homelab
-    ./hypr
-    ./kde
-    ./misc
-    ./music
-    ./styles
     ./terminal
-    ./utilities
-    ./virtualization
   ];
 }

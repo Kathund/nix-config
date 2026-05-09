@@ -1,7 +1,0 @@
-{
-  imports = [
-    ./spicetify
-    ./spotatui
-    ./spotifyd
-  ];
-}

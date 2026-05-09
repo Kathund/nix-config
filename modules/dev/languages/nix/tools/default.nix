@@ -1,7 +1,0 @@
-{
-  imports = [
-    ./dix
-    ./fmt
-    ./nixmate
-  ];
-}
