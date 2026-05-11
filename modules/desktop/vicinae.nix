@@ -31,7 +31,7 @@ in
             environment.USE_LAYER_SHELL = 1;
           };
           settings = {
-            close_on_focus_loss = true;
+            close_on_focus_loss = false;
             pop_to_root_on_close = true;
             launcher_window.opacity = lib.mkForce 0.9;
             font.normal.family = "JetBrainsMono Nerd Font Mono";
@@ -48,6 +48,9 @@ in
                 };
               };
               "@leonkohli/vicinae-extension-process-manager-0".enabled = true;
+              "@knoopx/vicinae-extension-nix-0".enabled = true;
+              "@Costeer/vicinae-extension-color-converter-0".enabled = true;
+              "@alan7a/vicinae-extension-case-converter-0".enabled = true;
               browser-extension.enabled = false;
               clipboard = {
                 preferences = {
@@ -59,12 +62,14 @@ in
                 entrypoints.history.preferences.defaultAction = "copy";
               };
               core.entrypoints.sponsor.enabled = false;
-              developer.enabled = false;
+              developer.enabled = true;
               files.enabled = true;
             };
           };
           extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
             awww-switcher
+            case-converter
+            color-converter
             nix
             protondb-search
             process-manager
