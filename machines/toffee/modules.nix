@@ -22,7 +22,7 @@
         lunar-client.enable = true;
         prism-launcher.enable = true;
         steam.enable = true;
-        protonup-qt.enable = true;
+        proton.enable = true;
       };
       ark.enable = true;
       dolphin.enable = true;

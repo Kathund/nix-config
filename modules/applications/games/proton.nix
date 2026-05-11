@@ -5,7 +5,7 @@
   ...
 }:
 let
-  program = "protonup-qt";
+  program = "proton";
   cfg = config.modules.applications.games.${program};
 in
 {
@@ -17,7 +17,11 @@ in
     home-manager.users.${username} =
       { pkgs, ... }:
       {
-        home.packages = with pkgs; [ protonup-qt ];
+        home.packages = with pkgs; [
+          protonup-qt
+          winetricks
+          protontricks
+        ];
       };
   };
 }
