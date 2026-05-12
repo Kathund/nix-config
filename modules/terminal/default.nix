@@ -1,6 +1,7 @@
 {
   imports = [
     ./git
+    ./zsh
     ./btop.nix
     ./fastfetch.nix
     ./fzf.nix
@@ -13,6 +14,5 @@
     ./tree.nix
     ./wl-clipboard.nix
     ./zip.nix
-    ./zsh.nix
   ];
 }

@@ -15,11 +15,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    programs = {
-      ${program} = {
-        enable = true;
-      };
-    };
+    programs.${program}.enable = true;
     home-manager.users.${username} = {
       programs.${program} = {
         enable = true;
@@ -33,6 +29,7 @@ in
           update-boot = "sudo nixos-rebuild boot --flake ${config.modules.configPath}#${machine}";
           hm-check = "journalctl -xeu home-manager-${username}.service";
           hm-clean = "rm ~/.gtkrc-2.0 ~/.config/mimeapps.list";
+          mclogs-upload = "${config.modules.configPath}/modules/terminal/zsh/scripts/mclogs-upload.sh";
         };
         zplug = {
           enable = true;
