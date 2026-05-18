@@ -13,14 +13,13 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    programs.nvf.settings.vim.languages.${program} = lib.mkIf cfg.nvf {
-      enable = true;
-      format = {
+    programs.nvf.settings.vim = lib.mkIf cfg.nvf {
+      lsp.presets.tailwindcss-language-server.enable = lib.mkIf cfg.nvf true;
+      languages.scss.enable = true;
+      languages.${program} = {
         enable = true;
-        type = [ "prettier" ];
+        format.type = [ "prettier" ];
       };
-      lsp.enable = true;
-      treesitter.enable = true;
     };
   };
 }

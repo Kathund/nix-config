@@ -15,19 +15,9 @@ in
   config = lib.mkIf cfg.enable {
     programs.nvf.settings.vim.languages.${program} = lib.mkIf cfg.nvf {
       enable = true;
-      extraDiagnostics = {
-        enable = true;
-        types = [ "htmlhint" ];
-      };
-      format = {
-        enable = true;
-        type = [ "superhtml" ];
-      };
-      lsp.enable = true;
-      treesitter = {
-        enable = true;
-        autotagHtml = true;
-      };
+      extraDiagnostics.types = [ "htmlhint" ];
+      format.type = [ "superhtml" ];
+      treesitter.autotagHtml = true;
     };
   };
 }

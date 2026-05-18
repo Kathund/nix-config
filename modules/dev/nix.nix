@@ -21,12 +21,7 @@ in
   config = lib.mkIf cfg.enable {
     programs.nvf.settings.vim.languages.${program} = lib.mkIf cfg.nvf {
       enable = true;
-      format = {
-        enable = true;
-        type = [ "nixfmt" ];
-      };
-      lsp.enable = true;
-      treesitter.enable = true;
+      format.type = [ "nixfmt" ];
     };
     home-manager.users.${username} =
       { pkgs, ... }:

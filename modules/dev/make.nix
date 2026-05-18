@@ -5,7 +5,7 @@
   ...
 }:
 let
-  program = "tailwind";
+  program = "make";
   cfg = config.modules.dev.${program};
 in
 {
@@ -18,11 +18,11 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    programs.nvf.settings.vim.lsp.presets.tailwindcss-language-server.enable = lib.mkIf cfg.nvf true;
+    programs.nvf.settings.vim.languages.${program}.enable = lib.mkIf cfg.nvf true;
     home-manager.users.${username} =
       { pkgs, ... }:
       {
-        home.packages = with pkgs; [ tailwindcss ];
+        home.packages = with pkgs; [ gnumake ];
       };
   };
 }

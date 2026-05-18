@@ -20,8 +20,10 @@ in
   config = lib.mkIf cfg.enable {
     programs.nvf.settings.vim.languages.${program} = lib.mkIf cfg.nvf {
       enable = true;
-      lsp.enable = true;
-      treesitter.enable = true;
+      extensions = {
+        gradle-nvim.enable = true;
+        maven-nvim.enable = true;
+      };
     };
     home-manager.users.${username} =
       { pkgs, ... }:

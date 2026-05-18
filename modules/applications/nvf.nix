@@ -42,6 +42,12 @@ in
           };
         };
         autocomplete.nvim-cmp.enable = true;
+        languages = {
+          enableDAP = true;
+          enableExtraDiagnostics = true;
+          enableFormat = true;
+          enableTreesitter = true;
+        };
         lsp = {
           enable = true;
           formatOnSave = true;
@@ -67,6 +73,7 @@ in
         git.enable = true;
         clipboard = {
           enable = true;
+          registers = "unnamedplus";
           providers.wl-copy.enable = true;
         };
         binds = {
@@ -281,15 +288,18 @@ in
         ${username} =
           { pkgs, ... }:
           {
-            home.file.".editorconfig".source = (pkgs.formats.ini { }).generate ".editorconfig" {
-              "*" = {
-                indent_style = "space";
-                indent_size = 2;
-                end_of_line = "lf";
-                charset = "utf-8";
-                trim_trailing_whitespace = true;
-                insert_final_newline = true;
-                max_line_width = 120;
+            home = {
+              packages = with pkgs; [ fd ];
+              file.".editorconfig".source = (pkgs.formats.ini { }).generate ".editorconfig" {
+                "*" = {
+                  indent_style = "space";
+                  indent_size = 2;
+                  end_of_line = "lf";
+                  charset = "utf-8";
+                  trim_trailing_whitespace = true;
+                  insert_final_newline = true;
+                  max_line_width = 120;
+                };
               };
             };
           };

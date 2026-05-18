@@ -21,26 +21,13 @@ in
     programs.nvf.settings.vim.languages = lib.mkIf cfg.nvf {
       typescript = {
         enable = true;
-        format = {
-          enable = true;
-          type = [ "prettier" ];
-        };
-        lsp.enable = true;
-        treesitter.enable = true;
+        format.type = [ "prettier" ];
         extensions.ts-error-translator.enable = true;
-        extraDiagnostics = {
-          enable = true;
-          types = [ "eslint_d" ];
-        };
+        extraDiagnostics.types = [ "eslint_d" ];
       };
       json = {
         enable = true;
-        format = {
-          enable = true;
-          type = [ "jsonfmt" ];
-        };
-        lsp.enable = true;
-        treesitter.enable = true;
+        format.type = [ "jsonfmt" ];
       };
     };
     home-manager.users.${username} =

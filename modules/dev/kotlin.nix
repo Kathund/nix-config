@@ -13,11 +13,6 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    programs.nvf.settings.vim.languages.${program} = lib.mkIf cfg.nvf {
-      enable = true;
-      extraDiagnostics.enable = true;
-      lsp.enable = true;
-      treesitter.enable = true;
-    };
+    programs.nvf.settings.vim.languages.${program}.enable = lib.mkIf cfg.nvf true;
   };
 }

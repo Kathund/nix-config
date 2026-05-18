@@ -5,7 +5,9 @@
       nvf.enable = true;
     };
     dev = {
+      bash.enable = true;
       c.enable = true;
+      make.enable = true;
       nix.enable = true;
     };
     desktop.catppuccin.enable = true;

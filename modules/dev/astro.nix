@@ -15,16 +15,8 @@ in
   config = lib.mkIf cfg.enable {
     programs.nvf.settings.vim.languages.${program} = lib.mkIf cfg.nvf {
       enable = true;
-      extraDiagnostics = {
-        enable = true;
-        types = [ "eslint_d" ];
-      };
-      format = {
-        enable = true;
-        type = [ "prettier" ];
-      };
-      lsp.enable = true;
-      treesitter.enable = true;
+      extraDiagnostics.types = [ "eslint_d" ];
+      format.type = [ "prettier" ];
     };
   };
 }

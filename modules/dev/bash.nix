@@ -1,11 +1,6 @@
-{
-  config,
-  lib,
-  username,
-  ...
-}:
+{ config, lib, ... }:
 let
-  program = "c";
+  program = "bash";
   cfg = config.modules.dev.${program};
 in
 {
@@ -18,11 +13,6 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    programs.nvf.settings.vim.languages.clang.enable = lib.mkIf cfg.nvf true;
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = with pkgs; [ clang ];
-      };
+    programs.nvf.settings.vim.languages.${program}.enable = lib.mkIf cfg.nvf true;
   };
 }

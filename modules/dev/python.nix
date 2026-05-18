@@ -20,13 +20,7 @@ in
   config = lib.mkIf cfg.enable {
     programs.nvf.settings.vim.languages.python = lib.mkIf cfg.nvf {
       enable = true;
-      dap.enable = true;
-      format = {
-        enable = true;
-        type = [ "black" ];
-      };
-      lsp.enable = true;
-      treesitter.enable = true;
+      format.type = [ "black" ];
     };
     home-manager.users.${username} =
       { pkgs, ... }:

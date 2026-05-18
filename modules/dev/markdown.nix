@@ -16,13 +16,7 @@ in
     programs.nvf.settings.vim.languages.${program} = lib.mkIf cfg.nvf {
       enable = true;
       extensions.markview-nvim.enable = true;
-      extraDiagnostics.enable = true;
-      format = {
-        enable = true;
-        type = [ "prettierd" ];
-      };
-      lsp.enable = true;
-      treesitter.enable = true;
+      format.type = [ "prettierd" ];
     };
   };
 }

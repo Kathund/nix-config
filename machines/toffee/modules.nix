@@ -42,12 +42,12 @@
         loadWorkspaceBinds = false;
         plugins.split-monitor-workspaces.enable = true;
       };
-      plasma.enable = true;
       awww.enable = true;
       fonts.enable = true;
       gtk.enable = true;
       hyprlock.enable = true;
       hyprshot.enable = true;
+      plasma.enable = true;
       vicinae.enable = true;
       wayle.enable = true;
     };
@@ -63,7 +63,6 @@
       nodejs.enable = true;
       python.enable = true;
       rust.enable = true;
-      tailwind.enable = true;
     };
     hardware = {
       sddm.enable = true;

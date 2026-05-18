@@ -20,13 +20,7 @@ in
   config = lib.mkIf cfg.enable {
     programs.nvf.settings.vim.languages.rust = lib.mkIf cfg.nvf {
       enable = true;
-      dap.enable = true;
-      format = {
-        enable = true;
-        type = [ "rustfmt" ];
-      };
-      lsp.enable = true;
-      treesitter.enable = true;
+      format.type = [ "rustfmt" ];
     };
     home-manager.users.${username} =
       { pkgs, ... }:
