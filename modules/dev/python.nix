@@ -25,7 +25,10 @@ in
     home-manager.users.${username} =
       { pkgs, ... }:
       {
-        home.packages = with pkgs; [ python314 ];
+        home.packages = with pkgs; [
+          python313
+          uv
+        ];
       };
   };
 }
