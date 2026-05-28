@@ -5,16 +5,14 @@
   ...
 }:
 {
-  users.users = {
-    ${username} = {
-      isNormalUser = true;
-      description = username;
-      extraGroups = [
-        "networkmanager"
-        "wheel"
-      ];
-      shell = pkgs.zsh;
-    };
+  users.users.${username} = {
+    isNormalUser = true;
+    description = username;
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    shell = pkgs.zsh;
   };
   imports = [ inputs.home-manager.nixosModules.home-manager ];
   home-manager = {

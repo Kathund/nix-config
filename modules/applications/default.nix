@@ -5,6 +5,7 @@
     ./games
     ./ark.nix
     ./dolphin.nix
+    ./gpu-screen-recorder.nix
     ./jetbrains-idea.nix
     ./kate.nix
     ./kdenlive.nix
