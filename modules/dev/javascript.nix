@@ -27,7 +27,7 @@ in
       };
       json = {
         enable = true;
-        format.type = [ "jsonfmt" ];
+        format.type = [ "prettier" ];
       };
     };
     home-manager.users.${username} =

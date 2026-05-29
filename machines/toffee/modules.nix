@@ -21,8 +21,8 @@
       games = {
         lunar-client.enable = true;
         prism-launcher.enable = true;
-        steam.enable = true;
         proton.enable = true;
+        steam.enable = true;
       };
       ark.enable = true;
       dolphin.enable = true;
@@ -66,9 +66,9 @@
       rust.enable = true;
     };
     hardware = {
+      nvidia.enable = true;
       sddm.enable = true;
       sound.enable = true;
-      nvidia.enable = true;
     };
     terminal = {
       git.signCommits = true;
