@@ -6,9 +6,9 @@
 
   networking.firewall.allowedTCPPorts = [
     80
-    25565
-    44361
+    5555
     27017
     32464
+    44361
   ];
 }
