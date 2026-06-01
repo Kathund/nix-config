@@ -3,6 +3,7 @@
     ./git
     ./zsh
     ./btop.nix
+    ./busybox.nix
     ./fastfetch.nix
     ./fzf.nix
     ./htop.nix
