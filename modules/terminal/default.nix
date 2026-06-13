@@ -5,6 +5,7 @@
     ./btop.nix
     ./busybox.nix
     ./fastfetch.nix
+    ./ffmpeg.nix
     ./fzf.nix
     ./htop.nix
     ./hyfetch.nix
