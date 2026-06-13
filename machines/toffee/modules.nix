@@ -75,6 +75,7 @@
     terminal = {
       git.signCommits = true;
       ffmpeg.enable = true;
+      scdl.enable = true;
       wl-clipboard.enable = true;
     };
   };

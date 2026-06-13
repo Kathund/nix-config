@@ -12,6 +12,7 @@
     ./jq.nix
     ./ncdu.nix
     ./ripgrep.nix
+    ./scdl.nix
     ./starship.nix
     ./tree.nix
     ./wl-clipboard.nix
