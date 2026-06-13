@@ -1,7 +1,7 @@
 {
   config,
   lib,
-  username,
+  pkgs,
   ...
 }:
 let
@@ -14,10 +14,21 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    programs.${program} = {
+    programs.obs-studio = {
       enable = true;
       enableVirtualCamera = true;
+      package = pkgs.obs-studio.override { cudaSupport = true; };
+      plugins = with pkgs.obs-studio-plugins; [
+        wlrobs
+        obs-backgroundremoval
+        obs-pipewire-audio-capture
+        obs-vaapi
+        obs-gstreamer
+        obs-vkcapture
+        obs-transition-table
+        advanced-scene-switcher
+        obs-media-controls
+      ];
     };
-    home-manager.users.${username}.programs.${program}.enable = true;
   };
 }
