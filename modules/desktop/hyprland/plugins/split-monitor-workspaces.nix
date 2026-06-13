@@ -31,6 +31,8 @@ in
         bind = [
           "SUPER, 0, split-workspace, 10"
           "SUPER SHIFT, 0, split-movetoworkspace, 10"
+          "SUPER SHIFT, left, split-changemonitor, next"
+          "SUPER SHIFT, right, split-changemonitor, prev"
         ]
         ++
           # workspaces: binds SUPER + [shift +] {1..9} to [move to] workspace {1..9}
