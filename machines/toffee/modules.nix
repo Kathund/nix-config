@@ -21,6 +21,7 @@
       };
       games = {
         lunar-client.enable = true;
+        packwiz.enable = true;
         prism-launcher.enable = true;
         proton.enable = true;
         steam.enable = true;

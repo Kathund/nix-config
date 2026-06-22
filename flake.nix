@@ -47,6 +47,10 @@
       inputs.vicinae.follows = "vicinae";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    packwiz = {
+      url = "github:polyfrost/packwiz/91963c904dce0ec6d62209b1dceda39f69860d9b";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
