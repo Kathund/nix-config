@@ -6,7 +6,6 @@
     ./ark.nix
     ./dolphin.nix
     ./drawy.nix
-    ./gpu-screen-recorder.nix
     ./jetbrains-idea.nix
     ./kate.nix
     ./kdenlive.nix

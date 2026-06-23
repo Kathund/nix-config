@@ -29,7 +29,6 @@
       ark.enable = true;
       dolphin.enable = true;
       drawy.enable = true;
-      gpu-screen-recorder.enable = true;
       jetbrains-idea.enable = true;
       kate.enable = true;
       kdenlive.enable = true;
