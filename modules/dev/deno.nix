@@ -5,7 +5,7 @@
   ...
 }:
 let
-  program = "bun";
+  program = "deno";
   cfg = config.modules.dev.${program};
 in
 {
@@ -22,9 +22,9 @@ in
       { pkgs, ... }:
       {
         programs.zsh.shellAliases = lib.mkIf cfg.zsh {
-          bunCheck = "bun prettier && bun eslint && bun run build";
+          denoCheck = "deno prettier && deno eslint && deno run build";
         };
-        home.packages = with pkgs; [ bun ];
+        home.packages = with pkgs; [ deno ];
       };
   };
 }

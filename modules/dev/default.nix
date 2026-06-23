@@ -5,6 +5,7 @@
     ./bun.nix
     ./c.nix
     ./css.nix
+    ./deno.nix
     ./html.nix
     ./java.nix
     ./javascript.nix
