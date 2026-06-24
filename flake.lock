@@ -618,11 +618,11 @@
     },
     "pipeweaver": {
       "locked": {
-        "lastModified": 1776138330,
-        "narHash": "sha256-0eMZbxIAoozXgXqOirmePgodkVDIdp6K3Bjy20//op4=",
+        "lastModified": 1781520489,
+        "narHash": "sha256-xXmVyt+1BwefJ2ue1HtB6XxtJpmnJC4oZQXUhgBno14=",
         "owner": "BridgeSenseDev",
         "repo": "nixpkgs",
-        "rev": "56f49f356226a767463a7b8c71e0564ef59923ef",
+        "rev": "be320eecc523015bb009b0d298fcfdbc7cc65e8e",
         "type": "github"
       },
       "original": {

@@ -21,6 +21,10 @@ in
     };
   };
 
+  imports = [
+    ./pipeweaver.nix
+  ];
+
   config = lib.mkIf cfg.enable {
     services.pipewire = {
       enable = true;

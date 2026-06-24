@@ -71,7 +71,10 @@
     hardware = {
       nvidia.enable = true;
       sddm.enable = true;
-      sound.enable = true;
+      sound = {
+        enable = true;
+        pipeweaver.enable = true;
+      };
     };
     terminal = {
       git.signCommits = true;
