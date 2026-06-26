@@ -17,11 +17,7 @@ in
     home-manager.users.${username} =
       { pkgs, ... }:
       {
-        home.packages = [
-          (pkgs.discord-canary.override {
-            withOpenASAR = true;
-          })
-        ];
+        home.packages = [ (pkgs.discord-canary.override { withOpenASAR = true; }) ];
       };
   };
 }

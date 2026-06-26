@@ -21,9 +21,7 @@ in
     };
   };
 
-  imports = [
-    ./pipeweaver.nix
-  ];
+  imports = [ ./pipeweaver.nix ];
 
   config = lib.mkIf cfg.enable {
     services.pipewire = {
