@@ -37,8 +37,6 @@ in
           mappings = {
             diagnostics = "<leader>fd";
             findFiles = "<leader>fF";
-            gitFiles = "<leader>ff";
-            liveGrep = "<leader>fc";
           };
         };
         autocomplete.nvim-cmp.enable = true;
@@ -278,6 +276,20 @@ in
             action = "function() Snacks.notifier.show_history() end";
             lua = true;
             desc = "Notifications History";
+          }
+          {
+            key = "<leader>fc";
+            mode = "n";
+            action = "function() Snacks.dashboard.pick('live_grep') end";
+            lua = true;
+            desc = "Live Grep";
+          }
+          {
+            key = "<leader>ff";
+            mode = "n";
+            action = "function() Snacks.dashboard.pick('files') end";
+            lua = true;
+            desc = "Find Files";
           }
         ];
       };
