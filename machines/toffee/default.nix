@@ -10,6 +10,14 @@
     efi.canTouchEfiVariables = true;
   };
 
+  users.motd = ''
+     _____      __  __              _______
+    |_   _|__  / _|/ _| ___  ___   / /___ /
+      | |/ _ \| |_| |_ / _ \/ _ \ / /  |_ \
+      | | (_) |  _|  _|  __/  __/ \ \ ___) |
+      |_|\___/|_| |_|  \___|\___|  \_\____/
+  '';
+
   environment.systemPackages = with pkgs; [
     stdenv.cc.cc
     glib

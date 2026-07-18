@@ -55,11 +55,7 @@
       wayle.enable = true;
     };
     dev = {
-      astro.enable = true;
       bun.enable = true;
-      css.enable = true;
-      deno.enable = true;
-      html.enable = true;
       java.enable = true;
       javascript.enable = true;
       kotlin.enable = true;
