@@ -48,7 +48,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     packwiz = {
-      url = "github:polyfrost/packwiz/91963c904dce0ec6d62209b1dceda39f69860d9b";
+      url = "github:polyfrost/packwiz/5314bd70591a1c26a2226b8c81df7421ffcda04c";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

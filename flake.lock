@@ -602,17 +602,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1771993286,
-        "narHash": "sha256-+Pyr8aFVi+SLS+dfrB3FkkVP7b3cyUnn51lXC91DFnA=",
+        "lastModified": 1784509624,
+        "narHash": "sha256-u5i8SwKCcSXQmiXFvDdzUxc4HZdB+dekDIivPzWsR+A=",
         "owner": "polyfrost",
         "repo": "packwiz",
-        "rev": "91963c904dce0ec6d62209b1dceda39f69860d9b",
+        "rev": "5314bd70591a1c26a2226b8c81df7421ffcda04c",
         "type": "github"
       },
       "original": {
         "owner": "polyfrost",
         "repo": "packwiz",
-        "rev": "91963c904dce0ec6d62209b1dceda39f69860d9b",
+        "rev": "5314bd70591a1c26a2226b8c81df7421ffcda04c",
         "type": "github"
       }
     },
