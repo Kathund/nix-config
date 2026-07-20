@@ -2,10 +2,11 @@
   config,
   lib,
   username,
+  inputs,
   ...
 }:
 let
-  program = "hyprshot";
+  program = "hyprcap";
   cfg = config.modules.desktop.${program};
 in
 {
@@ -21,9 +22,9 @@ in
     home-manager.users.${username} =
       { pkgs, ... }:
       {
-        home.packages = with pkgs; [ hyprshot ];
+        home.packages = [ inputs.hyprcap.packages.${pkgs.stdenv.hostPlatform.system}.default ];
         wayland.windowManager.hyprland.settings.bind = lib.mkIf cfg.hyprlandBind [
-          ", PRINT, exec, ${program} -m region --freeze --clipboard-only"
+          ", PRINT, exec, ${program} shot region --freeze --copy --notify"
         ];
       };
   };

@@ -165,6 +165,26 @@
         "type": "github"
       }
     },
+    "hyprcap": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1783094055,
+        "narHash": "sha256-lw1q5Mw915d/ltQ2wXNWfxmzg1QewwLOj1VVFS3sQ+c=",
+        "owner": "alonso-herreros",
+        "repo": "hyprcap",
+        "rev": "be7f609b83eeccd6bc539dc5c523ed3041c2084e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "alonso-herreros",
+        "repo": "hyprcap",
+        "type": "github"
+      }
+    },
     "hyprcursor": {
       "inputs": {
         "hyprlang": [
@@ -680,6 +700,7 @@
       "inputs": {
         "catppuccin": "catppuccin",
         "home-manager": "home-manager",
+        "hyprcap": "hyprcap",
         "hyprland": "hyprland",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",

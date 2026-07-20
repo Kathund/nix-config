@@ -51,6 +51,10 @@
       url = "github:polyfrost/packwiz/5314bd70591a1c26a2226b8c81df7421ffcda04c";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprcap = {
+      url = "github:alonso-herreros/hyprcap";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

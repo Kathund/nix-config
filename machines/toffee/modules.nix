@@ -48,8 +48,8 @@
       awww.enable = true;
       fonts.enable = true;
       gtk.enable = true;
+      hyprcap.enable = true;
       hyprlock.enable = true;
-      hyprshot.enable = true;
       plasma.enable = true;
       vicinae.enable = true;
       wayle.enable = true;
