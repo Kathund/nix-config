@@ -5,7 +5,7 @@
   ...
 }:
 let
-  program = "lunar-client";
+  program = "celeste";
   cfg = config.modules.applications.games.${program};
 in
 {
@@ -17,7 +17,7 @@ in
     home-manager.users.${username} =
       { pkgs, ... }:
       {
-        home.packages = with pkgs; [ lunar-client ];
+        home.packages = with pkgs; [ (olympus.override { celesteWrapper = "steam-run"; }) ];
       };
   };
 }

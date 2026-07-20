@@ -20,7 +20,7 @@
         vesktop.enable = true;
       };
       games = {
-        lunar-client.enable = true;
+        celeste.enable = true;
         packwiz.enable = true;
         prism-launcher.enable = true;
         proton.enable = true;

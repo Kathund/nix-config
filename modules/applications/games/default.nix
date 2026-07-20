@@ -1,6 +1,6 @@
 {
   imports = [
-    ./lunar-client.nix
+    ./celeste.nix
     ./packwiz.nix
     ./prism-launcher.nix
     ./proton.nix
