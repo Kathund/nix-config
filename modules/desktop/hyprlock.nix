@@ -11,10 +11,6 @@ in
 {
   options.modules.desktop.${program} = {
     enable = lib.mkEnableOption { description = "Enable ${program}"; };
-    hyprlandBind = lib.mkOption {
-      type = lib.types.bool;
-      default = true;
-    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -61,9 +57,6 @@ in
           };
         };
       };
-      wayland.windowManager.hyprland.settings.bind = lib.mkIf cfg.hyprlandBind [
-        "SUPER, L, exec, ${program}"
-      ];
     };
   };
 }

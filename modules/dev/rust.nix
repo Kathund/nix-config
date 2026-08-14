@@ -22,10 +22,6 @@ in
       enable = true;
       format.type = [ "rustfmt" ];
     };
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = with pkgs; [ rustup ];
-      };
+    home-manager.users.${username} = { pkgs, ... }: { home.packages = with pkgs; [ rustup ]; };
   };
 }

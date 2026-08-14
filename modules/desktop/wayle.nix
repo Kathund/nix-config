@@ -104,7 +104,6 @@ in
           wallpaper.engine-enabled = false;
         };
       };
-      wayland.windowManager.hyprland.settings.exec-once = lib.mkIf cfg.loadOnStartup [ "${program}" ];
     };
   };
 }

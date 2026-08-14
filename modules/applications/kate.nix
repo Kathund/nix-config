@@ -14,10 +14,8 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = with pkgs; [ kdePackages.kate ];
-      };
+    home-manager.users.${username} = { pkgs, ... }: {
+      home.packages = with pkgs; [ kdePackages.kate ];
+    };
   };
 }

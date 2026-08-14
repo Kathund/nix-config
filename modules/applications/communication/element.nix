@@ -14,10 +14,6 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = with pkgs; [ element-desktop ];
-      };
+    home-manager.users.${username} = { pkgs, ... }: { home.packages = with pkgs; [ element-desktop ]; };
   };
 }

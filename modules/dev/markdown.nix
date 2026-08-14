@@ -16,7 +16,7 @@ in
     programs.nvf.settings.vim.languages.${program} = lib.mkIf cfg.nvf {
       enable = true;
       extensions.markview-nvim.enable = true;
-      format.type = [ "prettierd" ];
+      format.type = [ "prettier" ];
     };
   };
 }

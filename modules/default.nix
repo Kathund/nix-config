@@ -1,5 +1,4 @@
-{ lib, username, ... }:
-{
+{ lib, username, ... }: {
   options.modules = {
     configPath = lib.mkOption {
       default = "/home/${username}/nix-config";

@@ -47,6 +47,7 @@ in
       imports = [ inputs.catppuccin.homeModules.catppuccin ];
       ${program} = lib.mkIf cfg.enable {
         enable = true;
+        autoEnable = true;
         inherit (cfg) flavor;
         inherit (cfg) accent;
       };

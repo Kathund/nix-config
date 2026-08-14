@@ -30,15 +30,13 @@ in
         format.type = [ "prettier" ];
       };
     };
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = with pkgs; [
-          prettier
-          eslint
-          tsx
-          typescript
-        ];
-      };
+    home-manager.users.${username} = { pkgs, ... }: {
+      home.packages = with pkgs; [
+        prettier
+        eslint
+        tsx
+        typescript
+      ];
+    };
   };
 }

@@ -14,10 +14,8 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = [ (pkgs.discord-canary.override { withOpenASAR = true; }) ];
-      };
+    home-manager.users.${username} = { pkgs, ... }: {
+      home.packages = [ (pkgs.discord-canary.override { withOpenASAR = true; }) ];
+    };
   };
 }

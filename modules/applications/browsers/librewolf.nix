@@ -11,10 +11,6 @@ in
 {
   options.modules.applications.browsers.${program} = {
     enable = lib.mkEnableOption { description = "Enable ${program}"; };
-    hyprlandBind = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-    };
     setDefault = lib.mkOption {
       type = lib.types.bool;
       default = false;
@@ -177,9 +173,6 @@ in
           };
         };
       };
-      wayland.windowManager.hyprland.settings.bind = lib.mkIf cfg.hyprlandBind [
-        "SUPER, S, exec, ${program}"
-      ];
       xdg.mimeApps = lib.mkIf cfg.setDefault {
         enable = true;
         defaultApplications = {

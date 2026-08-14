@@ -1,5 +1,4 @@
-{ username, pkgs, ... }:
-{
+{ username, pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
     ./modules.nix
@@ -40,8 +39,13 @@
     libGL
   ];
 
+  networking.firewall.allowedTCPPorts = [ 44461 ];
   home-manager.users.${username}.wayland.windowManager.hyprland.settings.monitor = [
-    "DP-1, 1920x1080@240, 0x0, 1"
-    "HDMI-A-1, 1920x1080@60, 1920x0, 1"
+    {
+      output = "DP-1";
+      mode = "1920x1080@240";
+      position = "0x0";
+      scale = "1";
+    }
   ];
 }

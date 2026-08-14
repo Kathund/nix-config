@@ -22,13 +22,11 @@ in
       enable = true;
       format.type = [ "black" ];
     };
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = with pkgs; [
-          python313
-          uv
-        ];
-      };
+    home-manager.users.${username} = { pkgs, ... }: {
+      home.packages = with pkgs; [
+        python313
+        uv
+      ];
+    };
   };
 }

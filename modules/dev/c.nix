@@ -19,10 +19,6 @@ in
 
   config = lib.mkIf cfg.enable {
     programs.nvf.settings.vim.languages.clang.enable = lib.mkIf cfg.nvf true;
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = with pkgs; [ clang ];
-      };
+    home-manager.users.${username} = { pkgs, ... }: { home.packages = with pkgs; [ clang ]; };
   };
 }

@@ -21,7 +21,7 @@
         lazygit.enable = true;
       };
       btop.enable = true;
-      busybox.enable = true;
+      busybox.enable = false;
       fastfetch.enable = true;
       fzf.enable = true;
       htop.enable = true;

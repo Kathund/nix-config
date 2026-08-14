@@ -23,20 +23,19 @@ in
       enable = true;
       format.type = [ "nixfmt" ];
     };
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        programs = {
-          nix-your-shell.enable = true;
-          nix-index.enable = true;
-        };
-        home.packages = with pkgs; [
-          nixfmt
-          nixfmt-tree
-          nixd
-          compose2nix
-        ];
-        nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+    home-manager.users.${username} = { pkgs, ... }: {
+      programs = {
+        nix-your-shell.enable = true;
+        nix-index.enable = true;
       };
+      home.packages = with pkgs; [
+        nixfmt
+        nixfmt-tree
+        nixd
+        compose2nix
+        hydra-check
+      ];
+      nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+    };
   };
 }

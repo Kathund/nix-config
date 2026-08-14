@@ -18,11 +18,8 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = with pkgs; [ streamcontroller ];
-        wayland.windowManager.hyprland.settings.exec-once = lib.mkIf cfg.loadOnStartup [ "${program} -b" ];
-      };
+    home-manager.users.${username} = { pkgs, ... }: {
+      home.packages = with pkgs; [ streamcontroller ];
+    };
   };
 }

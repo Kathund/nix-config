@@ -15,10 +15,8 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = [ inputs.packwiz.packages.${pkgs.stdenv.hostPlatform.system}.default ];
-      };
+    home-manager.users.${username} = { pkgs, ... }: {
+      home.packages = [ inputs.packwiz.packages.${pkgs.stdenv.hostPlatform.system}.default ];
+    };
   };
 }

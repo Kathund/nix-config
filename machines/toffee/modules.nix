@@ -1,5 +1,4 @@
-{ username, ... }:
-{
+{ username, ... }: {
   config.modules = {
     configPath = "/home/${username}/github/nix-config";
     applications = {
@@ -8,7 +7,6 @@
         firefox.enable = true;
         librewolf = {
           enable = true;
-          hyprlandBind = true;
           setDefault = true;
         };
       };
@@ -21,6 +19,7 @@
       };
       games = {
         celeste.enable = true;
+        oneclient.enable = true;
         packwiz.enable = true;
         prism-launcher.enable = true;
         proton.enable = true;
@@ -40,16 +39,12 @@
       vlc.enable = true;
     };
     desktop = {
-      hyprland = {
-        enable = true;
-        loadWorkspaceBinds = false;
-        plugins.split-monitor-workspaces.enable = true;
-      };
+      hyprland.enable = true;
       awww.enable = true;
       fonts.enable = true;
       gtk.enable = true;
-      hyprcap.enable = true;
       hyprlock.enable = true;
+      hyprshot.enable = true;
       plasma.enable = true;
       vicinae.enable = true;
       wayle.enable = true;

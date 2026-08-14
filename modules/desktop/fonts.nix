@@ -15,11 +15,12 @@ in
 
   config = lib.mkIf cfg.enable {
     fonts = {
+      enableDefaultPackages = true;
       packages = with pkgs; [
         open-sans
         noto-fonts-color-emoji
         nerd-fonts.jetbrains-mono
-        jetbrains-mono
+        # jetbrains-mono
       ];
       fontconfig = {
         enable = true;

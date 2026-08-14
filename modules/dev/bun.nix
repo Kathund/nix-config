@@ -18,13 +18,11 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        programs.zsh.shellAliases = lib.mkIf cfg.zsh {
-          bunCheck = "bun prettier && bun eslint && bun run build";
-        };
-        home.packages = with pkgs; [ bun ];
+    home-manager.users.${username} = { pkgs, ... }: {
+      programs.zsh.shellAliases = lib.mkIf cfg.zsh {
+        bunCheck = "bun prettier && bun eslint && bun run build";
       };
+      home.packages = with pkgs; [ bun ];
+    };
   };
 }

@@ -14,10 +14,6 @@
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    split-monitor-workspaces = {
-      url = "github:zjeffer/split-monitor-workspaces";
-      inputs.hyprland.follows = "hyprland";
-    };
     prismlauncher = {
       url = "github:PrismLauncher/PrismLauncher";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,8 +22,8 @@
       url = "github:catppuccin/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    pipeweaver = {
-      url = "github:BridgeSenseDev/nixpkgs/pipeweaver-init";
+    oneclient = {
+      url = "github:saadndm/nixpkgs/init-oneclient";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix = {
@@ -49,10 +45,6 @@
     };
     packwiz = {
       url = "github:polyfrost/packwiz/5314bd70591a1c26a2226b8c81df7421ffcda04c";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hyprcap = {
-      url = "github:alonso-herreros/hyprcap";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

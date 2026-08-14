@@ -11,10 +11,6 @@ in
 {
   options.modules.applications.${program} = {
     enable = lib.mkEnableOption { description = "Enable ${program}"; };
-    hyprlandBind = lib.mkOption {
-      type = lib.types.bool;
-      default = true;
-    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -30,9 +26,6 @@ in
         };
       };
       catppuccin.${program}.enable = false;
-      wayland.windowManager.hyprland.settings.bind = lib.mkIf cfg.hyprlandBind [
-        "SUPER, Q, exec, ${program}"
-      ];
     };
   };
 }

@@ -16,15 +16,13 @@ in
   imports = [ ./canary.nix ];
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = [
-          (pkgs.discord.override {
-            withOpenASAR = true;
-            withVencord = true;
-          })
-        ];
-      };
+    home-manager.users.${username} = { pkgs, ... }: {
+      home.packages = [
+        (pkgs.discord.override {
+          withOpenASAR = true;
+          withVencord = true;
+        })
+      ];
+    };
   };
 }

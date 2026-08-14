@@ -14,10 +14,6 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = with pkgs; [ wl-clipboard ];
-      };
+    home-manager.users.${username} = { pkgs, ... }: { home.packages = with pkgs; [ wl-clipboard ]; };
   };
 }

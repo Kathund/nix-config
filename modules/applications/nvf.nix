@@ -209,7 +209,6 @@ in
               };
             };
           };
-          vim-wakatime.enable = true;
         };
         ui = {
           noice.enable = true;
@@ -297,24 +296,22 @@ in
 
     home-manager = {
       users = {
-        ${username} =
-          { pkgs, ... }:
-          {
-            home = {
-              packages = with pkgs; [ fd ];
-              file.".editorconfig".source = (pkgs.formats.ini { }).generate ".editorconfig" {
-                "*" = {
-                  indent_style = "space";
-                  indent_size = 2;
-                  end_of_line = "lf";
-                  charset = "utf-8";
-                  trim_trailing_whitespace = true;
-                  insert_final_newline = true;
-                  max_line_width = 120;
-                };
+        ${username} = { pkgs, ... }: {
+          home = {
+            packages = with pkgs; [ fd ];
+            file.".editorconfig".source = (pkgs.formats.ini { }).generate ".editorconfig" {
+              "*" = {
+                indent_style = "space";
+                indent_size = 2;
+                end_of_line = "lf";
+                charset = "utf-8";
+                trim_trailing_whitespace = true;
+                insert_final_newline = true;
+                max_line_width = 120;
               };
             };
           };
+        };
       };
     };
   };

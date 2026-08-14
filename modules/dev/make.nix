@@ -19,10 +19,6 @@ in
 
   config = lib.mkIf cfg.enable {
     programs.nvf.settings.vim.languages.${program}.enable = lib.mkIf cfg.nvf true;
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = with pkgs; [ gnumake ];
-      };
+    home-manager.users.${username} = { pkgs, ... }: { home.packages = with pkgs; [ gnumake ]; };
   };
 }

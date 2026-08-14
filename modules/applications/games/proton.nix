@@ -14,14 +14,12 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = with pkgs; [
-          protonup-qt
-          winetricks
-          protontricks
-        ];
-      };
+    home-manager.users.${username} = { pkgs, ... }: {
+      home.packages = with pkgs; [
+        protonup-qt
+        winetricks
+        protontricks
+      ];
+    };
   };
 }

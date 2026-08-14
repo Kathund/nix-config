@@ -14,10 +14,8 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    home-manager.users.${username} =
-      { pkgs, ... }:
-      {
-        home.packages = with pkgs; [ (olympus.override { celesteWrapper = "steam-run"; }) ];
-      };
+    home-manager.users.${username} = { pkgs, ... }: {
+      home.packages = with pkgs; [ (olympus.override { celesteWrapper = "steam-run"; }) ];
+    };
   };
 }
