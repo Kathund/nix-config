@@ -11,7 +11,7 @@
         };
       };
       communication = {
-        discord.canary.enable = true;
+        discord.enable = true;
         element.enable = true;
         signal.enable = true;
         telegram.enable = true;
