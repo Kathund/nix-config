@@ -61,7 +61,7 @@ in
           pointer
         ];
         theme = spicetifyPkgs.themes.catppuccin;
-        colorScheme = "mocha";
+        colorScheme = lib.mkIf config.modules.desktop.catppuccin.enable config.modules.desktop.catppuccin.flavor;
       };
     };
   };

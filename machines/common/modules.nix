@@ -10,7 +10,10 @@
       make.enable = true;
       nix.enable = true;
     };
-    desktop.catppuccin.enable = true;
+    desktop.catppuccin = {
+      enable = true;
+      flavor = "latte";
+    };
     hardware.networking.enable = true;
     terminal = {
       git = {

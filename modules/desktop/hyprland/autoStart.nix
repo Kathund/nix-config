@@ -17,7 +17,7 @@ in
           hl.exec_cmd("update-wallpaper")
           hl.exec_cmd("wayle")
           hl.exec_cmd("qpwgraph -m")
-          hl.exec_cmd("pipeweaver --background")
+          hl.exec_cmd("pipeweaver-daemon --background")
         end
       '')
     ];

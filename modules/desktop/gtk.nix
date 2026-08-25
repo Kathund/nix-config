@@ -21,13 +21,13 @@ in
         gtk.enable = true;
         x11.enable = true;
         size = 16;
-        package = lib.mkIf config.modules.desktop.catppuccin.enable pkgs.catppuccin-cursors.mochaPink;
+        package = lib.mkIf config.modules.desktop.catppuccin.enable pkgs.catppuccin-cursors.lattePink;
         name = lib.mkIf config.modules.desktop.catppuccin.enable "Catppuccin";
       };
       gtk = {
         enable = true;
         cursorTheme = lib.mkIf config.modules.desktop.catppuccin.enable {
-          package = pkgs.catppuccin-cursors.mochaPink;
+          package = pkgs.catppuccin-cursors.lattePink;
           name = "Catppuccin";
         };
         theme = lib.mkIf config.modules.desktop.catppuccin.enable {
