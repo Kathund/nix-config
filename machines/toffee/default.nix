@@ -39,12 +39,21 @@
     libGL
   ];
 
-  networking.firewall.allowedTCPPorts = [ 44461 ];
+  networking.firewall.allowedTCPPorts = [
+    44461
+    14565
+  ];
   home-manager.users.${username}.wayland.windowManager.hyprland.settings.monitor = [
     {
       output = "DP-1";
       mode = "1920x1080@240";
       position = "0x0";
+      scale = "1";
+    }
+    {
+      output = "HDMI-A-1";
+      mode = "1920x1080@60";
+      position = "1920x0";
       scale = "1";
     }
   ];

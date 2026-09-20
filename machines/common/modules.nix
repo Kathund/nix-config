@@ -18,7 +18,7 @@
     terminal = {
       git = {
         enable = true;
-        username = "Jacob";
+        username = "Amber";
         email = "kathund@proton.me";
         gh.enable = true;
         lazygit.enable = true;
@@ -32,7 +32,7 @@
         enable = true;
         brightness = 0.50;
         backend = "fastfetch";
-        preset = "bisexual";
+        preset = "transgender";
       };
       jq.enable = true;
       ncdu.enable = true;

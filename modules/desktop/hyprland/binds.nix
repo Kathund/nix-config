@@ -70,29 +70,6 @@ in
         (superBind "mouse:272" "hl.dsp.window.drag()") # movewindow
         (superBind "mouse:273" "hl.dsp.window.resize()") # resizewindow
 
-        # Workspaces
-        (superBind "1" "hl.dsp.focus({ workspace = \"1\" })")
-        (superBind "2" "hl.dsp.focus({ workspace = \"2\" })")
-        (superBind "3" "hl.dsp.focus({ workspace = \"3\" })")
-        (superBind "4" "hl.dsp.focus({ workspace = \"4\" })")
-        (superBind "5" "hl.dsp.focus({ workspace = \"5\" })")
-        (superBind "6" "hl.dsp.focus({ workspace = \"6\" })")
-        (superBind "7" "hl.dsp.focus({ workspace = \"7\" })")
-        (superBind "8" "hl.dsp.focus({ workspace = \"8\" })")
-        (superBind "9" "hl.dsp.focus({ workspace = \"9\" })")
-        (superBind "0" "hl.dsp.focus({ workspace = \"10\" })")
-
-        (superShiftBind "1" "hl.dsp.window.move({ workspace = \"1\" })")
-        (superShiftBind "2" "hl.dsp.window.move({ workspace = \"2\" })")
-        (superShiftBind "3" "hl.dsp.window.move({ workspace = \"3\" })")
-        (superShiftBind "4" "hl.dsp.window.move({ workspace = \"4\" })")
-        (superShiftBind "5" "hl.dsp.window.move({ workspace = \"5\" })")
-        (superShiftBind "6" "hl.dsp.window.move({ workspace = \"6\" })")
-        (superShiftBind "7" "hl.dsp.window.move({ workspace = \"7\" })")
-        (superShiftBind "8" "hl.dsp.window.move({ workspace = \"8\" })")
-        (superShiftBind "9" "hl.dsp.window.move({ workspace = \"9\" })")
-        (superShiftBind "0" "hl.dsp.window.move({ workspace = \"10\" })")
-
         # Exec stuff
         (bind "PRINT" (exec "hyprshot -m region --freeze --clipboard-only"))
         (superBind "S" (exec "librewolf"))

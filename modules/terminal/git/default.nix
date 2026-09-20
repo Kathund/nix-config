@@ -30,6 +30,7 @@ in
       settings.user = {
         name = cfg.username;
         inherit (cfg) email;
+        signingkey = "926AE4E7F90CC6E2FED6D71B0CC25AAA1364985C";
       };
       signing.signByDefault = cfg.signCommits;
     };

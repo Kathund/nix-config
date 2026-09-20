@@ -6,6 +6,7 @@
     ./ark.nix
     ./dolphin.nix
     ./drawy.nix
+    ./filelight.nix
     ./jetbrains-idea.nix
     ./kate.nix
     ./kdenlive.nix

@@ -545,11 +545,11 @@
     },
     "oneclient": {
       "locked": {
-        "lastModified": 1786273519,
-        "narHash": "sha256-WSo/U8nPSw1Ir0/d6rlUHb5cK0DFF0X8BNYYCnPK430=",
+        "lastModified": 1788410755,
+        "narHash": "sha256-IsQbc/coXXMkMdmSfbnMn1MR1b5VjdzlagxHcfR1Y3Y=",
         "owner": "saadndm",
         "repo": "nixpkgs",
-        "rev": "841d62364ab2e0612c14369d7a9c42fd8697aca2",
+        "rev": "b8cb37325ad4e0767c6029645d25dc386a98a895",
         "type": "github"
       },
       "original": {

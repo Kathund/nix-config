@@ -19,6 +19,7 @@ in
     ./autoStart.nix
     ./binds.nix
     ./decoration.nix
+    ./workspaces.nix
   ];
 
   config = lib.mkIf cfg.enable {
