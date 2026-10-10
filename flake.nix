@@ -63,7 +63,7 @@
             ./machines/common
             ./machines/${machine}
             ./modules
-            ./users/${username}.nix
+            ./users/user.nix
           ];
         };
       system = "x86_64-linux";
