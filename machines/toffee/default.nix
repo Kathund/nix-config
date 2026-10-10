@@ -39,6 +39,20 @@
     libGL
   ];
 
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc
+      zlib
+      fuse3
+      icu
+      nss
+      openssl
+      curl
+      expat
+    ];
+  };
+
   networking.firewall.allowedTCPPorts = [
     44461
     14565

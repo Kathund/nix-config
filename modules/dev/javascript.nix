@@ -21,10 +21,9 @@ in
     programs.nvf.settings.vim.languages = lib.mkIf cfg.nvf {
       typescript = {
         enable = true;
-        format.type = [ "prettier" ];
         extensions.ts-error-translator.enable = true;
-        extraDiagnostics.types = [ "eslint_d" ];
       };
+      json5.enable = true;
       json = {
         enable = true;
         format.type = [ "prettier" ];

@@ -31,7 +31,10 @@ in
           style = lib.mkIf config.modules.desktop.catppuccin.enable config.modules.desktop.catppuccin.flavor;
           transparent = false;
         };
-        statusline.lualine.enable = true;
+        statusline.lualine = {
+          enable = true;
+          integrations.breadcrumbs.nvim-navic.enable = true;
+        };
         telescope = {
           enable = true;
           mappings = {
@@ -212,7 +215,6 @@ in
         };
         ui = {
           noice.enable = true;
-          breadcrumbs.enable = true;
           fastaction.enable = true;
         };
         comments.comment-nvim.enable = true;

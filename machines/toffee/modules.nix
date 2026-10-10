@@ -13,6 +13,7 @@
       communication = {
         discord.enable = true;
         element.enable = true;
+        equibop.enable = true;
         signal.enable = true;
         telegram.enable = true;
         vesktop.enable = true;
@@ -52,12 +53,12 @@
     };
     dev = {
       bun.enable = true;
+      html.enable = true;
       java.enable = true;
       javascript.enable = true;
       kotlin.enable = true;
       markdown.enable = true;
       nodejs.enable = true;
-      python.enable = true;
       rust.enable = true;
     };
     hardware = {

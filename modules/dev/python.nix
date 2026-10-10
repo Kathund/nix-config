@@ -18,10 +18,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    programs.nvf.settings.vim.languages.python = lib.mkIf cfg.nvf {
-      enable = true;
-      format.type = [ "black" ];
-    };
+    programs.nvf.settings.vim.languages.${program}.enable = lib.mkIf cfg.nvf true;
     home-manager.users.${username} = { pkgs, ... }: {
       home.packages = with pkgs; [
         python313

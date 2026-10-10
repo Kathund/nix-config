@@ -20,6 +20,7 @@ in
         winetricks
         protontricks
       ];
+      programs.mangohud.enable = true;
     };
   };
 }
