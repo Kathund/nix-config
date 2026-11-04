@@ -13,7 +13,6 @@
       communication = {
         discord.enable = true;
         element.enable = true;
-        equibop.enable = true;
         signal.enable = true;
         telegram.enable = true;
         vesktop.enable = true;
@@ -21,7 +20,6 @@
       games = {
         celeste.enable = true;
         oneclient.enable = true;
-        packwiz.enable = true;
         prism-launcher.enable = true;
         proton.enable = true;
         steam.enable = true;
@@ -37,6 +35,7 @@
       mongodb-compass.enable = true;
       obs-studio.enable = true;
       spicetify.enable = true;
+      sqlit-tui.enable = true;
       streamcontroller.enable = true;
       vlc.enable = true;
     };
@@ -54,11 +53,15 @@
     dev = {
       bun.enable = true;
       html.enable = true;
-      java.enable = true;
+      java = {
+        enable = true;
+        nvf = false;
+      };
       javascript.enable = true;
       kotlin.enable = true;
       markdown.enable = true;
       nodejs.enable = true;
+      python.enable = true;
       rust.enable = true;
     };
     hardware = {

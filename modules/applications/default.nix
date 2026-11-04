@@ -16,6 +16,7 @@
     ./nvf.nix
     ./obs-studio.nix
     ./spicetify.nix
+    ./sqlit-tui.nix
     ./streamcontroller.nix
     ./vlc.nix
   ];

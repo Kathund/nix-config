@@ -19,7 +19,6 @@ in
       home.pointerCursor = {
         enable = true;
         gtk.enable = true;
-        x11.enable = true;
         size = 16;
         package = lib.mkIf config.modules.desktop.catppuccin.enable pkgs.catppuccin-cursors.lattePink;
         name = lib.mkIf config.modules.desktop.catppuccin.enable "Catppuccin";

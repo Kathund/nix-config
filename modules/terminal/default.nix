@@ -14,7 +14,6 @@
     ./ripgrep.nix
     ./scdl.nix
     ./starship.nix
-    ./tmux.nix
     ./tree.nix
     ./wl-clipboard.nix
     ./zip.nix

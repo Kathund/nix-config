@@ -22,14 +22,11 @@
     glib
     cups
     alsa-lib
-    fontconfig
     freetype
     cairo
     gtk3
     ffmpeg.lib
-    gtk2
 
-    libX11
     libXext
     libXi
     libXrender

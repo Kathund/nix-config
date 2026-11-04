@@ -116,6 +116,7 @@ in
             "toolkit.telemetry.unified" = false;
             "toolkit.telemetry.unifiedIsOptIn" = false;
             "toolkit.telemetry.updatePing.enabled" = false;
+            "toolkit.legacyUserProfileCustomizations.stylesheets" = true; # to make the userChrome below work
             "privacy.donottrackheader.enabled" = true;
             "privacy.donottrackheader.value" = 1;
             "privacy.query_stripping" = true;
@@ -128,7 +129,23 @@ in
             "security.ssl.disable_session_identifiers" = true;
             "browser.eme.ui.enabled" = false;
             "media.eme.enabled" = false;
+            "layers.acceleration.force-enabled" = true;
+            "gfx.webrender.all" = true;
+            "svg.context-properties.content.enabled" = true;
           };
+          userChrome = ''
+            :root {
+              --space-small: 0.25rem !important;
+              --space-medium: 0.5rem !important;
+              --space-large: 0.75rem !important;
+            }
+
+            *,
+            *::before,
+            *::after {
+                border-radius: 0px !important;
+            }
+          '';
         };
         policies.ExtensionSettings = {
           # ublock-origin:

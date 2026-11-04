@@ -38,7 +38,6 @@
       ncdu.enable = true;
       ripgrep.enable = true;
       starship.enable = true;
-      tmux.enable = true;
       tree.enable = true;
       zip.enable = true;
       zsh.enable = true;

@@ -34,6 +34,7 @@ in
         nixd
         compose2nix
         hydra-check
+        nix-tree
       ];
       nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
     };

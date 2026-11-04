@@ -36,7 +36,6 @@ in
           showQueueDuration
           copyToClipboard
           history
-          betterGenres
           lastfm
           hidePodcasts
           playNext
