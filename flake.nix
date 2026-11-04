@@ -43,6 +43,10 @@
       inputs.vicinae.follows = "vicinae";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprcap = {
+      url = "github:alonso-herreros/hyprcap";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

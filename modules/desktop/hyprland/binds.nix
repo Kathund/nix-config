@@ -71,7 +71,12 @@ in
         (superBind "mouse:273" "hl.dsp.window.resize()") # resizewindow
 
         # Exec stuff
-        (bind "PRINT" (exec "hyprshot -m region --freeze --clipboard-only"))
+        (bind "PRINT" (
+          exec "hyprcap screenshot region --freeze --copy --no-file --no-actions --notif-timeout 5000"
+        ))
+        (superBind "PRINT" (
+          exec "hyprcap record region --copy --no-file --no-actions --notif-timeout 5000"
+        ))
         (superBind "S" (exec "librewolf"))
         (superBind "Q" (exec "kitty"))
         (superBind "E" (exec "dolphin"))

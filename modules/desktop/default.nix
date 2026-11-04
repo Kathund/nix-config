@@ -5,8 +5,9 @@
     ./catppuccin.nix
     ./fonts.nix
     ./gtk.nix
+    ./hyprcap.nix
     ./hyprlock.nix
-    ./hyprshot.nix
+    ./hyprpicker.nix
     ./plasma.nix
     ./vicinae.nix
     ./wayle.nix
