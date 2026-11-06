@@ -3,6 +3,7 @@
     applications = {
       kitty.enable = true;
       nvf.enable = true;
+      sqlit-tui.enable = true;
     };
     dev = {
       bash.enable = true;

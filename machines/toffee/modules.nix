@@ -25,6 +25,7 @@
         steam.enable = true;
       };
       ark.enable = true;
+      aseprite.enable = true;
       dolphin.enable = true;
       drawy.enable = true;
       filelight.enable = true;
@@ -35,7 +36,6 @@
       mongodb-compass.enable = true;
       obs-studio.enable = true;
       spicetify.enable = true;
-      sqlit-tui.enable = true;
       streamcontroller.enable = true;
       vlc.enable = true;
     };

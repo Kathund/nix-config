@@ -146,6 +146,15 @@ in
                 border-radius: 0px !important;
             }
           '';
+          userContent = ''
+            @-moz-document url-prefix("about:") {
+              *,
+              *::before,
+              *::after {
+                  border-radius: 0px !important;
+              }
+            }
+          '';
         };
         policies.ExtensionSettings = {
           # ublock-origin:

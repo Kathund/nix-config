@@ -23,7 +23,7 @@ in
         pnpmCheck = "pnpm prettier && pnpm eslint && pnpm build";
       };
       home.packages = with pkgs; [
-        nodejs_24
+        nodejs_26
         pnpm
       ];
     };

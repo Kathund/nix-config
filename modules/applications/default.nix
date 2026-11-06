@@ -4,6 +4,7 @@
     ./communication
     ./games
     ./ark.nix
+    ./aseprite.nix
     ./dolphin.nix
     ./drawy.nix
     ./filelight.nix
